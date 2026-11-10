@@ -1,0 +1,220 @@
+[
+  {
+    "id": "mandapa-central",
+    "destinationId": "heritage-courtyard",
+    "name": "Central Mandapa",
+    "hindiName": "केंद्रीय मंडप (स्तंभयुक्त मंडप)",
+    "category": "Pavilion & Vault Architecture",
+    "position": [0, 2.2, 0],
+    "interactionRadius": 5.0,
+    "shortDescription": "An octagonal pillared hall featuring corbelled concentric dome roofing and hand-carved sandstone columns.",
+    "detailedDescription": "In classical Indian architecture—spanning Hindu, Jain, and Buddhist traditions—the Mandapa is an open or semi-enclosed pillared hall serving as a ceremonial vestibule before the inner sanctum. This illustrative reconstruction showcases an open octagonal plan supported by eight structural columns with traditional pot-and-foliage (Ghatapallava) capitals and corbelled ceiling rings.",
+    "culturalSignificance": "The mandapa was historically a vibrant community space used for sacred recitations, classical dance (Natyamandapa), assembly, and philosophical discourse, providing shelter from seasonal desert heat.",
+    "architecturalDetails": [
+      "Octagonal floor plan aligned to cardinal and intermediate compass directions.",
+      "Corbelled lantern dome constructed by overlapping concentric stone courses without mortar keys.",
+      "Carved bracket capitals designed to bear transverse stone roof beams.",
+      "Raised stone plinth providing natural insulation from ground moisture and dust."
+    ],
+    "gallery": [
+      {
+        "id": "mandapa-img-1",
+        "url": "/images/destinations/gallery-mandapa.svg",
+        "caption": "Architectural diagram showing corbelled ceiling rings and column distribution.",
+        "alt": "Mandapa pillared hall architectural diagram",
+        "attribution": "NewArambh Cultural Heritage Documentation (CC-BY-4.0)",
+        "sourceUrl": "https://newarambh.org/licenses"
+      },
+      {
+        "id": "mandapa-img-2",
+        "url": "/images/destinations/courtyard-haveli.jpg",
+        "caption": "Traditional stone courtyard showing authentic pillared colonnades and lantern illumination.",
+        "alt": "Courtyard with stone columns and candle lanterns",
+        "attribution": "Public Domain / CC0 Heritage Photography Register",
+        "sourceUrl": "https://newarambh.org/licenses"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Architectural Survey of Temple Architecture in India",
+        "url": "https://asi.nic.in/",
+        "authorOrPublisher": "Archaeological Survey of India (ASI)",
+        "licenseNote": "Public Educational Reference"
+      },
+      {
+        "title": "Indian Architecture (Buddhist and Hindu Periods)",
+        "url": "https://archive.org/details/indianarchitectu00brow",
+        "authorOrPublisher": "Percy Brown (Dover Publications)",
+        "licenseNote": "Open Educational Monograph"
+      }
+    ]
+  },
+  {
+    "id": "jharokha-balcony",
+    "destinationId": "heritage-courtyard",
+    "name": "Stone Jharokha",
+    "hindiName": "पारंपरिक झरोखा (प्रक्षेपी वातायन)",
+    "category": "Facade & Passive Climate Architecture",
+    "position": [0, 3.2, -15.5],
+    "interactionRadius": 4.5,
+    "shortDescription": "An ornate overhanging stone balcony engineered for passive cooling, framed views, and microclimate ventilation.",
+    "detailedDescription": "The Jharokha is a cantilevered stone bay window characteristic of Rajasthani, Gujarati, and Mughal architectural facades. Projecting outward from the upper facade upon intricately carved stone brackets (Madal), it features sloped overhang eaves (Chhajja) and perforated latticed screens that facilitate natural air circulation while shading the interior from harsh solar radiation.",
+    "culturalSignificance": "Jharokhas served both ceremonial and practical domestic functions. They allowed royal women and inhabitants to observe state processions and courtyard festivities while preserving seclusion (purdah).",
+    "architecturalDetails": [
+      "Cantilevered stone support brackets sculpted with floral motifs.",
+      "Fluted eaves (chhajja) angled to repel monsoon rains and direct desert sunlight.",
+      "Perforated stone balustrades acting as natural sight-veils.",
+      "Venturi microclimate acceleration that cools ambient breezes as they pass into living quarters."
+    ],
+    "gallery": [
+      {
+        "id": "jharokha-img-1",
+        "url": "/images/destinations/gallery-jharokha.svg",
+        "caption": "Orthographic elevation of traditional stone Jharokha balcony with ribbed canopy.",
+        "alt": "Jharokha balcony architectural elevation",
+        "attribution": "NewArambh Cultural Heritage Documentation (CC-BY-4.0)",
+        "sourceUrl": "https://newarambh.org/licenses"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Jaipur City Built Heritage & Jharokha Facade Typologies",
+        "url": "https://whc.unesco.org/en/list/1605/",
+        "authorOrPublisher": "UNESCO World Heritage Centre",
+        "licenseNote": "Official UNESCO World Heritage Documentation"
+      },
+      {
+        "title": "Haveli and Jharokha: Domestic Architectural Studies in Western India",
+        "url": "https://ignca.gov.in/",
+        "authorOrPublisher": "Indira Gandhi National Centre for the Arts (IGNCA)",
+        "licenseNote": "Public Research Archive"
+      }
+    ]
+  },
+  {
+    "id": "baori-stepwell",
+    "destinationId": "heritage-courtyard",
+    "name": "Baori Stepwell",
+    "hindiName": "पारंपरिक बावड़ी (सोपान कूप)",
+    "category": "Hydraulic & Subterranean Architecture",
+    "position": [-11, 1.6, 4],
+    "interactionRadius": 5.2,
+    "shortDescription": "A subterranean water-conservation structure with stepped terraces and descending masonry flights.",
+    "detailedDescription": "Stepwells (known regionally as Baori, Bawdi, or Vav) are unique subterranean architectural marvels developed across Western India from the 7th century onwards. Combining civic hydrology with temple aesthetics, they descend through multi-tiered stone pavilions to reach deep aquifers, ensuring perennial access to clean water during prolonged arid droughts.",
+    "culturalSignificance": "More than functional cisterns, stepwells were communal sanctuaries, pilgrimage stops for desert caravans, and spiritual retreats where the temperature was consistently several degrees cooler than the surface.",
+    "architecturalDetails": [
+      "Inverted pyramid geometry creating structural stability against subterranean earth pressure.",
+      "Symmetrical zigzag stone staircases allowing access to water at fluctuating seasonal depths.",
+      "Carved subterranean galleries providing shaded resting spaces for travelers and worshippers.",
+      "Passive evaporative cooling cooling the immediate micro-environment of the surrounding courtyard."
+    ],
+    "gallery": [
+      {
+        "id": "stepwell-img-1",
+        "url": "/images/destinations/gallery-stepwell.svg",
+        "caption": "Cross-sectional perspective of stepped subterranean terraces and pool reservoir.",
+        "alt": "Stepwell cross section architectural drawing",
+        "attribution": "NewArambh Cultural Heritage Documentation (CC-BY-4.0)",
+        "sourceUrl": "https://newarambh.org/licenses"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Rani-ki-Vav (the Queen’s Stepwell) at Patan, Gujarat",
+        "url": "https://whc.unesco.org/en/list/922",
+        "authorOrPublisher": "UNESCO World Heritage Centre / Archaeological Survey of India",
+        "licenseNote": "Official UNESCO World Heritage Inscription #922"
+      },
+      {
+        "title": "The Vanishing Stepwells of India",
+        "url": "https://www.stepwells.org/",
+        "authorOrPublisher": "Victoria Lautman / Merrell Publishers",
+        "licenseNote": "Educational Heritage Documentation"
+      }
+    ]
+  },
+  {
+    "id": "torana-gateway",
+    "destinationId": "heritage-courtyard",
+    "name": "Torana Gateway",
+    "hindiName": "तोरण द्वार (भव्य अलंकृत प्रवेश द्वार)",
+    "category": "Sacred & Ceremonial Entrances",
+    "position": [0, 2.8, 16],
+    "interactionRadius": 4.5,
+    "shortDescription": "A monumental ceremonial entrance archway marking the sacred threshold between secular and sanctified space.",
+    "detailedDescription": "The Torana is a freestanding ceremonial gateway originating in early Buddhist architecture (such as the Great Stupa of Sanchi) and evolving into ornate stone gateways in medieval Hindu and Jain architecture (exemplified by the Kirti Torana of Vadnagar and Mukteshvara Temple). It consists of two monumental stone columns supporting two or three sculpted horizontal architraves linked by cusped brackets.",
+    "culturalSignificance": "Crossing the Torana threshold symbolizes entering a protected sacred precinct, leaving worldly anxieties behind. In secular settings, it signified civic honor, triumph, and royal reception.",
+    "architecturalDetails": [
+      "Two vertical monolith pillars carved with floral and geometric mouldings.",
+      "Multiple horizontal architraves (patas) with curved upward terminals.",
+      "Cusped scroll brackets (makara torana) transitioning weight between posts and beams.",
+      "Apex finial medallion celebrating spiritual auspiciousness."
+    ],
+    "gallery": [
+      {
+        "id": "torana-img-1",
+        "url": "/images/destinations/gallery-torana.svg",
+        "caption": "Elevation rendering of ceremonial Torana gateway with multi-tiered horizontal lintels.",
+        "alt": "Torana ceremonial gateway elevation diagram",
+        "attribution": "NewArambh Cultural Heritage Documentation (CC-BY-4.0)",
+        "sourceUrl": "https://newarambh.org/licenses"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Buddhist Monuments at Sanchi",
+        "url": "https://whc.unesco.org/en/list/524/",
+        "authorOrPublisher": "UNESCO World Heritage Centre",
+        "licenseNote": "UNESCO Documentation"
+      },
+      {
+        "title": "Archaeological Guide to Vadnagar Kirti Torana",
+        "url": "https://asi.nic.in/",
+        "authorOrPublisher": "Archaeological Survey of India (ASI)",
+        "licenseNote": "Public Heritage Publication"
+      }
+    ]
+  },
+  {
+    "id": "jali-screen",
+    "destinationId": "heritage-courtyard",
+    "name": "Jali Stonework",
+    "hindiName": "जाली (उत्कीर्ण प्रस्तर जाली)",
+    "category": "Ornamentation & Light Modulation",
+    "position": [16.2, 2.4, 0],
+    "interactionRadius": 4.5,
+    "shortDescription": "Perforated stone lattice screens that temper harsh sunlight, create dappled shadow, and funnel ambient breezes.",
+    "detailedDescription": "A Jali is an intricately carved perforated stone screen featuring geometric, tessellated, or botanical openwork. Developed to perfection in Indian architecture—from Chand Baori and Sidi Saiyyed to Fatehpur Sikri and Amber Palace—jali screens act as natural passive evaporative and ventilative cooling devices. By forcing moving air through small apertures, air velocity increases and temperature drops via the Venturi effect.",
+    "culturalSignificance": "The Jali creates a poetic interplay of shadow and light (chhiyan aur dhoop), transforming glaring desert noon light into gentle contemplative luminescence while affording interior privacy without claustrophobia.",
+    "architecturalDetails": [
+      "Precision stonework carved from solid sandstone or marble blocks.",
+      "Continuous interlocking geometric Islamic and Indian octagonal tessellations.",
+      "Fluid aerodynamic cooling utilizing the thermodynamic Venturi principle.",
+      "Glare attenuation reducing cooling costs and thermal heat gain in interior spaces."
+    ],
+    "gallery": [
+      {
+        "id": "jali-img-1",
+        "url": "/images/destinations/gallery-jali.svg",
+        "caption": "Architectural vector showing traditional cusped stone arch enclosing geometric jali latticework.",
+        "alt": "Perforated stone jali lattice architectural diagram",
+        "attribution": "NewArambh Cultural Heritage Documentation (CC-BY-4.0)",
+        "sourceUrl": "https://newarambh.org/licenses"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Jali: Perforated Screens in Classical Indian Architecture",
+        "url": "https://www.metmuseum.org/art/collection/search#!?q=jali",
+        "authorOrPublisher": "The Metropolitan Museum of Art Open Access",
+        "licenseNote": "Metropolitan Museum Educational Collection"
+      },
+      {
+        "title": "Sidi Saiyyed Mosque Jali Stonework Studies",
+        "url": "https://whc.unesco.org/en/list/1551/",
+        "authorOrPublisher": "UNESCO World Heritage Centre (Historic City of Ahmadabad)",
+        "licenseNote": "UNESCO Architectural Documentation"
+      }
+    ]
+  }
+]

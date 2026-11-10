@@ -19,6 +19,7 @@ import {
   Info,
   ExternalLink,
   CheckCircle2,
+  Map,
 } from 'lucide-react';
 
 const destinations: Destination[] = destinationsData as Destination[];
@@ -108,14 +109,22 @@ export default async function DestinationDetailPage({
               </p>
 
               {/* Enter Virtual Experience Primary CTA Button */}
-              <div className="pt-3 flex flex-wrap items-center gap-4">
+              <div className="pt-3 flex flex-wrap items-center gap-3">
                 <Link
                   href={`/explore/${destination.id}/experience`}
                   className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-bold text-zinc-950 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300 hover:from-amber-300 hover:to-yellow-200 shadow-xl shadow-amber-500/25 hover:shadow-amber-500/35 transition-all hover:scale-105 active:scale-95"
                 >
                   <Compass className="w-5 h-5 stroke-[2.3]" />
-                  <span>Enter Virtual Experience</span>
+                  <span>Enter 3D Experience</span>
                   <ArrowRight className="w-4 h-4 stroke-[2.3]" />
+                </Link>
+
+                <Link
+                  href={`/explore/${destination.id}/experience?mode=2d`}
+                  className="inline-flex items-center gap-2 px-6 py-4 rounded-full text-sm font-semibold text-zinc-200 hover:text-white bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700/80 transition-all hover:scale-105 active:scale-95"
+                >
+                  <Map className="w-4 h-4 text-amber-400" />
+                  <span>2D Floor Plan</span>
                 </Link>
 
                 <div className="flex items-center gap-4 text-xs text-zinc-300 bg-zinc-950/80 backdrop-blur-md px-4 py-3 rounded-full border border-white/10">

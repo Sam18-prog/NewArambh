@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgJali" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18130e"/>
+      <stop offset="100%" stop-color="#3b2716"/>
+    </linearGradient>
+    <radialGradient id="sunbeam" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#18130e" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Geometric Jali Pattern -->
+    <pattern id="jaliPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#a26938"/>
+      <polygon points="20,4 36,20 20,36 4,20" fill="#24170e"/>
+      <circle cx="20" cy="20" r="6" fill="#fef08a" opacity="0.85"/>
+      <circle cx="0" cy="0" r="5" fill="#fde047" opacity="0.6"/>
+      <circle cx="40" cy="0" r="5" fill="#fde047" opacity="0.6"/>
+      <circle cx="0" cy="40" r="5" fill="#fde047" opacity="0.6"/>
+      <circle cx="40" cy="40" r="5" fill="#fde047" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Warm Background -->
+  <rect width="800" height="600" fill="url(#bgJali)"/>
+  <circle cx="400" cy="280" r="320" fill="url(#sunbeam)"/>
+
+  <!-- Ornate Stone Arch Outer Frame -->
+  <path d="M 180 540 L 180 260 C 180 140, 620 140, 620 260 L 620 540 Z" fill="#58351b" stroke="#d97706" stroke-width="6"/>
+
+  <!-- Inner Recessed Arch with Jali Pattern -->
+  <path d="M 210 520 L 210 270 C 210 170, 590 170, 590 270 L 590 520 Z" fill="url(#jaliPattern)" stroke="#854d0e" stroke-width="4"/>
+
+  <!-- Arch Cusps / Scallops -->
+  <path d="M 210 270 Q 250 240, 290 270 Q 330 220, 400 200 Q 470 220, 510 270 Q 550 240, 590 270" fill="none" stroke="#fef08a" stroke-width="3" opacity="0.75"/>
+
+  <!-- Lower Stone Sill -->
+  <rect x="140" y="520" width="520" height="45" rx="4" fill="#3d2110" stroke="#b45309" stroke-width="2"/>
+  <rect x="160" y="530" width="480" height="15" rx="2" fill="#78350f"/>
+</svg>
