@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgJ" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#451a03"/>
+      <stop offset="100%" stop-color="#1e0b02"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgJ)"/>
+  <!-- Sandstone Wall -->
+  <rect x="150" y="50" width="500" height="500" fill="#92400e" opacity="0.6"/>
+  <!-- Jharokha Projected Structure -->
+  <g fill="#d97706">
+    <!-- Sloping Eaves (Chhajja) -->
+    <path d="M250 180 L200 240 L600 240 L550 180 Z" fill="#b45309"/>
+    <!-- Cusped Window Arches -->
+    <rect x="230" y="240" width="340" height="180" fill="#78350f"/>
+    <!-- Jali Screen Openings -->
+    <path d="M260 380 L260 280 Q300 240 340 280 L340 380 Z" fill="#fef3c7" opacity="0.9"/>
+    <path d="M360 380 L360 280 Q400 240 440 280 L440 380 Z" fill="#fef3c7" opacity="0.9"/>
+    <path d="M460 380 L460 280 Q500 240 540 280 L540 380 Z" fill="#fef3c7" opacity="0.9"/>
+    <!-- Lattice Pattern Overlay -->
+    <line x1="260" y1="310" x2="340" y2="310" stroke="#78350f" stroke-width="3"/>
+    <line x1="260" y1="340" x2="340" y2="340" stroke="#78350f" stroke-width="3"/>
+    <line x1="360" y1="310" x2="440" y2="310" stroke="#78350f" stroke-width="3"/>
+    <line x1="360" y1="340" x2="440" y2="340" stroke="#78350f" stroke-width="3"/>
+    <line x1="460" y1="310" x2="540" y2="310" stroke="#78350f" stroke-width="3"/>
+    <line x1="460" y1="340" x2="540" y2="340" stroke="#78350f" stroke-width="3"/>
+    <!-- Cantilevered Brackets -->
+    <polygon points="230,420 280,480 320,480 300,420" fill="#b45309"/>
+    <polygon points="340,420 380,490 420,490 460,420" fill="#b45309"/>
+    <polygon points="500,420 480,480 520,480 570,420" fill="#b45309"/>
+  </g>
+</svg>

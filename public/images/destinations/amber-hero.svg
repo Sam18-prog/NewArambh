@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="amberSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b0764"/>
+      <stop offset="50%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#amberSky)"/>
+  <!-- Hilltop Fortress Silhouette -->
+  <path d="M0 450 Q200 350 400 300 Q600 240 800 320 L800 600 L0 600 Z" fill="#291206"/>
+  <!-- Bastions & Ramparts -->
+  <g fill="#451a03">
+    <rect x="250" y="280" width="40" height="60"/>
+    <rect x="340" y="260" width="50" height="80"/>
+    <rect x="440" y="240" width="60" height="100"/>
+    <rect x="550" y="220" width="45" height="120"/>
+    <!-- Dome Pavilions -->
+    <path d="M450 240 Q470 200 490 240 Z" fill="#d97706"/>
+    <path d="M555 220 Q572 180 590 220 Z" fill="#d97706"/>
+  </g>
+</svg>

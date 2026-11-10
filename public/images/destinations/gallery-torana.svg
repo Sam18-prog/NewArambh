@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="skyTor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="70%" stop-color="#9a3412"/>
+      <stop offset="100%" stop-color="#431407"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyTor)"/>
+  <!-- Torana Gateway Arch -->
+  <g fill="#7c2d12">
+    <!-- Flanking Pillars -->
+    <rect x="220" y="180" width="45" height="360" rx="4" fill="#9a3412"/>
+    <rect x="535" y="180" width="45" height="360" rx="4" fill="#9a3412"/>
+    <!-- Pillar Capitals -->
+    <polygon points="190,180 295,180 270,140 215,140" fill="#c2410c"/>
+    <polygon points="505,180 610,180 585,140 530,140" fill="#c2410c"/>
+    <!-- Monumental Curved Archways (Cusped Beams) -->
+    <path d="M190 140 Q400 90 610 140 L610 110 Q400 60 190 110 Z" fill="#ea580c"/>
+    <path d="M210 100 Q400 50 590 100 L590 75 Q400 25 210 75 Z" fill="#f97316"/>
+    <!-- Central Finial Motif -->
+    <circle cx="400" cy="50" r="14" fill="#fef08a"/>
+    <line x1="400" y1="50" x2="400" y2="15" stroke="#fef08a" stroke-width="4"/>
+    <!-- Ground Baseline -->
+    <rect x="0" y="520" width="800" height="80" fill="#291206"/>
+  </g>
+</svg>

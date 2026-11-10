@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#09090b"/>
+  <!-- Grand Gopuram Silhouette -->
+  <g fill="#3f3f46">
+    <polygon points="300,500 500,500 470,180 330,180" fill="#27272a"/>
+    <polygon points="330,180 470,180 440,120 360,120" fill="#52525b"/>
+    <!-- Barrel Vault Kalasam Finials -->
+    <path d="M360 120 Q400 80 440 120 Z" fill="#e4e4e7"/>
+    <circle cx="380" cy="80" r="5" fill="#facc15"/>
+    <circle cx="400" cy="76" r="6" fill="#facc15"/>
+    <circle cx="420" cy="80" r="5" fill="#facc15"/>
+    <!-- Colonnade Pillars -->
+    <rect x="180" y="340" width="18" height="160" fill="#71717a"/>
+    <rect x="230" y="340" width="18" height="160" fill="#71717a"/>
+    <rect x="550" y="340" width="18" height="160" fill="#71717a"/>
+    <rect x="600" y="340" width="18" height="160" fill="#71717a"/>
+    <rect x="0" y="500" width="800" height="100" fill="#040405"/>
+  </g>
+</svg>

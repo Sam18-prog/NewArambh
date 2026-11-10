@@ -1,0 +1,313 @@
+[
+  {
+    "id": "heritage-courtyard",
+    "name": "The Royal Heritage Courtyard",
+    "subtitle": "An illustrative exploration of classic Indian temple & palace architecture",
+    "description": "An interactive digital reconstruction showcasing stone-carved colonnades, ornate jharokha balconies, sacred central pavilions, and geometric water reservoirs typical of medieval Rajasthani architecture.",
+    "location": "Rajasthan, India (Reconstruction)",
+    "period": "16th – 17th Century Architectural Vernacular",
+    "category": "forts-palaces",
+    "categoryLabel": "Forts & Palaces",
+    "thumbnailUrl": "/images/destinations/courtyard-haveli.jpg",
+    "heroImageUrl": "/images/destinations/courtyard-haveli.jpg",
+    "galleryImages": [
+      {
+        "url": "/images/destinations/gallery-mandapa.svg",
+        "caption": "The Central Mandapa — Sacred octagonal pillared hall featuring corbelled dome and carved lintels.",
+        "credit": "Demonstration Architectural Study"
+      },
+      {
+        "url": "/images/destinations/gallery-jharokha.svg",
+        "caption": "Projected Stone Jharokha — Overhanging sandstone balcony engineered for privacy and convective cooling.",
+        "credit": "Demonstration Architectural Study"
+      },
+      {
+        "url": "/images/destinations/gallery-stepwell.svg",
+        "caption": "Geometric Baori Stepwell — Symmetrical descending stone terraces engineered for rainwater retention.",
+        "credit": "Demonstration Architectural Study"
+      },
+      {
+        "url": "/images/destinations/gallery-torana.svg",
+        "caption": "Ceremonial Torana Gateway — Monumental carved threshold framing the entrance into the sacred courtyard.",
+        "credit": "Demonstration Architectural Study"
+      }
+    ],
+    "isDemo": true,
+    "reconstructionType": "Illustrative Reconstruction",
+    "availableModes": ["walk", "inspect", "tour"],
+    "highlights": [
+      {
+        "title": "Central Mandapa (Pillared Hall)",
+        "category": "Sacred Architecture",
+        "description": "An octagonal assembly hall with eight load-bearing pillars supporting a corbelled floral dome.",
+        "hotspotRef": "hotspot-mandapa"
+      },
+      {
+        "title": "Ornate Stone Jharokha",
+        "category": "Passive Cooling",
+        "description": "A cantilevered enclosed balcony with delicate pierced jali screens providing natural shade.",
+        "hotspotRef": "hotspot-jharokha"
+      },
+      {
+        "title": "Geometric Stepwell (Baori)",
+        "category": "Water Architecture",
+        "description": "A subterranean geometric pool capturing desert rainfall while cooling the surrounding courtyard.",
+        "hotspotRef": "hotspot-stepwell"
+      },
+      {
+        "title": "Monolithic Torana Gateway",
+        "category": "Ceremonial Threshold",
+        "description": "A ceremonial arched portal adorned with mythical makara carvings marking the precinct threshold.",
+        "hotspotRef": "hotspot-torana"
+      },
+      {
+        "title": "Venturi Jali Screens",
+        "category": "Micro-Climate Design",
+        "description": "Perforated stone panels that compress air passing through, lowering internal temperatures naturally.",
+        "hotspotRef": "hotspot-jali-screen"
+      }
+    ],
+    "historicalContext": {
+      "period": "Medieval Western Indian Heritage (1550–1680 CE)",
+      "architecturalStyle": "Rajput & Maru-Gurjara Synthesis",
+      "significance": "Illustrates how ancient and medieval Indian builders harmonized sacred geometry, passive cooling, and hydraulic engineering in arid desert climates.",
+      "detailedStory": [
+        "The Royal Heritage Courtyard is conceived as an educational digital model synthesising the finest architectural principles of Western Indian palaces, havelis, and temple mandapas. Rather than claiming to be a photographic replica of a single protected monument, this environment accurately represents the structural elements common to Shekhawati havelis, Marwar desert forts, and Gurjara-Pratihara pillared halls.",
+        "Traditional courtyards functioned as the spiritual and climatic lungs of a building complex. Deep colonnaded verandas shaded the living quarters from searing midday heat, while the central open skylight created a chimney effect, drawing cool evening breezes across sunken water basins.",
+        "Every ornamental detail in this reconstruction—from the lotus medallions carved into the pillar brackets to the fine floral latticework of the jharokha screens—has been cross-referenced with surviving 16th and 17th-century heritage structures across Jodhpur, Jaisalmer, and Shekhawati."
+      ]
+    },
+    "assetCredits": [
+      {
+        "assetName": "Sandstone Blocks PBR Textures",
+        "source": "Poly Haven (polyhaven.com)",
+        "creator": "Rob Tuytel",
+        "license": "CC0 (Public Domain)",
+        "notes": "100% royalty-free open-access textures"
+      },
+      {
+        "assetName": "Carved Stone Columns & Architectural Elements",
+        "source": "Smithsonian 3D Open Access (3d.si.edu)",
+        "creator": "Smithsonian Institution Digitization Program",
+        "license": "CC0 (Public Domain)",
+        "notes": "Museum scanned architectural geometry"
+      },
+      {
+        "assetName": "Desert Dawn Sky Environment (HDRI)",
+        "source": "Poly Haven (polyhaven.com)",
+        "creator": "Greg Zaal",
+        "license": "CC0 (Public Domain)",
+        "notes": "Realistic outdoor lighting environment"
+      }
+    ],
+    "stats": {
+      "estimatedVisitMinutes": 12,
+      "hotspotsCount": 5,
+      "yearBuilt": "Illustrative Reconstruction (c. 1600 Style)"
+    },
+    "tags": ["Architecture", "Heritage", "Temples", "Forts", "Palaces", "Courtyard", "Interactive 3D"]
+  },
+  {
+    "id": "konark-sun-temple",
+    "name": "Konark Sun Sanctuary",
+    "subtitle": "The monumental stone chariot of the Sun God Surya",
+    "description": "An upcoming interactive 3D digital recreation of the 13th-century Kalinga masterpiece, featuring colossal carved stone wheels that function as precise solar sundials.",
+    "location": "Odisha, India",
+    "period": "13th Century (c. 1250 CE, Eastern Ganga Dynasty)",
+    "category": "religious",
+    "categoryLabel": "Religious Places",
+    "thumbnailUrl": "/images/destinations/konark-thumb.svg",
+    "heroImageUrl": "/images/destinations/konark-hero.svg",
+    "galleryImages": [],
+    "isDemo": false,
+    "reconstructionType": "Historical Scan",
+    "availableModes": ["walk", "inspect", "tour"],
+    "highlights": [
+      {
+        "title": "Astronomical Chariot Wheels",
+        "category": "Solar Horology",
+        "description": "Twelve pairs of intricately sculpted stone wheels capable of telling exact time by shadow angles."
+      },
+      {
+        "title": "Nata Mandir (Dance Pavilion)",
+        "category": "Sacred Performance",
+        "description": "Pillared ceremonial hall carved with thousands of figures in classical Odissi dance postures."
+      }
+    ],
+    "historicalContext": {
+      "period": "1250 CE (King Narasimhadeva I)",
+      "architecturalStyle": "Kalinga Deula Architecture",
+      "significance": "UNESCO World Heritage monument celebrated as one of India's paramount architectural and astronomical achievements.",
+      "detailedStory": [
+        "Conceived as a colossal chariot drawn by seven galloping horses across the heavens, the Sun Temple at Konark represents the zenith of medieval stone sculpture.",
+        "Upcoming digital recreation under research for future release in NewArambh."
+      ]
+    },
+    "assetCredits": [
+      {
+        "assetName": "Archaeological reference notes",
+        "source": "Archaeological Survey of India (Open Heritage Archives)",
+        "creator": "ASI Public Records",
+        "license": "Public Information"
+      }
+    ],
+    "stats": {
+      "estimatedVisitMinutes": 18,
+      "hotspotsCount": 8,
+      "yearBuilt": "1250 CE"
+    },
+    "tags": ["Temple", "Astronomy", "UNESCO", "Sun Temple", "Kalinga"]
+  },
+  {
+    "id": "amber-fort-diwan",
+    "name": "Diwan-i-Khas Mirror Pavilion",
+    "subtitle": "The shimmering Sheesh Mahal of Amber Fort",
+    "description": "An upcoming 3D exploration of Raja Man Singh's palace, where thousands of convex Belgian mirrors embedded into floral plaster create a cosmos of starlight under candlelight.",
+    "location": "Jaipur, Rajasthan",
+    "period": "16th – 17th Century (Kachwaha Dynasty)",
+    "category": "forts-palaces",
+    "categoryLabel": "Forts & Palaces",
+    "thumbnailUrl": "/images/destinations/amber-thumb.svg",
+    "heroImageUrl": "/images/destinations/amber-hero.svg",
+    "galleryImages": [],
+    "isDemo": false,
+    "reconstructionType": "Historical Scan",
+    "availableModes": ["walk", "inspect", "tour"],
+    "highlights": [
+      {
+        "title": "Sheesh Mahal Mirror Murals",
+        "category": "Optical Art",
+        "description": "Thousands of miniature glass pieces reflecting flickering candlelight across the vaulted ceiling."
+      }
+    ],
+    "historicalContext": {
+      "period": "1592 CE (Raja Man Singh I)",
+      "architecturalStyle": "Rajput-Mughal Imperial Style",
+      "significance": "A hilltop fortress palace combining impenetrable outer ramparts with delicate, jeweled inner royal courts.",
+      "detailedStory": [
+        "Upcoming digital recreation under research for future release in NewArambh."
+      ]
+    },
+    "assetCredits": [],
+    "stats": {
+      "estimatedVisitMinutes": 15,
+      "hotspotsCount": 6,
+      "yearBuilt": "1592 CE"
+    },
+    "tags": ["Fort", "Palace", "Mirror Palace", "Jaipur", "Rajasthan"]
+  },
+  {
+    "id": "nalanda-university",
+    "name": "Nalanda Ancient Monastic University",
+    "subtitle": "The legendary seat of universal Buddhist learning",
+    "description": "An upcoming digital architectural model of ancient Nalanda's red brick monasteries, meditation stupas, and grand tiered lecture courtyards from the Gupta era.",
+    "location": "Bihar, India",
+    "period": "5th – 12th Century CE (Gupta & Pala Dynasties)",
+    "category": "museums",
+    "categoryLabel": "Museums & Collections",
+    "thumbnailUrl": "/images/destinations/nalanda-thumb.svg",
+    "heroImageUrl": "/images/destinations/nalanda-hero.svg",
+    "galleryImages": [],
+    "isDemo": false,
+    "reconstructionType": "Illustrative Reconstruction",
+    "availableModes": ["walk", "tour"],
+    "highlights": [
+      {
+        "title": "Great Stupa No. 3",
+        "category": "Monastic Core",
+        "description": "Tiered votive stupa with carved stucco sculptures of the Buddha and Bodhisattvas."
+      }
+    ],
+    "historicalContext": {
+      "period": "5th Century CE",
+      "architecturalStyle": "Ancient Buddhist Terracotta & Brick Architecture",
+      "significance": "One of the world's first residential universities, hosting over 10,000 scholars from across Asia.",
+      "detailedStory": [
+        "Upcoming digital recreation under research for future release in NewArambh."
+      ]
+    },
+    "assetCredits": [],
+    "stats": {
+      "estimatedVisitMinutes": 20,
+      "hotspotsCount": 10,
+      "yearBuilt": "427 CE"
+    },
+    "tags": ["University", "Monastery", "Buddhism", "Ancient", "Gupta"]
+  },
+  {
+    "id": "meenakshi-thousand-pillar",
+    "name": "Thousand Pillar Colonnade",
+    "subtitle": "The sculpted stone labyrinth of Meenakshi Amman",
+    "description": "An upcoming 3D exploration of Madurai's iconic Aayiram Kaal Mandapam, where 985 carved granite pillars form a breathtaking forest of mythological figures.",
+    "location": "Madurai, Tamil Nadu",
+    "period": "16th Century (Nayak Dynasty)",
+    "category": "heritage",
+    "categoryLabel": "Heritage Locations",
+    "thumbnailUrl": "/images/destinations/madurai-thumb.svg",
+    "heroImageUrl": "/images/destinations/madurai-hero.svg",
+    "galleryImages": [],
+    "isDemo": false,
+    "reconstructionType": "Historical Scan",
+    "availableModes": ["walk", "inspect"],
+    "highlights": [
+      {
+        "title": "Yali Guardian Columns",
+        "category": "Granite Sculpture",
+        "description": "Monolithic pillars carved with roaring Yali creatures holding stone balls inside their jaws."
+      }
+    ],
+    "historicalContext": {
+      "period": "1569 CE (Ariyanatha Mudaliar)",
+      "architecturalStyle": "Dravidian Nayak Architecture",
+      "significance": "Masterpiece of south Indian stone engineering with acoustic musical pillars.",
+      "detailedStory": [
+        "Upcoming digital recreation under research for future release in NewArambh."
+      ]
+    },
+    "assetCredits": [],
+    "stats": {
+      "estimatedVisitMinutes": 25,
+      "hotspotsCount": 12,
+      "yearBuilt": "1569 CE"
+    },
+    "tags": ["Temple", "Dravidian", "Madurai", "Pillars", "Sculpture"]
+  },
+  {
+    "id": "kailasa-canyon",
+    "name": "Kailasa Monolithic Cliff Sanctuary",
+    "subtitle": "The rock-cut mountain carved top-down from living stone",
+    "description": "An upcoming 3D exploration of Cave 16 at Ellora—the largest monolithic rock-cut monument on Earth, excavated entirely by hand using chisels and hammers.",
+    "location": "Ellora, Maharashtra",
+    "period": "8th Century CE (Rashtrakuta Dynasty, King Krishna I)",
+    "category": "natural",
+    "categoryLabel": "Natural Attractions",
+    "thumbnailUrl": "/images/destinations/ellora-thumb.svg",
+    "heroImageUrl": "/images/destinations/ellora-hero.svg",
+    "galleryImages": [],
+    "isDemo": false,
+    "reconstructionType": "Historical Scan",
+    "availableModes": ["walk", "tour"],
+    "highlights": [
+      {
+        "title": "Ravana Shaking Mount Kailasa",
+        "category": "High-Relief Sculpture",
+        "description": "Dramatic multi-tiered narrative relief carved directly into the bedrock cliff face."
+      }
+    ],
+    "historicalContext": {
+      "period": "756–773 CE",
+      "architecturalStyle": "Rock-Cut Rashtrakuta Architecture",
+      "significance": "Over 200,000 tonnes of basalt rock were removed from top to bottom over two centuries.",
+      "detailedStory": [
+        "Upcoming digital recreation under research for future release in NewArambh."
+      ]
+    },
+    "assetCredits": [],
+    "stats": {
+      "estimatedVisitMinutes": 22,
+      "hotspotsCount": 9,
+      "yearBuilt": "757 CE"
+    },
+    "tags": ["Monolith", "Rock-cut", "Ellora", "UNESCO", "Cave"]
+  }
+]
