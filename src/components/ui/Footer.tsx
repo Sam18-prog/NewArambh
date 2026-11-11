@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Compass, Sparkles, Heart } from 'lucide-react';
+import { Compass, Sparkles } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -17,14 +17,14 @@ export default function Footer() {
                 NEWARAMBH
               </span>
             </Link>
-            <p className="text-zinc-400 max-w-sm leading-relaxed">
-              Explore the World Beyond Boundaries. An immersive 3D virtual destination exploration
-              platform for global cultural heritage, historical architecture, and sacred monuments.
-            </p>
-            <p className="text-[11px] text-zinc-400">
-              Developed with zero budget using Next.js 16, React 19, Three.js, and public domain
-              cultural assets.
-            </p>
+            <div className="space-y-1.5 max-w-sm">
+              <p className="font-bold text-sm text-zinc-100 tracking-tight">
+                Walk Through History, From Anywhere.
+              </p>
+              <p className="text-zinc-400 leading-relaxed">
+                Experience the world’s cultural heritage, sacred monuments, and architectural wonders through immersive 3D exploration.
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -65,12 +65,12 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/explore?category=forts-palaces" className="hover:text-amber-400 transition-colors">
-                  Forts & Palaces
+                  Forts &amp; Palaces
                 </Link>
               </li>
               <li>
                 <Link href="/explore?category=religious" className="hover:text-amber-400 transition-colors">
-                  Religious Places & Temples
+                  Religious Places &amp; Temples
                 </Link>
               </li>
               <li>
@@ -80,7 +80,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/explore?category=museums" className="hover:text-amber-400 transition-colors">
-                  Museums & Collections
+                  Museums &amp; Collections
                 </Link>
               </li>
               <li>
@@ -101,9 +101,9 @@ export default function Footer() {
             <p className="text-xs font-semibold uppercase tracking-wider text-white">Transparency</p>
             <ul className="space-y-2">
               <li>
-                <Link href="/licenses" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                <Link href="/licenses" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 font-medium text-amber-400/90">
                   <Sparkles className="w-3 h-3 text-amber-400" />
-                  <span>Asset Register & Licenses</span>
+                  <span>Asset Register &amp; Licenses</span>
                 </Link>
               </li>
               <li>
@@ -117,14 +117,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-10 mt-10 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-400">
-          <p>© {new Date().getFullYear()} NewArambh. Created for cultural education & spatial exploration.</p>
-          <p className="flex items-center gap-1">
-            Built with <Heart className="w-3 h-3 text-rose-500 fill-current inline" /> using Open-Source Web Technologies.
-          </p>
         </div>
       </div>
     </footer>

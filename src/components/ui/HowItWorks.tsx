@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Footprints, Eye, Route, Sparkles, Move, MousePointer, Compass, Shield } from 'lucide-react';
 
 export default function HowItWorks() {
@@ -121,27 +122,48 @@ export default function HowItWorks() {
         })}
       </div>
 
-      {/* Control Tips Pill */}
-      <div className="mt-12 rounded-2xl bg-zinc-900/60 border border-zinc-800 p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
-        <div className="flex items-center gap-3">
-          <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
-            <Move className="w-5 h-5" />
+      {/* Control Tips Pill & 2D Accessibility Banner */}
+      <div className="mt-12 space-y-4">
+        <div className="rounded-2xl bg-zinc-900/60 border border-zinc-800 p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              <Move className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="font-semibold text-white">Universal Controls Architecture</p>
+              <p>
+                Desktop: WASD + Mouse Look. Mobile: Floating Virtual Joystick + Swipe. No plugins or
+                external downloads required.
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="font-semibold text-white">Universal Controls Architecture</p>
-            <p>
-              Desktop: WASD + Mouse Look. Mobile: Floating Virtual Joystick + Swipe. No plugins or
-              external downloads required.
-            </p>
+          <div className="flex items-center gap-4 text-zinc-300 shrink-0">
+            <span className="flex items-center gap-1.5">
+              <MousePointer className="w-3.5 h-3.5 text-amber-400" /> Click to Lock
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Compass className="w-3.5 h-3.5 text-amber-400" /> Free Orbit
+            </span>
           </div>
         </div>
-        <div className="flex items-center gap-4 text-zinc-300 shrink-0">
-          <span className="flex items-center gap-1.5">
-            <MousePointer className="w-3.5 h-3.5 text-amber-400" /> Click to Lock
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Compass className="w-3.5 h-3.5 text-amber-400" /> Free Orbit
-          </span>
+
+        {/* 2D Floor Plan Inclusion Callout */}
+        <div className="rounded-2xl bg-amber-500/5 border border-amber-500/20 p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-300">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-amber-400/10 text-amber-400 border border-amber-400/20 flex items-center justify-center shrink-0">
+              <Sparkles className="w-4 h-4" />
+            </div>
+            <p>
+              <span className="font-bold text-white">Universal 2D Floor Plan Included:</span> Older hardware or slow mobile connection?
+              Every destination provides an instant SVG architectural blueprint with interactive hotspot pins and zero GPU load.
+            </p>
+          </div>
+          <Link
+            href="/explore/heritage-courtyard/experience?mode=2d"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-semibold text-zinc-950 bg-amber-400 hover:bg-amber-300 transition-colors shrink-0"
+          >
+            <span>Try 2D Floor Plan</span>
+          </Link>
         </div>
       </div>
     </section>

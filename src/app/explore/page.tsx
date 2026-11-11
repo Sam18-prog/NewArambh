@@ -184,18 +184,55 @@ function ExploreFilterableGrid() {
   );
 }
 
+function ExploreCatalogSkeleton() {
+  return (
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 animate-pulse">
+      {/* Page Header Skeleton */}
+      <div className="text-center max-w-3xl mx-auto space-y-3">
+        <div className="w-48 h-6 bg-zinc-900 rounded-full mx-auto" />
+        <div className="w-80 h-12 bg-zinc-900 rounded-2xl mx-auto" />
+        <div className="w-full max-w-lg h-5 bg-zinc-900/60 rounded mx-auto" />
+      </div>
+
+      {/* Search Bar Skeleton */}
+      <div className="space-y-6">
+        <div className="flex flex-col md:flex-row gap-4 items-center">
+          <div className="flex-1 w-full h-12 bg-zinc-900/80 rounded-2xl" />
+          <div className="w-full md:w-56 h-12 bg-zinc-900/80 rounded-2xl" />
+        </div>
+        <div className="flex gap-2 overflow-hidden">
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div key={i} className="w-28 h-8 bg-zinc-900 rounded-full shrink-0" />
+          ))}
+        </div>
+      </div>
+
+      {/* Grid Skeleton */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[1, 2, 3, 4, 5, 6].map((i) => (
+          <div
+            key={i}
+            className="rounded-3xl overflow-hidden bg-zinc-900/50 border border-zinc-800/80 h-96 flex flex-col justify-between p-6 space-y-4"
+          >
+            <div className="w-full h-44 bg-zinc-800/60 rounded-2xl" />
+            <div className="space-y-2">
+              <div className="w-3/4 h-5 bg-zinc-800/80 rounded" />
+              <div className="w-1/2 h-4 bg-zinc-800/50 rounded" />
+            </div>
+            <div className="w-full h-10 bg-zinc-800/40 rounded-xl" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ExplorePage() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col selection:bg-amber-500/30 selection:text-amber-200">
       <Header />
       <main className="flex-1">
-        <Suspense
-          fallback={
-            <div className="py-24 text-center text-zinc-500 text-sm">
-              Loading destination catalog...
-            </div>
-          }
-        >
+        <Suspense fallback={<ExploreCatalogSkeleton />}>
           <ExploreFilterableGrid />
         </Suspense>
       </main>

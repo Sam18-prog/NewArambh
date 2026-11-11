@@ -2,15 +2,20 @@
 
 import React, { useEffect, useState } from 'react';
 import { useProgress } from '@react-three/drei';
-import { Compass, Sparkles } from 'lucide-react';
+import { Compass, Sparkles, Map, RefreshCw, AlertCircle } from 'lucide-react';
 
 interface LoadingScreenProps {
   destinationName?: string;
+  onSwitchTo2D?: () => void;
 }
 
-export default function LoadingScreen({ destinationName = 'Heritage Environment' }: LoadingScreenProps) {
+export default function LoadingScreen({
+  destinationName = 'Heritage Environment',
+  onSwitchTo2D,
+}: LoadingScreenProps) {
   const { active, progress, item, loaded, total } = useProgress();
   const [fadedOut, setFadedOut] = useState(false);
+  const [takingLong, setTakingLong] = useState(false);
 
   useEffect(() => {
     if (!active && progress === 100) {
@@ -21,9 +26,33 @@ export default function LoadingScreen({ destinationName = 'Heritage Environment'
     }
   }, [active, progress]);
 
+  // If loading takes longer than 8 seconds, reveal fallback options
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTakingLong(true);
+    }, 8000);
+    return () => clearTimeout(timer);
+  }, []);
+
   if (fadedOut) return null;
 
   const isComplete = !active && progress === 100;
+
+  const handleSwitch2D = () => {
+    if (onSwitchTo2D) {
+      onSwitchTo2D();
+    } else if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      url.searchParams.set('mode', '2d');
+      window.location.href = url.toString();
+    }
+  };
+
+  const handleRetry = () => {
+    if (typeof window !== 'undefined') {
+      window.location.reload();
+    }
+  };
 
   return (
     <div
@@ -76,6 +105,37 @@ export default function LoadingScreen({ destinationName = 'Heritage Environment'
           <p className="text-[10px] text-zinc-400 font-mono truncate max-w-xs mx-auto">
             {item}
           </p>
+        )}
+
+        {/* Timeout Fallback Card if loading takes long */}
+        {takingLong && (
+          <div className="pt-4 border-t border-zinc-800 space-y-3 animate-fade-in text-xs">
+            <div className="flex items-center justify-center gap-1.5 text-amber-400 font-medium">
+              <AlertCircle className="w-4 h-4 shrink-0" />
+              <span>Taking longer than expected?</span>
+            </div>
+            <p className="text-zinc-400 text-[11px] leading-relaxed">
+              Your connection or mobile GPU may still be compiling WebGL shaders. You can switch to our instant 2D floor plan or retry.
+            </p>
+            <div className="flex items-center justify-center gap-3 pt-1">
+              <button
+                type="button"
+                onClick={handleSwitch2D}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-amber-400 text-zinc-950 hover:bg-amber-300 transition-colors shadow-md"
+              >
+                <Map className="w-3.5 h-3.5" />
+                <span>Switch to 2D Floor Plan</span>
+              </button>
+              <button
+                type="button"
+                onClick={handleRetry}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors"
+              >
+                <RefreshCw className="w-3.5 h-3.5" />
+                <span>Retry</span>
+              </button>
+            </div>
+          </div>
         )}
       </div>
     </div>

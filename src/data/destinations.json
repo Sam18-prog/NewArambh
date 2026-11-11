@@ -79,25 +79,25 @@
     },
     "assetCredits": [
       {
-        "assetName": "Sandstone Blocks PBR Textures",
-        "source": "Poly Haven (polyhaven.com)",
-        "creator": "Rob Tuytel",
-        "license": "CC0 (Public Domain)",
-        "notes": "100% royalty-free open-access textures"
+        "assetName": "Procedural 3D Courtyard Model (scene.glb)",
+        "source": "In-Engine Three.js Procedural GLTF Generator",
+        "creator": "NewArambh Engineering Team",
+        "license": "MIT / CC0 Public Domain",
+        "notes": "100% zero-budget procedural Three.js geometry and PBR materials"
       },
       {
-        "assetName": "Carved Stone Columns & Architectural Elements",
-        "source": "Smithsonian 3D Open Access (3d.si.edu)",
-        "creator": "Smithsonian Institution Digitization Program",
-        "license": "CC0 (Public Domain)",
-        "notes": "Museum scanned architectural geometry"
+        "assetName": "Architectural Vector Drawings & Diagrams",
+        "source": "NewArambh Cultural Heritage Documentation Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0",
+        "notes": "Handcrafted SVG elevations and architectural section drawings"
       },
       {
-        "assetName": "Desert Dawn Sky Environment (HDRI)",
-        "source": "Poly Haven (polyhaven.com)",
-        "creator": "Greg Zaal",
-        "license": "CC0 (Public Domain)",
-        "notes": "Realistic outdoor lighting environment"
+        "assetName": "Heritage Research & Historical Inscriptions",
+        "source": "UNESCO World Heritage Centre & Archaeological Survey of India",
+        "creator": "UNESCO / ASI / Met Museum Open Access",
+        "license": "Public Educational Heritage Record",
+        "notes": "Inscriptions #922 (Rani-ki-Vav), #1605 (Jaipur), #1551 (Ahmadabad), #524 (Sanchi)"
       }
     ],
     "stats": {
