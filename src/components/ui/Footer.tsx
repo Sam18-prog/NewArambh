@@ -19,10 +19,10 @@ export default function Footer() {
             </Link>
             <div className="space-y-1.5 max-w-sm">
               <p className="font-bold text-sm text-zinc-100 tracking-tight">
-                Walk Through History, From Anywhere.
+                Walk through history, free in your browser.
               </p>
               <p className="text-zinc-400 leading-relaxed">
-                Experience the world’s cultural heritage, sacred monuments, and architectural wonders through immersive 3D exploration.
+                Explore 3D reconstructions of World’s heritage architecture: courtyards, stepwells, and temple halls, with no downloads and no tickets.
               </p>
             </div>
           </div>

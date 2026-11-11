@@ -16,9 +16,9 @@ export default function WhyNewArambh() {
       icon: GraduationCap,
     },
     {
-      title: 'Digital Preservation of Endangered Sites',
+      title: 'Educational Heritage Reconstruction',
       description:
-        'Natural weathering, climate shifts, and human density threaten ancient monuments worldwide. By creating faithful 3D models and digital environments, we help archive humanity’s cultural treasures for future generations.',
+        'Natural weathering and geographical distances limit physical access to historic architecture. By creating illustrative 3D reconstructions informed by historical research, we make architectural knowledge accessible worldwide.',
       icon: Archive,
     },
     {
@@ -53,9 +53,9 @@ export default function WhyNewArambh() {
           </p>
 
           <p className="text-sm text-zinc-400 leading-relaxed">
-            By fusing modern web 3D engines (Three.js and WebGL) with museum-grade historical curation,
-            we enable students, researchers, elders, and travelers to step inside living history
-            from their smartphones and laptops.
+            By fusing modern web 3D engines (Three.js and WebGL) with documented architectural
+            scholarship and verified UNESCO references, we enable students, researchers, elders, and
+            travelers to step inside living history from their smartphones and laptops.
           </p>
 
           <div className="pt-2 flex items-center gap-3 text-xs text-amber-400 font-semibold">

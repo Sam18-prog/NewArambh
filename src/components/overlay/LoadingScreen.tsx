@@ -18,25 +18,36 @@ export default function LoadingScreen({
   const [takingLong, setTakingLong] = useState(false);
 
   useEffect(() => {
-    if (!active && progress === 100) {
+    // Dismiss loading overlay when progress completes or when idle without pending downloads
+    if (!active && (progress >= 100 || total === 0)) {
       const timer = setTimeout(() => {
         setFadedOut(true);
-      }, 500);
+      }, 400);
       return () => clearTimeout(timer);
     }
-  }, [active, progress]);
+  }, [active, progress, total]);
 
-  // If loading takes longer than 8 seconds, reveal fallback options
+  // Safety failsafe: If loader has no active tasks, ensure overlay fades out within 3.5s
+  useEffect(() => {
+    const safetyTimer = setTimeout(() => {
+      if (!active) {
+        setFadedOut(true);
+      }
+    }, 3500);
+    return () => clearTimeout(safetyTimer);
+  }, [active]);
+
+  // If active download takes longer than 9 seconds, offer 2D alternative
   useEffect(() => {
     const timer = setTimeout(() => {
       setTakingLong(true);
-    }, 8000);
+    }, 9000);
     return () => clearTimeout(timer);
   }, []);
 
   if (fadedOut) return null;
 
-  const isComplete = !active && progress === 100;
+  const isComplete = !active && (progress >= 100 || total === 0);
 
   const handleSwitch2D = () => {
     if (onSwitchTo2D) {
@@ -56,7 +67,7 @@ export default function LoadingScreen({
 
   return (
     <div
-      className={`absolute inset-0 z-50 flex flex-col items-center justify-center bg-zinc-950/95 backdrop-blur-md transition-opacity duration-500 p-6 ${
+      className={`absolute inset-0 z-40 flex flex-col items-center justify-center bg-zinc-950/95 backdrop-blur-md transition-opacity duration-500 p-6 ${
         isComplete ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
@@ -94,7 +105,7 @@ export default function LoadingScreen({
 
           <div className="flex items-center justify-between text-[11px] text-zinc-400 font-mono">
             <span>
-              {total > 0 ? `Item ${loaded} of ${total}` : 'Downloading GLB assets...'}
+              {total > 0 ? `Item ${loaded} of ${total}` : 'Initializing 3D scene...'}
             </span>
             <span className="font-bold text-amber-400">{Math.round(progress)}%</span>
           </div>
@@ -108,14 +119,14 @@ export default function LoadingScreen({
         )}
 
         {/* Timeout Fallback Card if loading takes long */}
-        {takingLong && (
+        {takingLong && !isComplete && (
           <div className="pt-4 border-t border-zinc-800 space-y-3 animate-fade-in text-xs">
             <div className="flex items-center justify-center gap-1.5 text-amber-400 font-medium">
               <AlertCircle className="w-4 h-4 shrink-0" />
               <span>Taking longer than expected?</span>
             </div>
             <p className="text-zinc-400 text-[11px] leading-relaxed">
-              Your connection or mobile GPU may still be compiling WebGL shaders. You can switch to our instant 2D floor plan or retry.
+              Your network or GPU may be slow compiling WebGL shaders. You can switch to our instant 2D floor plan or retry.
             </p>
             <div className="flex items-center justify-center gap-3 pt-1">
               <button

@@ -55,7 +55,7 @@ export interface Destination {
   heroImageUrl: string;
   galleryImages: GalleryItem[];
   isDemo: boolean;
-  reconstructionType: 'Illustrative Reconstruction' | 'Historical Scan' | 'Museum Curation';
+  reconstructionType: 'Illustrative Reconstruction' | 'Educational Recreation' | 'Architectural Study';
   availableModes: ExplorationMode[];
   highlights: ArchitecturalHighlight[];
   historicalContext: HistoricalContext;

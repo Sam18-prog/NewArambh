@@ -25,6 +25,7 @@ interface Fallback2DViewProps {
   destinationName: string;
   onSwitchTo3D?: () => void;
   canSwitchTo3D?: boolean;
+  webGLError?: string;
 }
 
 export default function Fallback2DView({
@@ -32,6 +33,7 @@ export default function Fallback2DView({
   destinationName,
   onSwitchTo3D,
   canSwitchTo3D = true,
+  webGLError,
 }: Fallback2DViewProps) {
   const hotspots: EducationalHotspot[] = getHotspotsByDestination(destinationId);
   const [selectedHotspotIndex, setSelectedHotspotIndex] = useState(0);
@@ -62,17 +64,34 @@ export default function Fallback2DView({
         </div>
 
         {/* Switch to 3D Button if available */}
-        {canSwitchTo3D && onSwitchTo3D && (
+        {canSwitchTo3D && onSwitchTo3D ? (
           <button
             type="button"
             onClick={onSwitchTo3D}
             className="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-amber-400 to-yellow-400 text-zinc-950 hover:from-amber-300 hover:to-yellow-300 shadow-md shadow-amber-500/20 active:scale-95 transition-all"
           >
             <Eye className="w-3.5 h-3.5" />
-            <span>Switch to 3D Walk</span>
+            <span>Switch to 3D Experience</span>
           </button>
+        ) : (
+          <span className="text-[11px] font-medium text-zinc-400 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800">
+            2D Mode Active
+          </span>
         )}
       </header>
+
+      {/* Helpful WebGL Unsupported Notice if 3D is genuinely unavailable */}
+      {webGLError && (
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-4">
+          <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200/90 flex items-center gap-3">
+            <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
+            <span>
+              <strong>Hardware Notice:</strong> {webGLError} All educational hotspots, architectural stories,
+              and academic citations are fully accessible through this 2D interactive floor plan.
+            </span>
+          </div>
+        </div>
+      )}
 
       {/* Main Educational Interface */}
       <main className="flex-1 max-w-7xl mx-auto w-full p-4 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">

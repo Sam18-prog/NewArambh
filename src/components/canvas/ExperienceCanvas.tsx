@@ -73,15 +73,36 @@ export default function ExperienceCanvas({
   destinationName,
   modelUrl = '/models/heritage-courtyard/scene.glb',
 }: ExperienceCanvasProps) {
-  // WebGL Support & 2D Fallback state (Client-side initializers)
+  // WebGL Support & 2D Fallback state
   const [webGLSupport] = useState(() => checkWebGLSupport());
   const [is2DMode, setIs2DMode] = useState(() => {
+    if (typeof window === 'undefined') return false;
     const support = checkWebGLSupport();
-    const wants2D =
-      !support.isSupported ||
-      (typeof window !== 'undefined' && window.location.search.includes('mode=2d'));
-    return wants2D;
+    const params = new URLSearchParams(window.location.search);
+    const explicitlyRequested2D = params.get('mode') === '2d';
+    // Enter 2D ONLY if explicitly requested via query param or if WebGL is genuinely unsupported
+    return explicitlyRequested2D || !support.isSupported;
   });
+
+  // Switch to 3D and clear mode=2d from URL
+  const handleSwitchTo3D = useCallback(() => {
+    setIs2DMode(false);
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('mode');
+      window.history.replaceState(null, '', url.pathname + (url.search ? url.search : ''));
+    }
+  }, []);
+
+  // Switch to 2D and sync mode=2d to URL
+  const handleSwitchTo2D = useCallback(() => {
+    setIs2DMode(true);
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      url.searchParams.set('mode', '2d');
+      window.history.replaceState(null, '', url.pathname + url.search);
+    }
+  }, []);
 
   const [mode, setMode] = useState<ExplorationMode>('walk');
   const [activeView, setActiveView] = useState<CameraPreset>('panoramic');
@@ -190,13 +211,22 @@ export default function ExperienceCanvas({
     };
   }, []);
 
-  // Request Pointer Lock on explicit user interaction (Desktop only)
+  // Request Pointer Lock on explicit user interaction (Desktop only) with safe error suppression
   const requestPointerLock = useCallback(() => {
     if (mode !== 'walk' || isTouchDevice || shouldPause) return;
 
     const canvasElement = containerRef.current?.querySelector('canvas');
     if (canvasElement && document.pointerLockElement !== canvasElement) {
-      canvasElement.requestPointerLock();
+      try {
+        const promise = canvasElement.requestPointerLock();
+        if (promise && typeof (promise as unknown as Promise<void>).catch === 'function') {
+          (promise as unknown as Promise<void>).catch(() => {
+            // Silently suppress expected user cancellation or focus mismatch
+          });
+        }
+      } catch {
+        // Silently suppress if browser does not support pointerLock
+      }
     }
   }, [mode, isTouchDevice, shouldPause]);
 
@@ -287,8 +317,9 @@ export default function ExperienceCanvas({
       <Fallback2DView
         destinationId={destinationId}
         destinationName={destinationName}
-        onSwitchTo3D={() => setIs2DMode(false)}
+        onSwitchTo3D={handleSwitchTo3D}
         canSwitchTo3D={webGLSupport.isSupported}
+        webGLError={!webGLSupport.isSupported ? webGLSupport.error : undefined}
       />
     );
   }
@@ -302,7 +333,10 @@ export default function ExperienceCanvas({
       }`}
     >
       {/* 2D Loading Screen connected to Drei useProgress */}
-      <LoadingScreen destinationName={destinationName} />
+      <LoadingScreen
+        destinationName={destinationName}
+        onSwitchTo2D={handleSwitchTo2D}
+      />
 
       {/* 2D Overlay HUD (Mode toggle, return, camera presets, controls help, pause, 2D switch) */}
       <ExperienceControlsHUD
@@ -318,7 +352,7 @@ export default function ExperienceCanvas({
         onToggleColliders={() => setShowColliders((prev) => !prev)}
         isTouchDevice={isTouchDevice}
         onPause={() => setIsPaused(true)}
-        onToggle2D={() => setIs2DMode(true)}
+        onToggle2D={handleSwitchTo2D}
       />
 
       {/* Guided Tour HUD (Active during Guided Tour Mode) */}
@@ -383,77 +417,83 @@ export default function ExperienceCanvas({
         onToggleColliders={() => setShowColliders((prev) => !prev)}
       />
 
-      {/* Core 3D WebGL Canvas */}
-      <Canvas
-        shadows
-        camera={{ position: [0, 1.7, 12], fov: 65, near: 0.1, far: 200 }}
-        gl={{
-          antialias: true,
-          alpha: false,
-          powerPreference: 'high-performance',
+      {/* Core 3D WebGL Canvas with Outer DOM Error Boundary */}
+      <ModelErrorBoundary
+        fallbackDestinationId={destinationId}
+        onFallback2D={handleSwitchTo2D}
+        onRetry={() => {
+          if (typeof window !== 'undefined') window.location.reload();
         }}
-        className="w-full h-full"
       >
-        <Suspense fallback={null}>
-          {/* Lighting, Sky & Fog Environment */}
-          <SceneEnvironment />
+        <Canvas
+          shadows
+          camera={{ position: [0, 1.7, 12], fov: 65, near: 0.1, far: 200 }}
+          gl={{
+            antialias: true,
+            alpha: false,
+            powerPreference: 'high-performance',
+          }}
+          className="w-full h-full"
+        >
+          <Suspense fallback={null}>
+            {/* Lighting, Sky & Fog Environment */}
+            <SceneEnvironment />
 
-          {/* Model Loading with Error Boundary */}
-          <ModelErrorBoundary fallbackDestinationId={destinationId}>
+            {/* Model Loading */}
             <WorldModel modelUrl={modelUrl} />
-          </ModelErrorBoundary>
 
-          {/* Educational Hotspots & Proximity Manager */}
-          <HotspotManager
-            hotspots={hotspots}
-            onNearbyChange={setNearbyHotspot}
-            onSelect={setSelectedHotspot}
-            nearbyHotspotId={nearbyHotspot?.id}
-          />
-
-          {/* Physical Collision Wireframe Overlay (Visual Inspection) */}
-          <CollisionSystem colliders={COURTYARD_COLLIDERS} visible={showColliders} />
-
-          {/* Mode 1: First-Person Walk Mode Player Controller */}
-          {mode === 'walk' && !isTourActive && (
-            <PlayerController
-              enabled={true}
-              isLocked={isPointerLocked}
-              spawnPosition={[0, 1.7, 12]}
-              walkSpeed={4.8}
-              sprintSpeed={7.5}
-              mouseSensitivity={0.0022}
-              boundaries={{ minX: -18.5, maxX: 18.5, minZ: -18.5, maxZ: 18.5 }}
-              mobileInputRef={mobileInput}
-              resetSignal={resetSignal}
+            {/* Educational Hotspots & Proximity Manager */}
+            <HotspotManager
+              hotspots={hotspots}
+              onNearbyChange={setNearbyHotspot}
+              onSelect={setSelectedHotspot}
+              nearbyHotspotId={nearbyHotspot?.id}
             />
-          )}
 
-          {/* Mode 2: Model Inspection Mode with OrbitControls */}
-          {mode === 'inspect' && !isTourActive && (
-            <>
-              <SmoothCameraController activeView={activeView} controlsRef={controlsRef} />
-              <OrbitControls
-                ref={controlsRef}
-                makeDefault
-                maxPolarAngle={Math.PI / 2 - 0.04} // Prevent camera going beneath ground
-                minDistance={3.5}
-                maxDistance={65}
-                enableDamping
-                dampingFactor={0.06}
+            {/* Physical Collision Wireframe Overlay (Visual Inspection) */}
+            <CollisionSystem colliders={COURTYARD_COLLIDERS} visible={showColliders} />
+
+            {/* Mode 1: First-Person Walk Mode Player Controller */}
+            {mode === 'walk' && !isTourActive && (
+              <PlayerController
+                enabled={true}
+                isLocked={isPointerLocked}
+                spawnPosition={[0, 1.7, 12]}
+                walkSpeed={4.8}
+                sprintSpeed={7.5}
+                mouseSensitivity={0.0022}
+                boundaries={{ minX: -18.5, maxX: 18.5, minZ: -18.5, maxZ: 18.5 }}
+                mobileInputRef={mobileInput}
+                resetSignal={resetSignal}
               />
-            </>
-          )}
+            )}
 
-          {/* Mode 3: Guided Tour Waypoint Navigator */}
-          {isTourActive && (
-            <GuidedTourNavigator
-              activeStop={COURTYARD_TOUR_STOPS[tourStopIndex]}
-              enabled={isTourActive}
-            />
-          )}
-        </Suspense>
-      </Canvas>
+            {/* Mode 2: Model Inspection Mode with OrbitControls */}
+            {mode === 'inspect' && !isTourActive && (
+              <>
+                <SmoothCameraController activeView={activeView} controlsRef={controlsRef} />
+                <OrbitControls
+                  ref={controlsRef}
+                  makeDefault
+                  maxPolarAngle={Math.PI / 2 - 0.04} // Prevent camera going beneath ground
+                  minDistance={3.5}
+                  maxDistance={65}
+                  enableDamping
+                  dampingFactor={0.06}
+                />
+              </>
+            )}
+
+            {/* Mode 3: Guided Tour Waypoint Navigator */}
+            {isTourActive && (
+              <GuidedTourNavigator
+                activeStop={COURTYARD_TOUR_STOPS[tourStopIndex]}
+                enabled={isTourActive}
+              />
+            )}
+          </Suspense>
+        </Canvas>
+      </ModelErrorBoundary>
     </div>
   );
 }

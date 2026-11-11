@@ -16,8 +16,8 @@ export default function FeaturedDestination() {
             Featured Destination
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">
-            Experience our first functional 3D digital demonstration—crafted using open-access
-            heritage scans, PBR textures, and historical research.
+            An illustrative, procedurally generated architectural reconstruction informed by
+            historical research and documented heritage references.
           </p>
         </div>
 
