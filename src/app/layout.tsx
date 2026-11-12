@@ -10,30 +10,29 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://newarambh.netlify.app'),
   title: {
-    default: 'NewArambh — Explore the World Beyond Boundaries',
+    default: 'NewArambh — Walk Through History, From Anywhere',
     template: '%s | NewArambh',
   },
   description:
-    'An immersive 3D virtual cultural heritage platform. Walk through digitally reconstructed historic monuments, temples, and havelis with first-person agency and scholarly curation.',
+    'Experience the world’s cultural heritage, sacred monuments, and architectural wonders through immersive 3D exploration.',
   keywords: [
     'virtual heritage',
     '3D cultural tourism',
+    'Taj Mahal 3D',
     'Three.js',
     'React Three Fiber',
     'architectural history',
-    'mandapa',
-    'stepwell',
-    'jharokha',
-    'jali',
+    'Mughal architecture',
+    'Charbagh',
     'open access culture',
   ],
   authors: [{ name: 'NewArambh Cultural Heritage Initiative' }],
   creator: 'NewArambh',
   publisher: 'NewArambh',
   openGraph: {
-    title: 'NewArambh — Explore the World Beyond Boundaries',
+    title: 'NewArambh — Walk Through History, From Anywhere',
     description:
-      'Immersive 3D cultural destinations in your browser. Walk freely, inspect sacred stone carvings, and experience curated historical tours.',
+      'Experience the world’s cultural heritage, sacred monuments, and architectural wonders through immersive 3D exploration.',
     url: 'https://newarambh.netlify.app',
     siteName: 'NewArambh',
     images: [
@@ -41,7 +40,7 @@ export const metadata: Metadata = {
         url: '/images/destinations/hero-taj-sunset.jpg',
         width: 1200,
         height: 630,
-        alt: 'NewArambh 3D Cultural Platform',
+        alt: 'NewArambh 3D Cultural Platform — The Taj Mahal',
       },
     ],
     locale: 'en_US',
@@ -49,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NewArambh — Explore the World Beyond Boundaries',
+    title: 'NewArambh — Walk Through History, From Anywhere',
     description:
-      'Immersive 3D cultural destinations in your browser. Walk through historic courtyards with first-person freedom.',
+      'Experience the world’s cultural heritage, sacred monuments, and architectural wonders through immersive 3D exploration.',
     images: ['/images/destinations/hero-taj-sunset.jpg'],
   },
   robots: {

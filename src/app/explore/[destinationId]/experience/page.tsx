@@ -25,10 +25,7 @@ export default async function ExperiencePortalPage({
   }
 
   // Model path for demonstration environment
-  const modelUrl =
-    destination.id === 'heritage-courtyard'
-      ? '/models/heritage-courtyard/scene.glb'
-      : '/models/heritage-courtyard/scene.glb';
+  const modelUrl = '/models/taj-mahal/scene.glb';
 
   return (
     <main className="w-screen h-screen overflow-hidden bg-[#0c0603]">

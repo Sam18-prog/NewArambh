@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
 import destinationsData from '@/data/destinations.json';
-import courtyardHotspotsData from '@/data/hotspots/heritage-courtyard.json';
+import { getHotspotsByDestination } from '@/lib/hotspots/getHotspots';
 import { Destination } from '@/types/destination';
 import { EducationalHotspot } from '@/types/hotspot';
 import {
@@ -27,7 +27,6 @@ import {
 } from 'lucide-react';
 
 const destinations: Destination[] = destinationsData as Destination[];
-const courtyardHotspots: EducationalHotspot[] = courtyardHotspotsData as EducationalHotspot[];
 
 export async function generateStaticParams() {
   return destinations.map((d) => ({
@@ -48,8 +47,7 @@ export default async function DestinationDetailPage({
   }
 
   const isDemo = destination.isDemo;
-  const isCourtyard = destination.id === 'heritage-courtyard';
-  const hotspotsList = isCourtyard ? courtyardHotspots : [];
+  const hotspotsList = isDemo ? getHotspotsByDestination(destination.id) : [];
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col selection:bg-amber-500/30 selection:text-amber-200">
@@ -413,7 +411,7 @@ export default async function DestinationDetailPage({
                   </div>
                   <h3 className="text-xl font-bold text-white">Ready to Enter?</h3>
                   <p className="text-xs text-zinc-400 leading-relaxed">
-                    Step directly into the 3D environment. Explore the courtyard, inspect stone
+                    Step directly into the 3D environment. Explore the architectural complex, inspect white marble
                     carvings, and experience the guided path.
                   </p>
                 </div>

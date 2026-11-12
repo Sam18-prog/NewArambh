@@ -10,7 +10,7 @@ import {
   Sparkles,
   CheckCircle2,
 } from 'lucide-react';
-import { COURTYARD_TOUR_STOPS } from '@/data/tours/courtyardTour';
+import { TAJ_MAHAL_TOUR_STOPS } from '@/data/tours/tajMahalTour';
 
 interface TourCompletionModalProps {
   isOpen: boolean;
@@ -46,7 +46,7 @@ export default function TourCompletionModal({
             Journey Completed
           </h2>
           <p className="text-xs sm:text-sm text-zinc-300 max-w-sm mx-auto leading-relaxed">
-            You have explored all 5 architectural milestones of the {destinationName} illustrative reconstruction.
+            You have explored all 5 architectural milestones of {destinationName}.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function TourCompletionModal({
             Explored Architectural Landmarks
           </span>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-            {COURTYARD_TOUR_STOPS.map((stop) => (
+            {TAJ_MAHAL_TOUR_STOPS.map((stop) => (
               <div key={stop.id} className="flex items-center gap-2 text-zinc-200">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 <span className="font-medium truncate">{stop.name}</span>

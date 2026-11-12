@@ -100,144 +100,198 @@ export default function Fallback2DView({
           <div className="p-4 sm:p-6 rounded-3xl bg-zinc-900/50 border border-zinc-800 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-bold uppercase tracking-wider text-amber-400 flex items-center gap-2">
-                <Landmark className="w-4 h-4" /> Courtyard Floor Plan
+                <Landmark className="w-4 h-4" /> Taj Mahal Site Plan
               </h2>
               <span className="text-[10px] font-mono text-zinc-500">
                 Click pins to explore
               </span>
             </div>
 
-            {/* Architectural SVG Map */}
-            <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-[#18110a] border border-amber-900/40 p-2 shadow-inner">
+            {/* Architectural SVG Map of the Taj Mahal Complex */}
+            <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-[#0d141e] border border-amber-900/40 p-2 shadow-inner">
               <svg
                 viewBox="0 0 500 500"
                 className="w-full h-full select-none"
-                aria-label="Courtyard Architectural Floor Plan"
+                aria-label="Taj Mahal Complex Architectural Floor Plan"
               >
                 <defs>
                   <pattern
-                    id="stoneGrid"
-                    width="25"
-                    height="25"
+                    id="marbleGrid"
+                    width="20"
+                    height="20"
                     patternUnits="userSpaceOnUse"
                   >
                     <path
-                      d="M 25 0 L 0 0 0 25"
+                      d="M 20 0 L 0 0 0 20"
                       fill="none"
-                      stroke="#452a16"
+                      stroke="#cbd5e1"
                       strokeWidth="0.5"
-                      opacity="0.4"
+                      opacity="0.3"
                     />
+                  </pattern>
+                  <pattern
+                    id="gardenTexture"
+                    width="16"
+                    height="16"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <rect width="16" height="16" fill="#1b4332" />
+                    <circle cx="8" cy="8" r="1.5" fill="#2d6a4f" opacity="0.6" />
                   </pattern>
                 </defs>
 
-                {/* Ground Plinth Grid */}
-                <rect width="500" height="500" fill="#1f160e" />
-                <rect x="30" y="30" width="440" height="440" fill="url(#stoneGrid)" />
+                {/* Outer Site Ground */}
+                <rect width="500" height="500" fill="#0f172a" />
 
-                {/* Perimeter Walls */}
-                <rect x="25" y="25" width="450" height="15" fill="#8c582f" rx="2" />
-                <rect x="25" y="460" width="450" height="15" fill="#8c582f" rx="2" />
-                <rect x="25" y="25" width="15" height="450" fill="#8c582f" rx="2" />
-                <rect x="460" y="25" width="15" height="450" fill="#8c582f" rx="2" />
+                {/* Yamuna River (North Riverfront) */}
+                <rect x="0" y="0" width="500" height="42" fill="#1e3a5f" opacity="0.9" />
+                <path d="M 0 32 Q 125 38 250 32 T 500 32" fill="none" stroke="#38bdf8" strokeWidth="1.2" opacity="0.7" />
+                <text x="250" y="22" fill="#93c5fd" fontSize="9" fontWeight="bold" letterSpacing="2" textAnchor="middle" fontFamily="sans-serif">
+                  YAMUNA RIVER (NORTH)
+                </text>
 
-                {/* Central Mandapa Octagonal Plinth */}
-                <polygon
-                  points="250,150 320,180 350,250 320,320 250,350 180,320 150,250 180,180"
-                  fill="#3d2413"
-                  stroke="#d97706"
-                  strokeWidth="2"
-                />
-                <circle cx="250" cy="250" r="45" fill="#54331a" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="3 3" />
+                {/* Red Sandstone Riverfront Terrace (Chameli Farsh) */}
+                <rect x="60" y="48" width="380" height="140" fill="#8f3c2c" stroke="#6e2c1e" strokeWidth="1.5" rx="3" />
 
-                {/* 8 Mandapa Pillars */}
+                {/* White Makrana Marble Plinth (Marmar Farsh) */}
+                <rect x="135" y="55" width="230" height="125" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="2" rx="2" />
+                <rect x="135" y="55" width="230" height="125" fill="url(#marbleGrid)" />
+
+                {/* Four Corner Minarets */}
                 {[
-                  [250, 175], [305, 195], [325, 250], [305, 305],
-                  [250, 325], [195, 305], [175, 250], [195, 195],
-                ].map(([cx, cy], idx) => (
-                  <circle key={idx} cx={cx} cy={cy} r="6" fill="#fef3c7" stroke="#92400e" strokeWidth="1.5" />
+                  { cx: 146, cy: 66, label: 'NW Minaret' },
+                  { cx: 354, cy: 66, label: 'NE Minaret' },
+                  { cx: 146, cy: 169, label: 'SW Minaret' },
+                  { cx: 354, cy: 169, label: 'SE Minaret' },
+                ].map((m, idx) => (
+                  <g key={idx}>
+                    <polygon
+                      points={`${m.cx-8},${m.cy-4} ${m.cx-4},${m.cy-8} ${m.cx+4},${m.cy-8} ${m.cx+8},${m.cy-4} ${m.cx+8},${m.cy+4} ${m.cx+4},${m.cy+8} ${m.cx-4},${m.cy+8} ${m.cx-8},${m.cy+4}`}
+                      fill="#e2e8f0"
+                      stroke="#94a3b8"
+                      strokeWidth="1.2"
+                    />
+                    <circle cx={m.cx} cy={m.cy} r="5" fill="#ffffff" stroke="#64748b" strokeWidth="1" />
+                    <circle cx={m.cx} cy={m.cy} r="1.5" fill="#f59e0b" />
+                  </g>
                 ))}
 
-                {/* Baori Stepwell Terraced Cistern (West) */}
-                <g transform="translate(60, 200)">
-                  <rect x="0" y="0" width="100" height="100" fill="#29180c" stroke="#b45309" strokeWidth="2" rx="4" />
-                  <rect x="15" y="15" width="70" height="70" fill="#1b3a4b" stroke="#38bdf8" strokeWidth="1" />
-                  <rect x="28" y="28" width="44" height="44" fill="#0284c7" />
-                  <text x="50" y="55" fill="#bae6fd" fontSize="9" textAnchor="middle" fontFamily="sans-serif">
-                    Baori Tank
+                {/* Main Mausoleum (Baghdadi Octagon Plan) */}
+                <polygon
+                  points="215,75 285,75 315,95 315,140 285,160 215,160 185,140 185,95"
+                  fill="#ffffff"
+                  stroke="#cbd5e1"
+                  strokeWidth="2"
+                />
+
+                {/* Four Vaulted Arched Iwans (Pishtaq Recesses) */}
+                <rect x="232" y="73" width="36" height="10" fill="#1e2229" />
+                <rect x="232" y="152" width="36" height="10" fill="#1e2229" />
+                <rect x="183" y="106" width="10" height="36" fill="#1e2229" />
+                <rect x="307" y="106" width="10" height="36" fill="#1e2229" />
+
+                {/* Central Bulbous Onion Dome & Gilded Kalash Spire */}
+                <circle cx="250" cy="118" r="26" fill="#f1f5f9" stroke="#f59e0b" strokeWidth="2" />
+                <circle cx="250" cy="118" r="20" fill="#ffffff" stroke="#94a3b8" strokeWidth="1" strokeDasharray="3 3" />
+                <circle cx="250" cy="118" r="4" fill="#f59e0b" />
+
+                {/* Four Roof Chhatris */}
+                {[
+                  [205, 96], [295, 96],
+                  [205, 139], [295, 139],
+                ].map(([cx, cy], idx) => (
+                  <circle key={idx} cx={cx} cy={cy} r="6" fill="#e2e8f0" stroke="#f59e0b" strokeWidth="1.2" />
+                ))}
+
+                {/* South Staircase from Garden to Marble Plinth */}
+                <rect x="236" y="180" width="28" height="10" fill="#ffffff" stroke="#cbd5e1" strokeWidth="1" />
+
+                {/* Charbagh Four-Part Paradise Gardens */}
+                <rect x="60" y="196" width="380" height="236" fill="#1b281d" rx="2" />
+
+                {/* 4 Green Lawn Quadrants */}
+                <rect x="74" y="206" width="156" height="98" fill="url(#gardenTexture)" rx="4" stroke="#2d6a4f" strokeWidth="1" />
+                <rect x="270" y="206" width="156" height="98" fill="url(#gardenTexture)" rx="4" stroke="#2d6a4f" strokeWidth="1" />
+                <rect x="74" y="322" width="156" height="98" fill="url(#gardenTexture)" rx="4" stroke="#2d6a4f" strokeWidth="1" />
+                <rect x="270" y="322" width="156" height="98" fill="url(#gardenTexture)" rx="4" stroke="#2d6a4f" strokeWidth="1" />
+
+                {/* East-West Transverse Paved Walkway */}
+                <rect x="60" y="306" width="380" height="14" fill="#8f3c2c" />
+
+                {/* North-South Axial Reflecting Canal (Al-Hawd al-Kawthar) */}
+                <rect x="238" y="196" width="24" height="236" fill="#8f3c2c" />
+                <rect x="242" y="198" width="16" height="232" fill="#0284c7" stroke="#38bdf8" strokeWidth="1" />
+
+                {/* Cypress Trees Line along the Reflecting Pool */}
+                {[214, 238, 262, 342, 366, 390].map((treeY, idx) => (
+                  <g key={idx}>
+                    <circle cx="234" cy={treeY} r="3.5" fill="#143d24" stroke="#225e36" strokeWidth="0.8" />
+                    <circle cx="266" cy={treeY} r="3.5" fill="#143d24" stroke="#225e36" strokeWidth="0.8" />
+                  </g>
+                ))}
+
+                {/* Center Raised Lotus Pool (Al-Hawd al-Kawthar Tank) */}
+                <rect x="228" y="296" width="44" height="44" fill="#ffffff" stroke="#cbd5e1" strokeWidth="1.5" rx="3" />
+                <circle cx="250" cy="318" r="16" fill="#0284c7" stroke="#38bdf8" strokeWidth="1.2" />
+                <circle cx="250" cy="318" r="4" fill="#f59e0b" />
+
+                {/* Southern Great Gate (Darwaza-i-rauza) */}
+                <g transform="translate(190, 442)">
+                  <rect x="0" y="0" width="120" height="34" fill="#8f3c2c" stroke="#6e2c1e" strokeWidth="1.5" rx="3" />
+                  <rect x="36" y="6" width="48" height="28" fill="#1e2229" rx="2" />
+                  <rect x="42" y="12" width="36" height="22" fill="#3b1d15" rx="1" />
+                  <circle cx="6" cy="17" r="7" fill="#8f3c2c" stroke="#f59e0b" strokeWidth="1" />
+                  <circle cx="114" cy="17" r="7" fill="#8f3c2c" stroke="#f59e0b" strokeWidth="1" />
+                  <text x="60" y="26" fill="#fde68a" fontSize="8" fontWeight="bold" textAnchor="middle" fontFamily="sans-serif">
+                    DARWAZA-I-RAUZA
                   </text>
                 </g>
 
-                {/* North Jharokha Balcony */}
-                <g transform="translate(200, 25)">
-                  <polygon points="0,0 100,0 85,25 15,25" fill="#a16207" stroke="#fef08a" strokeWidth="1" />
-                  <text x="50" y="16" fill="#fef3c7" fontSize="8" textAnchor="middle" fontFamily="sans-serif">
-                    Jharokha
-                  </text>
-                </g>
+                {/* 5 Interactive Numbered Clickable Pins */}
 
-                {/* South Torana Gateway */}
-                <g transform="translate(190, 440)">
-                  <rect x="0" y="0" width="120" height="12" fill="#78350f" rx="2" />
-                  <circle cx="20" cy="6" r="8" fill="#f59e0b" />
-                  <circle cx="100" cy="6" r="8" fill="#f59e0b" />
-                  <text x="60" y="24" fill="#fde68a" fontSize="8" textAnchor="middle" fontFamily="sans-serif">
-                    Torana Gateway
-                  </text>
-                </g>
-
-                {/* East Jali Screen Gallery */}
-                <g transform="translate(460, 190)">
-                  <rect x="-8" y="0" width="12" height="120" fill="#b45309" rx="2" />
-                  <text x="-12" y="65" fill="#fde68a" fontSize="8" textAnchor="middle" transform="rotate(-90 -12 65)" fontFamily="sans-serif">
-                    Jali Gallery
-                  </text>
-                </g>
-
-                {/* 5 Interactive Numbered Pins */}
-                {/* Pin 1: Torana Gateway (South: x=250, y=425) */}
+                {/* Pin 1: Main Mausoleum (Rauza-i-Munawwara: x=250, y=138) */}
                 <g
-                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'torana-gateway'))}
+                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'hotspot-mausoleum'))}
                   className="cursor-pointer group"
                 >
-                  <circle cx="250" cy="425" r="16" fill={activeHotspot.id === 'torana-gateway' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2" />
-                  <text x="250" y="430" fill={activeHotspot.id === 'torana-gateway' ? '#09090b' : '#ffffff'} fontSize="12" fontWeight="bold" textAnchor="middle">1</text>
+                  <circle cx="250" cy="138" r="15" fill={activeHotspot.id === 'hotspot-mausoleum' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2.5" />
+                  <text x="250" y="143" fill={activeHotspot.id === 'hotspot-mausoleum' ? '#09090b' : '#ffffff'} fontSize="11" fontWeight="bold" textAnchor="middle">1</text>
                 </g>
 
-                {/* Pin 2: Baori Stepwell (West: x=110, y=250) */}
+                {/* Pin 2: Central Onion Dome & Chhatris (Center: x=250, y=105) */}
                 <g
-                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'baori-stepwell'))}
+                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'hotspot-dome'))}
                   className="cursor-pointer group"
                 >
-                  <circle cx="110" cy="250" r="16" fill={activeHotspot.id === 'baori-stepwell' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2" />
-                  <text x="110" y="255" fill={activeHotspot.id === 'baori-stepwell' ? '#09090b' : '#ffffff'} fontSize="12" fontWeight="bold" textAnchor="middle">2</text>
+                  <circle cx="250" cy="105" r="14" fill={activeHotspot.id === 'hotspot-dome' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2" />
+                  <text x="250" y="110" fill={activeHotspot.id === 'hotspot-dome' ? '#09090b' : '#ffffff'} fontSize="11" fontWeight="bold" textAnchor="middle">2</text>
                 </g>
 
-                {/* Pin 3: Central Mandapa (Center: x=250, y=250) */}
+                {/* Pin 3: Four Monumental Minarets (SE Minaret: x=354, y=169) */}
                 <g
-                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'mandapa-central'))}
+                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'hotspot-minarets'))}
                   className="cursor-pointer group"
                 >
-                  <circle cx="250" cy="250" r="18" fill={activeHotspot.id === 'mandapa-central' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2.5" />
-                  <text x="250" y="255" fill={activeHotspot.id === 'mandapa-central' ? '#09090b' : '#ffffff'} fontSize="13" fontWeight="bold" textAnchor="middle">3</text>
+                  <circle cx="354" cy="169" r="14" fill={activeHotspot.id === 'hotspot-minarets' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2" />
+                  <text x="354" y="174" fill={activeHotspot.id === 'hotspot-minarets' ? '#09090b' : '#ffffff'} fontSize="11" fontWeight="bold" textAnchor="middle">3</text>
                 </g>
 
-                {/* Pin 4: Stone Jharokha (North: x=250, y=65) */}
+                {/* Pin 4: Grand Pishtaq Iwan (South Portal: x=250, y=164) */}
                 <g
-                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'jharokha-balcony'))}
+                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'hotspot-pishtaq'))}
                   className="cursor-pointer group"
                 >
-                  <circle cx="250" cy="65" r="16" fill={activeHotspot.id === 'jharokha-balcony' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2" />
-                  <text x="250" y="70" fill={activeHotspot.id === 'jharokha-balcony' ? '#09090b' : '#ffffff'} fontSize="12" fontWeight="bold" textAnchor="middle">4</text>
+                  <circle cx="250" cy="164" r="14" fill={activeHotspot.id === 'hotspot-pishtaq' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2" />
+                  <text x="250" y="169" fill={activeHotspot.id === 'hotspot-pishtaq' ? '#09090b' : '#ffffff'} fontSize="11" fontWeight="bold" textAnchor="middle">4</text>
                 </g>
 
-                {/* Pin 5: Jali Screen (East: x=435, y=250) */}
+                {/* Pin 5: Charbagh Gardens & Reflecting Pool (Pool Tank: x=250, y=318) */}
                 <g
-                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'jali-screen'))}
+                  onClick={() => setSelectedHotspotIndex(hotspots.findIndex(h => h.id === 'hotspot-reflecting-pool'))}
                   className="cursor-pointer group"
                 >
-                  <circle cx="435" cy="250" r="16" fill={activeHotspot.id === 'jali-screen' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2" />
-                  <text x="435" y="255" fill={activeHotspot.id === 'jali-screen' ? '#09090b' : '#ffffff'} fontSize="12" fontWeight="bold" textAnchor="middle">5</text>
+                  <circle cx="250" cy="318" r="15" fill={activeHotspot.id === 'hotspot-reflecting-pool' ? '#f59e0b' : '#18181b'} stroke="#fef08a" strokeWidth="2.5" />
+                  <text x="250" y="323" fill={activeHotspot.id === 'hotspot-reflecting-pool' ? '#09090b' : '#ffffff'} fontSize="11" fontWeight="bold" textAnchor="middle">5</text>
                 </g>
               </svg>
             </div>

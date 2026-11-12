@@ -73,7 +73,7 @@ export default function CategoryGrid() {
           Explore by Category
         </h2>
         <p className="text-zinc-400 text-sm sm:text-base">
-          Navigate diverse realms of heritage—from grand royal courtyards to ancient rock-cut canyons
+          Navigate diverse realms of heritage—from the monumental Taj Mahal to ancient rock-cut canyons
           and sacred temple colonnades.
         </p>
       </div>

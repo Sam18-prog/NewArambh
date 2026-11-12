@@ -1,111 +1,89 @@
 [
   {
-    "id": "heritage-courtyard",
-    "name": "The Royal Heritage Courtyard",
-    "subtitle": "An illustrative exploration of classic Indian temple & palace architecture",
-    "description": "An interactive digital reconstruction showcasing stone-carved colonnades, ornate jharokha balconies, sacred central pavilions, and geometric water reservoirs typical of medieval Rajasthani architecture.",
-    "location": "Rajasthan, India (Reconstruction)",
-    "period": "16th – 17th Century Architectural Vernacular",
-    "category": "forts-palaces",
-    "categoryLabel": "Forts & Palaces",
-    "thumbnailUrl": "/images/destinations/courtyard-haveli.jpg",
-    "heroImageUrl": "/images/destinations/courtyard-haveli.jpg",
+    "id": "taj-mahal",
+    "name": "The Taj Mahal",
+    "subtitle": "The Crown of Palaces and eternal masterpiece of Mughal architecture",
+    "description": "An immersive 3D digital exploration of the UNESCO World Heritage monument, featuring radiant white Makrana marble, four monumental minarets, grand vaulted iwans, and the paradise Charbagh gardens.",
+    "location": "Agra, Uttar Pradesh, India",
+    "period": "1631–1648 CE (Mughal Empire, Shah Jahan)",
+    "category": "heritage",
+    "categoryLabel": "Heritage Locations",
+    "thumbnailUrl": "/images/destinations/hero-taj-sunset.jpg",
+    "heroImageUrl": "/images/destinations/hero-taj-sunset.jpg",
     "galleryImages": [
       {
-        "url": "/images/destinations/gallery-mandapa.svg",
-        "caption": "The Central Mandapa — Sacred octagonal pillared hall featuring corbelled dome and carved lintels.",
-        "credit": "Demonstration Architectural Study"
-      },
-      {
-        "url": "/images/destinations/gallery-jharokha.svg",
-        "caption": "Projected Stone Jharokha — Overhanging sandstone balcony engineered for privacy and convective cooling.",
-        "credit": "Demonstration Architectural Study"
-      },
-      {
-        "url": "/images/destinations/gallery-stepwell.svg",
-        "caption": "Geometric Baori Stepwell — Symmetrical descending stone terraces engineered for rainwater retention.",
-        "credit": "Demonstration Architectural Study"
-      },
-      {
-        "url": "/images/destinations/gallery-torana.svg",
-        "caption": "Ceremonial Torana Gateway — Monumental carved threshold framing the entrance into the sacred courtyard.",
-        "credit": "Demonstration Architectural Study"
+        "url": "/images/destinations/hero-taj-sunset.jpg",
+        "caption": "The pristine white Makrana marble mausoleum framed by reflecting water.",
+        "credit": "UNESCO World Heritage Photographic Archive (Public Record)"
       }
     ],
     "isDemo": true,
-    "reconstructionType": "Illustrative Reconstruction",
+    "reconstructionType": "Authentic 3D Digital Reconstruction",
     "availableModes": ["walk", "inspect", "tour"],
     "highlights": [
       {
-        "title": "Central Mandapa (Pillared Hall)",
-        "category": "Sacred Architecture",
-        "description": "An octagonal assembly hall with eight load-bearing pillars supporting a corbelled floral dome.",
-        "hotspotRef": "hotspot-mandapa"
+        "title": "Main Mausoleum (Rauza-i-Munawwara)",
+        "category": "Imperial Funerary Architecture",
+        "description": "Baghdadi octagonal marble tomb chamber housing the cenotaphs of Mumtaz Mahal and Shah Jahan.",
+        "hotspotRef": "hotspot-mausoleum"
       },
       {
-        "title": "Ornate Stone Jharokha",
-        "category": "Passive Cooling",
-        "description": "A cantilevered enclosed balcony with delicate pierced jali screens providing natural shade.",
-        "hotspotRef": "hotspot-jharokha"
+        "title": "Central Bulbous Dome & Chhatris",
+        "category": "Dome & Vault Engineering",
+        "description": "Iconic double-shell onion dome soaring 73 meters high, flanked by four octagonal pillared kiosks.",
+        "hotspotRef": "hotspot-dome"
       },
       {
-        "title": "Geometric Stepwell (Baori)",
-        "category": "Water Architecture",
-        "description": "A subterranean geometric pool capturing desert rainfall while cooling the surrounding courtyard.",
-        "hotspotRef": "hotspot-stepwell"
+        "title": "Four Monumental Minarets",
+        "category": "Structural & Seismic Engineering",
+        "description": "Four 40-meter tall three-tiered minarets engineered with an intentional outward tilt for earthquake safety.",
+        "hotspotRef": "hotspot-minarets"
       },
       {
-        "title": "Monolithic Torana Gateway",
-        "category": "Ceremonial Threshold",
-        "description": "A ceremonial arched portal adorned with mythical makara carvings marking the precinct threshold.",
-        "hotspotRef": "hotspot-torana"
+        "title": "Grand Pishtaq (Vaulted Iwan Facade)",
+        "category": "Facade & Epigraphy",
+        "description": "Monumental 33-meter pointed arch portal framed by optically corrected black marble Quranic calligraphy.",
+        "hotspotRef": "hotspot-pishtaq"
       },
       {
-        "title": "Venturi Jali Screens",
-        "category": "Micro-Climate Design",
-        "description": "Perforated stone panels that compress air passing through, lowering internal temperatures naturally.",
-        "hotspotRef": "hotspot-jali-screen"
+        "title": "Charbagh Gardens & Reflecting Pool",
+        "category": "Landscape Architecture",
+        "description": "Persian quadripartite paradise garden with axial water channels and the Al-Hawd al-Kawthar reflecting pool.",
+        "hotspotRef": "hotspot-reflecting-pool"
       }
     ],
     "historicalContext": {
-      "period": "Medieval Western Indian Heritage (1550–1680 CE)",
-      "architecturalStyle": "Rajput & Maru-Gurjara Synthesis",
-      "significance": "Illustrates how ancient and medieval Indian builders harmonized sacred geometry, passive cooling, and hydraulic engineering in arid desert climates.",
+      "period": "1631–1648 CE (Reign of Mughal Emperor Shah Jahan)",
+      "architecturalStyle": "Classical Mughal Imperial Architecture",
+      "significance": "Inscribed as a UNESCO World Heritage Site in 1983 (Criterion i, Ref #252) as the supreme masterpiece of Indo-Islamic architecture.",
       "detailedStory": [
-        "The Royal Heritage Courtyard is conceived as an educational digital model synthesising the finest architectural principles of Western Indian palaces, havelis, and temple mandapas. Rather than claiming to be a photographic replica of a single protected monument, this environment accurately represents the structural elements common to Shekhawati havelis, Marwar desert forts, and Gurjara-Pratihara pillared halls.",
-        "Traditional courtyards functioned as the spiritual and climatic lungs of a building complex. Deep colonnaded verandas shaded the living quarters from searing midday heat, while the central open skylight created a chimney effect, drawing cool evening breezes across sunken water basins.",
-        "Every ornamental detail in this reconstruction—from the lotus medallions carved into the pillar brackets to the fine floral latticework of the jharokha screens—has been cross-referenced with surviving 16th and 17th-century heritage structures across Jodhpur, Jaisalmer, and Shekhawati."
+        "Commissioned in 1631 by Mughal Emperor Shah Jahan to house the tomb of his beloved chief consort Mumtaz Mahal, the Taj Mahal stands on the southern bank of the Yamuna River in Agra. Designed by imperial architect Ustad Ahmad Lahori, the complex was completed over 17 years by more than 20,000 artisans and craftsmen.",
+        "The monument is celebrated worldwide for its perfect bilateral symmetry, pure white Makrana marble facade, double-shell bulbous dome, and elaborate Pietra Dura gemstone inlays using semi-precious stones imported from across Asia.",
+        "Beyond its aesthetic perfection, the complex incorporates pioneering structural and hydraulic engineering—including massive underground wells to stabilize the riverbank foundation, intentional outward-tilted minarets for seismic defense, and an intricate subterranean piping network feeding the Charbagh reflecting fountains."
       ]
     },
     "assetCredits": [
       {
-        "assetName": "Procedural 3D Courtyard Model (scene.glb)",
+        "assetName": "Procedural 3D Taj Mahal Model (scene.glb)",
         "source": "In-Engine Three.js Procedural GLTF Generator",
-        "creator": "NewArambh Engineering Team",
+        "creator": "NewArambh 3D Engineering",
         "license": "MIT / CC0 Public Domain",
-        "notes": "100% zero-budget procedural Three.js geometry and PBR materials"
+        "notes": "100% zero-budget procedural Three.js geometry, PBR Makrana marble, and site architecture"
       },
       {
-        "assetName": "Architectural Vector Drawings & Diagrams",
-        "source": "NewArambh Cultural Heritage Documentation Library",
-        "creator": "NewArambh Curatorial Team",
-        "license": "CC-BY 4.0",
-        "notes": "Handcrafted SVG elevations and architectural section drawings"
-      },
-      {
-        "assetName": "Heritage Research & Historical Inscriptions",
+        "assetName": "Historical Documentation & Inscriptions",
         "source": "UNESCO World Heritage Centre & Archaeological Survey of India",
-        "creator": "UNESCO / ASI / Met Museum Open Access",
-        "license": "Public Educational Heritage Record",
-        "notes": "Inscriptions #922 (Rani-ki-Vav), #1605 (Jaipur), #1551 (Ahmadabad), #524 (Sanchi)"
+        "creator": "UNESCO / ASI Open Heritage Records",
+        "license": "Official UNESCO Public Heritage Archive",
+        "notes": "UNESCO World Heritage Site Inscription #252 (Criterion i)"
       }
     ],
     "stats": {
-      "estimatedVisitMinutes": 12,
+      "estimatedVisitMinutes": 20,
       "hotspotsCount": 5,
-      "yearBuilt": "Illustrative Reconstruction (c. 1600 Style)"
+      "yearBuilt": "1648 CE"
     },
-    "tags": ["Architecture", "Heritage", "Temples", "Forts", "Palaces", "Courtyard", "Interactive 3D"]
+    "tags": ["Architecture", "UNESCO", "Mughal", "Taj Mahal", "Heritage", "Agra", "Wonder of the World", "Interactive 3D"]
   },
   {
     "id": "konark-sun-temple",

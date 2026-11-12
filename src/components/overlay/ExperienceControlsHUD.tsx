@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 export type ExplorationMode = 'walk' | 'inspect' | 'tour';
-export type CameraPreset = 'panoramic' | 'mandapa' | 'stepwell' | 'torana';
+export type CameraPreset = 'panoramic' | 'mausoleum' | 'pool' | 'gate';
 
 interface ExperienceControlsHUDProps {
   destinationId: string;
@@ -340,38 +340,38 @@ export default function ExperienceControlsHUD({
 
               <button
                 type="button"
-                onClick={() => onSetCameraView('mandapa')}
+                onClick={() => onSetCameraView('mausoleum')}
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
-                  activeView === 'mandapa'
+                  activeView === 'mausoleum'
                     ? 'bg-amber-400 text-zinc-950 font-semibold'
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
                 }`}
               >
-                Mandapa
+                Mausoleum
               </button>
 
               <button
                 type="button"
-                onClick={() => onSetCameraView('stepwell')}
+                onClick={() => onSetCameraView('pool')}
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
-                  activeView === 'stepwell'
+                  activeView === 'pool'
                     ? 'bg-amber-400 text-zinc-950 font-semibold'
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
                 }`}
               >
-                Baori Stepwell
+                Reflecting Pool
               </button>
 
               <button
                 type="button"
-                onClick={() => onSetCameraView('torana')}
+                onClick={() => onSetCameraView('gate')}
                 className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
-                  activeView === 'torana'
+                  activeView === 'gate'
                     ? 'bg-amber-400 text-zinc-950 font-semibold'
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
                 }`}
               >
-                Torana Gate
+                Great Gate
               </button>
             </div>
           )

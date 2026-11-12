@@ -66,7 +66,7 @@ export default function Header() {
           {/* Primary CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Link
-              href="/explore/heritage-courtyard"
+              href="/explore/taj-mahal"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-zinc-950 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 shadow-md shadow-amber-500/20 hover:shadow-amber-500/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <Sparkles className="w-3.5 h-3.5" />
@@ -129,7 +129,7 @@ export default function Header() {
           </Link>
           <div className="pt-2">
             <Link
-              href="/explore/heritage-courtyard"
+              href="/explore/taj-mahal"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-sm font-semibold text-zinc-950 bg-amber-400 hover:bg-amber-300 shadow-md"
             >

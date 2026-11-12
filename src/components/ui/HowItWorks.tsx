@@ -159,7 +159,7 @@ export default function HowItWorks() {
             </p>
           </div>
           <Link
-            href="/explore/heritage-courtyard/experience?mode=2d"
+            href="/explore/taj-mahal/experience?mode=2d"
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full font-semibold text-zinc-950 bg-amber-400 hover:bg-amber-300 transition-colors shrink-0"
           >
             <span>Try 2D Floor Plan</span>

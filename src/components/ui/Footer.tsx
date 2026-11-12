@@ -42,8 +42,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/explore/heritage-courtyard" className="hover:text-amber-400 transition-colors">
-                  Demonstration Courtyard
+                <Link href="/explore/taj-mahal" className="hover:text-amber-400 transition-colors">
+                  The Taj Mahal (3D Demo)
                 </Link>
               </li>
               <li>

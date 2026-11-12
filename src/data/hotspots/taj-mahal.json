@@ -1,0 +1,212 @@
+[
+  {
+    "id": "hotspot-mausoleum",
+    "destinationId": "taj-mahal",
+    "name": "Main Mausoleum (Rauza-i-Munawwara)",
+    "hindiName": "मुख्य मकबरा (रौज़ा-ए-मुनव्वरा)",
+    "category": "Imperial Funerary Architecture",
+    "position": [0, 4.5, -20],
+    "interactionRadius": 6.5,
+    "shortDescription": "The radiant white marble tomb chamber housing the cenotaphs of Mumtaz Mahal and Mughal Emperor Shah Jahan.",
+    "detailedDescription": "The central mausoleum, known historically as the Rauza-i-Munawwara ('The Illumined Tomb'), represents the supreme pinnacle of Indo-Islamic architectural synthesis. Constructed between 1631 and 1648 CE from translucent Makrana white marble quarried in Rajasthan, the building follows a symmetrical Baghdadi octagonal plan (hasht-bihisht, or 'eight paradises'). The exterior glows under shifting sunlight—appearing soft pink at dawn, brilliant white at midday, and ethereal milky-blue under moonlight.",
+    "culturalSignificance": "Commissioned by the fifth Mughal Emperor Shah Jahan as an eternal tribute to his beloved chief consort Arjumand Banu Begum (Mumtaz Mahal), the mausoleum embodies spiritual allegories of paradise as described in the Holy Quran.",
+    "architecturalDetails": [
+      "Square plan measuring 56.6 meters per side with chamfered corners forming an unequal octagon (Baghdadi plan).",
+      "Clad entirely in fine white Makrana marble set over a brick and lime mortar masonry core.",
+      "Intricate Pietra Dura (Parchin Kari) floral inlays using 28 varieties of semi-precious stones including lapis lazuli, jade, crystal, turquoise, and carnelian.",
+      "Octagonal inner marble perforated jali screen (screen of light) enclosing the central cenotaphs."
+    ],
+    "gallery": [
+      {
+        "id": "taj-mausoleum-img-1",
+        "url": "/images/destinations/hero-taj-sunset.jpg",
+        "caption": "The pristine white Makrana marble mausoleum illuminated against the evening sky.",
+        "alt": "The Taj Mahal main mausoleum at sunset",
+        "attribution": "Public Domain Heritage Photographic Register",
+        "sourceUrl": "https://whc.unesco.org/en/list/252/"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Taj Mahal — UNESCO World Heritage Centre (Inscription #252)",
+        "url": "https://whc.unesco.org/en/list/252/",
+        "authorOrPublisher": "UNESCO World Heritage Centre",
+        "licenseNote": "Official UNESCO World Heritage Documentation"
+      },
+      {
+        "title": "Taj Mahal, Agra — Archaeological Survey of India",
+        "url": "https://asi.nic.in/taj-mahal-agra/",
+        "authorOrPublisher": "Archaeological Survey of India (ASI)",
+        "licenseNote": "Government of India Protected Monument Monograph"
+      }
+    ]
+  },
+  {
+    "id": "hotspot-dome",
+    "destinationId": "taj-mahal",
+    "name": "Central Bulbous Dome & Chhatris",
+    "hindiName": "केंद्रीय गुंबद एवं छतरियां",
+    "category": "Dome & Vault Engineering",
+    "position": [0, 20.0, -25.0],
+    "interactionRadius": 9.0,
+    "shortDescription": "The majestic double-shell onion dome soaring 73 meters high, flanked by four symmetrical pillared chhatris.",
+    "detailedDescription": "The central bulbous dome—traditionally termed the Amrud (guava dome) for its swelling profile—rises atop a 7-meter high cylindrical drum. Built using a double-shell structural system pioneered in Timurid Samarkand, the inner dome preserves human acoustic proportions inside the chamber, while the soaring outer shell dominates the Agra skyline. The apex is crowned by a carved lotus motif and a monumental gilded bronze finial (Kalash) measuring over 9.5 meters in height, topped with an Islamic crescent moon.",
+    "culturalSignificance": "The dome serves as the cosmic crown of the monument. In Islamic and Indian architecture, the dome symbolizes the vault of heaven resting upon the square earthly foundation below.",
+    "architecturalDetails": [
+      "Double-shell dome construction: outer shell rises 35 meters above the roof terrace; inner shell reaches 24 meters.",
+      "Bulbous onion contour with a high cylindrical drum (tambour) banded with inlaid marble moldings.",
+      "Four open octagonal chhatris (pillared kiosks) placed symmetrically at the roof corners to visually anchor the central dome.",
+      "Gilded bronze finial combining traditional Indian Kalash water-pot motifs with the Mughal crescent moon."
+    ],
+    "gallery": [
+      {
+        "id": "taj-dome-img-1",
+        "url": "/images/destinations/hero-taj-sunset.jpg",
+        "caption": "Symmetrical composition of the central dome flanked by corner pillared kiosks.",
+        "alt": "Taj Mahal central dome and chhatris",
+        "attribution": "Public Domain Heritage Photographic Register",
+        "sourceUrl": "https://whc.unesco.org/en/list/252/"
+      }
+    ],
+    "sources": [
+      {
+        "title": "The Complete Taj Mahal: And the Riverfront Gardens of Agra",
+        "url": "https://whc.unesco.org/en/list/252/",
+        "authorOrPublisher": "Ebba Koch (Thames & Hudson / UNESCO)",
+        "licenseNote": "Scholarly Architectural Monograph"
+      },
+      {
+        "title": "Taj Mahal World Heritage Inscription Records",
+        "url": "https://whc.unesco.org/en/list/252/",
+        "authorOrPublisher": "UNESCO World Heritage Centre",
+        "licenseNote": "Official UNESCO World Heritage Documentation"
+      }
+    ]
+  },
+  {
+    "id": "hotspot-minarets",
+    "destinationId": "taj-mahal",
+    "name": "Four Monumental Minarets",
+    "hindiName": "चार विशाल मीनारें",
+    "category": "Structural & Seismic Engineering",
+    "position": [24.5, 6.0, -0.5],
+    "interactionRadius": 7.0,
+    "shortDescription": "Four 40-meter tall three-tiered minarets engineered with an intentional outward tilt for earthquake protection.",
+    "detailedDescription": "Standing at the four corners of the elevated white marble terrace, each minaret rises over 40 meters into the sky. Divided into three equal vertical stages by projecting bracketed balconies, each minaret is capped by an eight-pillared octagonal chhatri cupola. Rather than being strictly perpendicular, Mughal royal architect Ustad Ahmad Lahori intentionally engineered the towers to tilt slightly outwards (approximately 0.7 degrees) away from the central mausoleum—ensuring that in the event of a catastrophic earthquake, the minarets would fall away from the sacred tomb.",
+    "culturalSignificance": "The four minarets frame the central tomb into a three-dimensional spatial cube. While traditionally used for the call to prayer (Adhan), here their function is primarily architectural balance, grandeur, and structural protection.",
+    "architecturalDetails": [
+      "Total height exceeding 40 meters from the marble terrace floor to the finial tips.",
+      "Three functional cantilevered ring balconies supported by decorative carved corbel brackets.",
+      "Subtle outward engineering inclination designed as proactive seismic safeguard.",
+      "Octagonal domed chhatris crowning each minaret matching the four roof kiosks of the central tomb."
+    ],
+    "gallery": [
+      {
+        "id": "taj-minaret-img-1",
+        "url": "/images/destinations/hero-taj-sunset.jpg",
+        "caption": "Corner minaret standing as a sentinel on the edge of the elevated marble terrace.",
+        "alt": "Monumental minaret of the Taj Mahal",
+        "attribution": "Public Domain Heritage Photographic Register",
+        "sourceUrl": "https://whc.unesco.org/en/list/252/"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Architectural Conservation of the Taj Mahal Minarets",
+        "url": "https://asi.nic.in/taj-mahal-agra/",
+        "authorOrPublisher": "Archaeological Survey of India (ASI)",
+        "licenseNote": "Official Monument Conservation Report"
+      },
+      {
+        "title": "UNESCO World Heritage Advisory Body Evaluation #252",
+        "url": "https://whc.unesco.org/en/list/252/",
+        "authorOrPublisher": "ICOMOS / UNESCO",
+        "licenseNote": "ICOMOS Evaluation Report"
+      }
+    ]
+  },
+  {
+    "id": "hotspot-pishtaq",
+    "destinationId": "taj-mahal",
+    "name": "Grand Pishtaq (Vaulted Iwan Facade)",
+    "hindiName": "भव्य पिश्ताक (मेहराबदार प्रवेश द्वार)",
+    "category": "Facade & Calligraphic Architecture",
+    "position": [0, 4.5, -12.5],
+    "interactionRadius": 6.0,
+    "shortDescription": "The monumental pointed vaulted portal framing the entrance, bordered by flowing Quranic calligraphy and arabesques.",
+    "detailedDescription": "Dominating each of the four cardinal faces of the tomb is a colossal arched niche known as a Pishtaq or Iwan. Reaching a height of nearly 33 meters, the portal is flanked by slender semi-octagonal pilasters topped with delicate marble pinnacles (guldastas). Framing the vault is an extraordinary band of black marble inlaid Quranic calligraphy executed by master royal calligrapher Amanat Khan Shirazi. In an ingenious optical correction, the font size gradually increases as the letters climb higher, ensuring they appear perfectly uniform to a viewer standing at ground level.",
+    "culturalSignificance": "The Pishtaq symbolizes the threshold into the divine presence. The calligraphic verses inscribed around the south portal are taken from Surah Al-Fajr ('The Daybreak'), concluding with the invitation: 'Enter thou into My Paradise'.",
+    "architecturalDetails": [
+      "Pointed cusped Timurid-style arch vaulting recessed over 2.5 meters into the main facade.",
+      "Pietra Dura black marble calligraphy with optical perspective correction (graduated letter scaling).",
+      "Semi-precious stone floral arabesques and leafy scrolls adorning the arch spandrels.",
+      "Intertwined chevrons and geometric herringbone marble panels in the dados."
+    ],
+    "gallery": [
+      {
+        "id": "taj-pishtaq-img-1",
+        "url": "/images/destinations/hero-taj-sunset.jpg",
+        "caption": "The monumental South Pishtaq framing the main portal into the funerary chamber.",
+        "alt": "Taj Mahal grand pishtaq entrance portal",
+        "attribution": "Public Domain Heritage Photographic Register",
+        "sourceUrl": "https://whc.unesco.org/en/list/252/"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Epigraphy and Calligraphy of the Taj Mahal",
+        "url": "https://asi.nic.in/taj-mahal-agra/",
+        "authorOrPublisher": "Archaeological Survey of India (ASI Epigraphical Series)",
+        "licenseNote": "Government Public Historical Archive"
+      },
+      {
+        "title": "Mughal Architecture: An Outline of Its History and Development",
+        "url": "https://whc.unesco.org/en/list/252/",
+        "authorOrPublisher": "Ebba Koch (Prestel / UNESCO)",
+        "licenseNote": "Academic Heritage Reference"
+      }
+    ]
+  },
+  {
+    "id": "hotspot-reflecting-pool",
+    "destinationId": "taj-mahal",
+    "name": "Charbagh Gardens & Reflecting Pool",
+    "hindiName": "चारबाग़ एवं प्रतिबिंबित जल कुंड",
+    "category": "Landscape & Hydraulic Architecture",
+    "position": [0, 2.0, 36.0],
+    "interactionRadius": 6.5,
+    "shortDescription": "The quadripartite paradise garden layout with its axial reflecting pool mirroring the white marble monument.",
+    "detailedDescription": "The Taj Mahal garden is laid out according to the Persian Charbagh (four-quartered garden) concept, representing the four rivers of Paradise mentioned in Quranic scripture (rivers of water, milk, wine, and pure honey). Unlike earlier Mughal tombs where the mausoleum was placed at the center of the garden, here the tomb is elevated at the northern Yamuna riverfront, allowing the entire 300-meter walled garden to stretch in front of it. At the center of the garden lies the raised marble lotus tank (Al-Hawd al-Kawthar, the 'Cistern of Abundance'), flanked by a 50-meter long reflecting canal bordered by solemn cypress trees.",
+    "culturalSignificance": "The garden was envisioned as an earthly recreation of Jannat (Paradise). The still, crystal waters of the central canal act as an optical mirror, doubling the luminous presence of the monument across the landscape.",
+    "architecturalDetails": [
+      "Rigid four-part geometric division (Charbagh) separated by axial stone walkways and water channels.",
+      "Central raised marble tank (Al-Hawd al-Kawthar) with five original fountain spouts and scalloped edges.",
+      "Subterranean clay and copper piping systems engineered to maintain equal water pressure across all fountains simultaneously.",
+      "Carefully chosen symbolic flora: evergreen cypress trees representing eternity paired with blossoming fruit trees representing renewal."
+    ],
+    "gallery": [
+      {
+        "id": "taj-garden-img-1",
+        "url": "/images/destinations/hero-taj-sunset.jpg",
+        "caption": "The axial reflecting pool capturing the luminous mirror reflection of the Taj Mahal.",
+        "alt": "Reflecting pool and Charbagh gardens at the Taj Mahal",
+        "attribution": "Public Domain Heritage Photographic Register",
+        "sourceUrl": "https://whc.unesco.org/en/list/252/"
+      }
+    ],
+    "sources": [
+      {
+        "title": "The Mughal Garden: Interpretation, Conservation and Implications",
+        "url": "https://whc.unesco.org/en/list/252/",
+        "authorOrPublisher": "M. Hussain, A. Rehman & J. L. Wescoat (Ferozsons / UNESCO)",
+        "licenseNote": "Heritage Landscape Monograph"
+      },
+      {
+        "title": "Taj Mahal Garden Conservation Management Plan",
+        "url": "https://asi.nic.in/taj-mahal-agra/",
+        "authorOrPublisher": "Archaeological Survey of India (ASI)",
+        "licenseNote": "Official Government Conservation Study"
+      }
+    ]
+  }
+]

@@ -6,9 +6,9 @@ import * as THREE from 'three';
 import { useKeyboardControls } from '@/hooks/useKeyboardControls';
 import { CollisionEngine } from '@/lib/collision/CollisionEngine';
 import {
-  COURTYARD_COLLIDERS,
+  TAJ_MAHAL_COLLIDERS,
   DEFAULT_PLAYER_COLLIDER_CONFIG,
-} from '@/data/scene-configs/courtyardColliders';
+} from '@/data/scene-configs/tajMahalColliders';
 import { SceneCollider, PlayerCollisionConfig } from '@/types/collision';
 import { MobileInputState } from '@/types/input';
 
@@ -35,12 +35,12 @@ const _desiredVelocity = new THREE.Vector3();
 export default function PlayerController({
   enabled,
   isLocked,
-  spawnPosition = [0, 1.7, 12],
-  walkSpeed = 4.8,
-  sprintSpeed = 7.5,
+  spawnPosition = [0, 1.8, 52],
+  walkSpeed = 5.2,
+  sprintSpeed = 8.5,
   mouseSensitivity = 0.0022,
-  boundaries = { minX: -18.5, maxX: 18.5, minZ: -18.5, maxZ: 18.5 },
-  colliders = COURTYARD_COLLIDERS,
+  boundaries = { minX: -50, maxX: 50, minZ: -60, maxZ: 66 },
+  colliders = TAJ_MAHAL_COLLIDERS,
   playerConfig = DEFAULT_PLAYER_COLLIDER_CONFIG,
   mobileInputRef,
   resetSignal = 0,

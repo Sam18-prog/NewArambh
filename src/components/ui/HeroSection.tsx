@@ -25,7 +25,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-amber-300 bg-amber-500/10 border border-amber-500/30 backdrop-blur-md">
                 <Sparkles className="w-3.5 h-3.5" />
-                Immersive 3D Cultural Platform
+                Walk Through History, From Anywhere
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-md">
                 <ShieldCheck className="w-3.5 h-3.5" />
@@ -47,8 +47,7 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-zinc-300 text-base sm:text-lg max-w-xl leading-relaxed">
-                  Digitally recreated 3D cultural destinations. Walk through historic courtyards,
-                  inspect sacred architectural elements, and discover centuries of history with free gaming-style agency.
+                  Experience the world’s cultural heritage, sacred monuments, and architectural wonders through immersive 3D exploration.
                 </p>
 
                 {/* Primary & Secondary Action Buttons */}
@@ -63,13 +62,13 @@ export default function HeroSection() {
                   </Link>
 
                   <Link
-                    href="/explore/heritage-courtyard"
+                    href="/explore/taj-mahal"
                     className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-200 bg-zinc-900/80 hover:bg-zinc-800/90 border border-zinc-700/80 hover:border-amber-400/50 backdrop-blur-md transition-all hover:scale-105 active:scale-95 group"
                   >
                     <div className="w-5 h-5 rounded-full bg-amber-400/20 flex items-center justify-center text-amber-400 group-hover:bg-amber-400 group-hover:text-zinc-950 transition-colors">
                       <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
                     </div>
-                    <span>Enter Demo Courtyard</span>
+                    <span>Enter Taj Mahal 3D</span>
                   </Link>
                 </div>
               </div>
@@ -83,31 +82,31 @@ export default function HeroSection() {
                       Featured Demonstration
                     </span>
                     <span className="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-amber-500/10 text-amber-300 border border-amber-500/20">
-                      Illustrative Model
+                      Interactive 3D Model
                     </span>
                   </div>
 
                   <div>
                     <h2 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
-                      The Royal Heritage Courtyard
+                      The Taj Mahal
                     </h2>
                     <p className="text-xs text-zinc-400 mt-1">
-                      Rajasthan, India • 16th–17th Century Architectural Style
+                      Agra, Uttar Pradesh, India • UNESCO World Heritage #252
                     </p>
                   </div>
 
                   <p className="text-sm text-zinc-300 leading-relaxed">
-                    Step inside an illustrative digital reconstruction combining carved stone mandapas,
-                    overhanging jharokhas, and subterranean stepwell pools engineered for desert climates.
+                    Step inside an authentic 3D digital exploration of the white Makrana marble masterpiece,
+                    symmetrical minarets, grand vaulted iwans, and Charbagh reflecting gardens.
                   </p>
 
                   <div className="pt-2 flex items-center justify-between border-t border-zinc-800/80">
                     <div className="flex items-center gap-2 text-xs text-zinc-400">
                       <Layers className="w-3.5 h-3.5 text-amber-400" />
-                      <span>5 Curated Hotspots</span>
+                      <span>5 Educational Hotspots</span>
                     </div>
                     <Link
-                      href="/explore/heritage-courtyard"
+                      href="/explore/taj-mahal"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors group"
                     >
                       <span>Explore Virtual Experience</span>

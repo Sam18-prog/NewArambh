@@ -16,8 +16,8 @@ export default function FeaturedDestination() {
             Featured Destination
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl">
-            An illustrative, procedurally generated architectural reconstruction informed by
-            historical research and documented heritage references.
+            An authentic, real-time 3D architectural exploration informed by historical research
+            and UNESCO World Heritage documentation.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export default function FeaturedDestination() {
           <div className="lg:col-span-7 relative min-h-[380px] lg:min-h-[520px] overflow-hidden group">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: `url('/images/destinations/courtyard-haveli.jpg')` }}
+              style={{ backgroundImage: `url('/images/destinations/hero-taj-sunset.jpg')` }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-zinc-950/60 hidden lg:block" />
@@ -45,10 +45,10 @@ export default function FeaturedDestination() {
             {/* Floating Overlay Tags */}
             <div className="absolute top-6 left-6 flex flex-wrap gap-2">
               <span className="px-3 py-1 rounded-full text-xs font-semibold bg-zinc-950/80 backdrop-blur-md text-amber-300 border border-amber-500/30">
-                Forts & Palaces
+                Heritage Locations
               </span>
               <span className="px-3 py-1 rounded-full text-xs font-semibold bg-zinc-950/80 backdrop-blur-md text-zinc-300 border border-zinc-700">
-                16th–17th Century Style
+                Mughal Imperial Style (1631–1648 CE)
               </span>
             </div>
 
@@ -77,26 +77,26 @@ export default function FeaturedDestination() {
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold text-amber-400">
                 <MapPin className="w-4 h-4" />
-                <span>Rajasthan, India</span>
+                <span>Agra, Uttar Pradesh, India</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                The Royal Heritage Courtyard
+                The Taj Mahal
               </h3>
 
               <p className="text-sm text-zinc-300 leading-relaxed">
-                An illustrative digital environment synthesizing the architectural majesty of
-                traditional Rajasthani palace courtyards, Shekhawati havelis, and carved mandapa
-                colonnades.
+                Step inside an immersive 3D digital exploration of the crown jewel of Mughal architecture.
+                Walk across the grand Charbagh reflecting pools, inspect the pristine white Makrana marble
+                facade, and explore centuries of craftsmanship.
               </p>
 
               {/* Transparent Disclosure Notice */}
               <div className="rounded-xl p-3.5 bg-amber-500/5 border border-amber-500/20 text-xs text-amber-200/90 flex items-start gap-2.5">
                 <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Ethical Heritage Disclosure:</strong> This is an educational illustrative
-                  reconstruction combining verified architectural elements, not a scanned replica
-                  of a single protected monument.
+                  <strong>Heritage Documentation:</strong> Inscribed as a UNESCO World Heritage Site in 1983
+                  (Criterion i, Ref #252) and protected as a Monument of National Importance by the
+                  Archaeological Survey of India (ASI).
                 </span>
               </div>
 
@@ -108,19 +108,19 @@ export default function FeaturedDestination() {
                 <ul className="text-xs text-zinc-300 space-y-1.5">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                    <span>The Central Mandapa — Octagonal pillared assembly hall</span>
+                    <span>Main Mausoleum — Baghdadi octagonal tomb with pietra dura inlays</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                    <span>Ornate Stone Jharokha — Overhanging convective balcony</span>
+                    <span>Central Bulbous Dome — Double-shell onion dome soaring 73 meters</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                    <span>Geometric Baori Stepwell — Rainwater conservation pool</span>
+                    <span>Four Monumental Minarets — Intentionally tilted for seismic safety</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                    <span>Monolithic Torana Gateway & Venturi Jali Screens</span>
+                    <span>Grand Pishtaq &amp; Charbagh Al-Hawd al-Kawthar reflecting pool</span>
                   </li>
                 </ul>
               </div>
@@ -129,7 +129,7 @@ export default function FeaturedDestination() {
             {/* CTAs */}
             <div className="pt-4 border-t border-zinc-800/80 flex flex-col sm:flex-row gap-3">
               <Link
-                href="/explore/heritage-courtyard"
+                href="/explore/taj-mahal"
                 className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-zinc-950 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 shadow-lg shadow-amber-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Enter Destination Portal</span>

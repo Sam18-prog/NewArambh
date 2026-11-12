@@ -6,57 +6,57 @@ export default function SceneEnvironment() {
   return (
     <>
       {/* Background Clear Color & Atmospheric Depth Fog */}
-      <color attach="background" args={['#0e0703']} />
-      <fog attach="fog" args={['#1a0c04', 32, 90]} />
+      <color attach="background" args={['#111827']} />
+      <fog attach="fog" args={['#182132', 55, 220]} />
 
-      {/* Ambient Lighting for Base Sandstone Illumination */}
-      <ambientLight color="#fff7ed" intensity={0.7} />
+      {/* Ambient Lighting for Makrana White Marble Illumination */}
+      <ambientLight color="#f8fafc" intensity={0.9} />
 
-      {/* Hemisphere Light for Desert Sky and Warm Earth Tone Bounce */}
+      {/* Hemisphere Light for Clear Sky and Warm Sandstone Bounce */}
       <hemisphereLight
-        args={['#fde68a', '#3b1c06', 0.6]}
-        position={[0, 50, 0]}
+        args={['#bae6fd', '#451a03', 0.75]}
+        position={[0, 80, 0]}
       />
 
       {/* Primary Directional Sunlight with Shadows */}
       <directionalLight
-        position={[25, 40, 22]}
-        intensity={2.2}
-        color="#fff2d5"
+        position={[45, 65, 45]}
+        intensity={2.6}
+        color="#fffbeb"
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
         shadow-camera-near={1}
-        shadow-camera-far={120}
-        shadow-camera-left={-24}
-        shadow-camera-right={24}
-        shadow-camera-top={24}
-        shadow-camera-bottom={-24}
+        shadow-camera-far={220}
+        shadow-camera-left={-60}
+        shadow-camera-right={60}
+        shadow-camera-top={60}
+        shadow-camera-bottom={-60}
         shadow-bias={-0.00015}
       />
 
       {/* Secondary Fill Light from Opposite Side */}
       <directionalLight
-        position={[-20, 20, -15]}
-        intensity={0.6}
-        color="#fdba74"
+        position={[-40, 35, -35]}
+        intensity={0.8}
+        color="#e0f2fe"
       />
 
-      {/* Warm Point Light at Central Mandapa (Simulating Oil Lamps / Diyas) */}
+      {/* Subtle Luminous Bounce over Reflecting Pool (Al-Hawd al-Kawthar) */}
       <pointLight
-        position={[0, 2.8, 0]}
-        color="#f59e0b"
-        intensity={35}
-        distance={16}
+        position={[0, 2.2, 36]}
+        color="#38bdf8"
+        intensity={20}
+        distance={35}
         decay={2}
       />
 
-      {/* Baori Stepwell Subtle Water Glow */}
+      {/* Warm Ambient Glow at South Pishtaq Entrance Archway */}
       <pointLight
-        position={[-11, 0.4, 4]}
-        color="#38bdf8"
-        intensity={12}
-        distance={10}
+        position={[0, 5.5, -12]}
+        color="#fef3c7"
+        intensity={22}
+        distance={24}
         decay={2}
       />
     </>

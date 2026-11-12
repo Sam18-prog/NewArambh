@@ -10,7 +10,7 @@ import WorldModel from '@/components/canvas/WorldModel';
 import ModelErrorBoundary from '@/components/canvas/ModelErrorBoundary';
 import PlayerController from '@/components/canvas/PlayerController';
 import CollisionSystem from '@/components/canvas/CollisionSystem';
-import { COURTYARD_COLLIDERS } from '@/data/scene-configs/courtyardColliders';
+import { TAJ_MAHAL_COLLIDERS } from '@/data/scene-configs/tajMahalColliders';
 import LoadingScreen from '@/components/overlay/LoadingScreen';
 import ExperienceControlsHUD, { ExplorationMode, CameraPreset } from '@/components/overlay/ExperienceControlsHUD';
 import MobileControlsOverlay from '@/components/overlay/MobileControlsOverlay';
@@ -25,7 +25,7 @@ import Fallback2DView from '@/components/fallback/Fallback2DView';
 import { MobileInputState, TouchControlSettings, DEFAULT_TOUCH_SETTINGS } from '@/types/input';
 import { EducationalHotspot } from '@/types/hotspot';
 import { getHotspotsByDestination, getHotspotById } from '@/lib/hotspots/getHotspots';
-import { COURTYARD_TOUR_STOPS } from '@/data/tours/courtyardTour';
+import { TAJ_MAHAL_TOUR_STOPS } from '@/data/tours/tajMahalTour';
 import { checkWebGLSupport } from '@/lib/webgl/detectWebGL';
 
 interface ExperienceCanvasProps {
@@ -35,10 +35,10 @@ interface ExperienceCanvasProps {
 }
 
 const CAMERA_PRESETS: Record<CameraPreset, { position: [number, number, number]; target: [number, number, number] }> = {
-  panoramic: { position: [0, 9, 25], target: [0, 2, 0] },
-  mandapa: { position: [0, 3.2, 8], target: [0, 2.5, 0] },
-  stepwell: { position: [-11, 4.5, 11], target: [-11, -0.5, 4] },
-  torana: { position: [0, 3.5, 23], target: [0, 4.5, 16] },
+  panoramic: { position: [0, 22, 70], target: [0, 10, -25] },
+  mausoleum: { position: [0, 6, 8], target: [0, 10, -25] },
+  pool: { position: [0, 3, 52], target: [0, 1.5, 36] },
+  gate: { position: [0, 4, 58], target: [0, 7.5, 68] },
 };
 
 function SmoothCameraController({
@@ -71,7 +71,7 @@ function SmoothCameraController({
 export default function ExperienceCanvas({
   destinationId,
   destinationName,
-  modelUrl = '/models/heritage-courtyard/scene.glb',
+  modelUrl = '/models/taj-mahal/scene.glb',
 }: ExperienceCanvasProps) {
   // WebGL Support & 2D Fallback state
   const [webGLSupport] = useState(() => checkWebGLSupport());
@@ -264,7 +264,7 @@ export default function ExperienceCanvas({
 
   // Guided Tour Navigation handlers
   const handleNextTourStop = useCallback(() => {
-    if (tourStopIndex < COURTYARD_TOUR_STOPS.length - 1) {
+    if (tourStopIndex < TAJ_MAHAL_TOUR_STOPS.length - 1) {
       setTourStopIndex((prev) => prev + 1);
     } else {
       setIsTourCompleted(true);
@@ -294,7 +294,7 @@ export default function ExperienceCanvas({
   }, []);
 
   const handleOpenTourDetails = useCallback(() => {
-    const currentStop = COURTYARD_TOUR_STOPS[tourStopIndex];
+    const currentStop = TAJ_MAHAL_TOUR_STOPS[tourStopIndex];
     if (currentStop) {
       const found = getHotspotById(destinationId, currentStop.hotspotId);
       if (found) {
@@ -358,9 +358,9 @@ export default function ExperienceCanvas({
       {/* Guided Tour HUD (Active during Guided Tour Mode) */}
       {isTourActive && !isTourCompleted && selectedHotspot === null && (
         <GuidedTourHUD
-          currentStop={COURTYARD_TOUR_STOPS[tourStopIndex]}
+          currentStop={TAJ_MAHAL_TOUR_STOPS[tourStopIndex]}
           currentIndex={tourStopIndex}
-          totalStops={COURTYARD_TOUR_STOPS.length}
+          totalStops={TAJ_MAHAL_TOUR_STOPS.length}
           isPaused={isTourPaused}
           onNext={handleNextTourStop}
           onPrev={handlePrevTourStop}
@@ -427,7 +427,7 @@ export default function ExperienceCanvas({
       >
         <Canvas
           shadows
-          camera={{ position: [0, 1.7, 12], fov: 65, near: 0.1, far: 200 }}
+          camera={{ position: [0, 2.0, 52], fov: 60, near: 0.1, far: 300 }}
           gl={{
             antialias: true,
             alpha: false,
@@ -451,18 +451,19 @@ export default function ExperienceCanvas({
             />
 
             {/* Physical Collision Wireframe Overlay (Visual Inspection) */}
-            <CollisionSystem colliders={COURTYARD_COLLIDERS} visible={showColliders} />
+            <CollisionSystem colliders={TAJ_MAHAL_COLLIDERS} visible={showColliders} />
 
             {/* Mode 1: First-Person Walk Mode Player Controller */}
             {mode === 'walk' && !isTourActive && (
               <PlayerController
                 enabled={true}
                 isLocked={isPointerLocked}
-                spawnPosition={[0, 1.7, 12]}
-                walkSpeed={4.8}
-                sprintSpeed={7.5}
+                spawnPosition={[0, 1.8, 52]}
+                walkSpeed={5.2}
+                sprintSpeed={8.5}
                 mouseSensitivity={0.0022}
-                boundaries={{ minX: -18.5, maxX: 18.5, minZ: -18.5, maxZ: 18.5 }}
+                boundaries={{ minX: -50, maxX: 50, minZ: -60, maxZ: 66 }}
+                colliders={TAJ_MAHAL_COLLIDERS}
                 mobileInputRef={mobileInput}
                 resetSignal={resetSignal}
               />
@@ -476,8 +477,8 @@ export default function ExperienceCanvas({
                   ref={controlsRef}
                   makeDefault
                   maxPolarAngle={Math.PI / 2 - 0.04} // Prevent camera going beneath ground
-                  minDistance={3.5}
-                  maxDistance={65}
+                  minDistance={4.0}
+                  maxDistance={120}
                   enableDamping
                   dampingFactor={0.06}
                 />
@@ -487,7 +488,7 @@ export default function ExperienceCanvas({
             {/* Mode 3: Guided Tour Waypoint Navigator */}
             {isTourActive && (
               <GuidedTourNavigator
-                activeStop={COURTYARD_TOUR_STOPS[tourStopIndex]}
+                activeStop={TAJ_MAHAL_TOUR_STOPS[tourStopIndex]}
                 enabled={isTourActive}
               />
             )}
