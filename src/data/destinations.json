@@ -1,81 +1,305 @@
 [
   {
     "id": "taj-mahal",
+    "slug": "taj-mahal",
     "name": "The Taj Mahal",
+    "shortName": "Taj Mahal",
+    "hindiName": "ताज महल",
     "subtitle": "The Crown of Palaces and eternal masterpiece of Mughal architecture",
-    "description": "An immersive 3D digital exploration of the UNESCO World Heritage monument, featuring radiant white Makrana marble, four monumental minarets, grand vaulted iwans, and the paradise Charbagh gardens.",
+    "description": "An iconic white Makrana marble mausoleum complex on the Yamuna riverbank, celebrated worldwide for its perfect symmetry, soaring onion dome, four monumental minarets, and paradise Charbagh gardens.",
+    "detailedHistory": [
+      "Commissioned in 1631 by the fifth Mughal Emperor Shah Jahan to honor his favorite chief consort, Arjumand Banu Begum (better known as Mumtaz Mahal), who died giving birth to their fourteenth child in Burhanpur.",
+      "Construction commenced in 1632 under imperial architect Ustad Ahmad Lahori. Over 20,000 stone carvers, calligraphers, inlay artists, and masons worked for over 17 years until the main mausoleum was completed in 1648, with the surrounding gardens and outbuildings completed by 1653.",
+      "Unlike traditional Mughal tomb layouts where the mausoleum stood at the geometric center of a walled garden, Shah Jahan elevated the tomb upon a colossal marble terrace directly overlooking the Yamuna River, transforming the entire 300-meter Charbagh garden into a dramatic ceremonial approach."
+    ],
     "location": "Agra, Uttar Pradesh, India",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "country": "India",
     "period": "1631–1648 CE (Mughal Empire, Shah Jahan)",
     "category": "heritage",
-    "categoryLabel": "Heritage Locations",
-    "thumbnailUrl": "/images/destinations/hero-taj-sunset.jpg",
-    "heroImageUrl": "/images/destinations/hero-taj-sunset.jpg",
+    "categoryLabel": "Heritage Architecture",
+    "heritageClassification": "unesco",
+    "unescoInscriptionYear": 1983,
+    "unescoUrl": "https://whc.unesco.org/en/list/252/",
+    "officialUrl": "https://asi.nic.in/taj-mahal-agra/",
+    "thumbnailUrl": "/images/destinations/taj-mahal-thumb.jpg",
+    "heroImageUrl": "/images/destinations/taj-mahal.jpg",
     "galleryImages": [
       {
-        "url": "/images/destinations/hero-taj-sunset.jpg",
-        "caption": "The pristine white Makrana marble mausoleum framed by reflecting water.",
-        "credit": "UNESCO World Heritage Photographic Archive (Public Record)"
+        "url": "/images/destinations/taj-mahal.jpg",
+        "caption": "The white Makrana marble mausoleum mirrored in the axial Charbagh reflecting canal.",
+        "credit": "UNESCO World Heritage Photographic Archive (Public Domain)",
+        "alt": "The Taj Mahal at sunset reflected in the water canal"
       }
     ],
     "isDemo": true,
     "reconstructionType": "Authentic 3D Digital Reconstruction",
-    "availableModes": ["walk", "inspect", "tour"],
-    "highlights": [
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
       {
-        "title": "Main Mausoleum (Rauza-i-Munawwara)",
+        "id": "taj-landmark-1",
+        "destinationId": "taj-mahal",
+        "name": "Main Mausoleum (Rauza-i-Munawwara)",
+        "hindiName": "मुख्य मकबरा (रौज़ा-ए-मुनव्वरा)",
         "category": "Imperial Funerary Architecture",
-        "description": "Baghdadi octagonal marble tomb chamber housing the cenotaphs of Mumtaz Mahal and Shah Jahan.",
-        "hotspotRef": "hotspot-mausoleum"
+        "mapCoordinates": {
+          "x": 50,
+          "y": 26
+        },
+        "shortDescription": "The radiant white marble tomb chamber housing the cenotaphs of Mumtaz Mahal and Shah Jahan.",
+        "detailedDescription": "The primary mausoleum follows the hasht-bihisht (\"eight paradises\") Baghdadi octagonal plan with chamfered corners. Clad in pure Makrana white marble, it features four monumental arched iwans and intricate Pietra Dura gemstone inlays using lapis lazuli, jade, crystal, and carnelian.",
+        "historicalSignificance": "Serves as the resting place of Emperor Shah Jahan and Mumtaz Mahal, embodying spiritual metaphors of the Throne of God (Arsh) and Paradise described in Quranic eschatology.",
+        "architecturalHighlights": [
+          "56.6-meter square plan with chamfered corners forming an unequal octagon.",
+          "Pietra Dura (Parchin Kari) floral inlays using 28 distinct varieties of precious stones.",
+          "Octagonal pierced marble jali screen enclosing the central cenotaphs.",
+          "Elevated white marble terrace standing 7 meters above the Charbagh garden floor."
+        ],
+        "gallery": [
+          {
+            "id": "taj-l1-img1",
+            "url": "/images/destinations/taj-mahal.jpg",
+            "caption": "The main octagonal mausoleum viewed from the central reflecting pool.",
+            "alt": "Taj Mahal main mausoleum facade",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Taj Mahal Inscription #252",
+            "url": "https://whc.unesco.org/en/list/252/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          },
+          {
+            "title": "Monograph on the Taj Mahal, Agra",
+            "url": "https://asi.nic.in/taj-mahal-agra/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
       },
       {
-        "title": "Central Bulbous Dome & Chhatris",
+        "id": "taj-landmark-2",
+        "destinationId": "taj-mahal",
+        "name": "Central Bulbous Dome & Chhatris",
+        "hindiName": "केंद्रीय अमृत गुंबद एवं छतरियां",
         "category": "Dome & Vault Engineering",
-        "description": "Iconic double-shell onion dome soaring 73 meters high, flanked by four octagonal pillared kiosks.",
-        "hotspotRef": "hotspot-dome"
+        "mapCoordinates": {
+          "x": 50,
+          "y": 22
+        },
+        "shortDescription": "The iconic double-shell onion dome soaring 73 meters high, flanked by four symmetrical pillared chhatris.",
+        "detailedDescription": "The bulbous dome—termed Amrud (guava dome) for its swelling outline—rises atop an elevated cylindrical drum. Built with a sophisticated double-shell structure, the inner dome preserves acoustic intimacy inside the burial chamber while the towering outer shell crowns the Agra skyline.",
+        "historicalSignificance": "Symbolizes the vault of heaven resting upon the earthly square foundation, crowned by a 9.5-meter gilded bronze Kalash finial bearing the Islamic crescent moon.",
+        "architecturalHighlights": [
+          "Outer shell reaches 35 meters above the roof terrace; inner shell reaches 24 meters.",
+          "Four octagonal pillared chhatris visually balance and anchor the central dome.",
+          "Gilded bronze finial combining Hindu Kalash water-pot iconography with the Mughal crescent."
+        ],
+        "gallery": [
+          {
+            "id": "taj-l2-img1",
+            "url": "/images/destinations/taj-mahal.jpg",
+            "caption": "The central bulbous dome flanked by corner pillared kiosks.",
+            "alt": "Taj Mahal dome profile",
+            "credit": "UNESCO World Heritage Centre"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Complete Taj Mahal and the Riverfront Gardens of Agra",
+            "url": "https://whc.unesco.org/en/list/252/",
+            "authorOrPublisher": "Ebba Koch (Thames & Hudson / UNESCO)"
+          }
+        ]
       },
       {
-        "title": "Four Monumental Minarets",
+        "id": "taj-landmark-3",
+        "destinationId": "taj-mahal",
+        "name": "Four Monumental Minarets",
+        "hindiName": "चार विशाल मीनारें",
         "category": "Structural & Seismic Engineering",
-        "description": "Four 40-meter tall three-tiered minarets engineered with an intentional outward tilt for earthquake safety.",
-        "hotspotRef": "hotspot-minarets"
+        "mapCoordinates": {
+          "x": 71,
+          "y": 34
+        },
+        "shortDescription": "Four 40-meter tall three-tiered minarets engineered with an intentional outward tilt for earthquake safety.",
+        "detailedDescription": "Standing at the four corners of the elevated marble plinth, each minaret is divided into three equal stages by projecting railed balconies. To protect the main tomb from seismic collapses, the towers were engineered to lean slightly outward (~0.7 degrees) so they would fall away from the mausoleum.",
+        "historicalSignificance": "Frames the central tomb into a three-dimensional spatial cube, establishing absolute bilateral symmetry across the riverfront.",
+        "architecturalHighlights": [
+          "Over 40 meters tall from the marble terrace to the crowning bronze finials.",
+          "Three cantilevered balconies supported by intricately carved corbel brackets.",
+          "Calculated outward inclination as a proactive seismic defense."
+        ],
+        "gallery": [
+          {
+            "id": "taj-l3-img1",
+            "url": "/images/destinations/taj-mahal.jpg",
+            "caption": "Corner minaret standing as a sentinel on the marble terrace.",
+            "alt": "Taj Mahal minaret detail",
+            "credit": "Archaeological Survey of India"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Architectural Conservation of the Taj Mahal Minarets",
+            "url": "https://asi.nic.in/taj-mahal-agra/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
       },
       {
-        "title": "Grand Pishtaq (Vaulted Iwan Facade)",
+        "id": "taj-landmark-4",
+        "destinationId": "taj-mahal",
+        "name": "Grand Pishtaq (Vaulted Iwan Facade)",
+        "hindiName": "भव्य पिश्ताक (कुरानिक सुलेख)",
         "category": "Facade & Epigraphy",
-        "description": "Monumental 33-meter pointed arch portal framed by optically corrected black marble Quranic calligraphy.",
-        "hotspotRef": "hotspot-pishtaq"
+        "mapCoordinates": {
+          "x": 50,
+          "y": 32
+        },
+        "shortDescription": "The monumental pointed arch portal framing the entrance, bordered by optically corrected Quranic calligraphy.",
+        "detailedDescription": "The monumental 33-meter southern archway (Pishtaq) features recessed vaulting adorned with black marble calligraphy executed by royal calligrapher Amanat Khan Shirazi. Letters gradually enlarge toward the top so they appear uniformly proportioned from the ground.",
+        "historicalSignificance": "Marks the ceremonial threshold into the sacred funerary space, concluding with the Quranic invitation: \"Enter thou into My Paradise.\"",
+        "architecturalHighlights": [
+          "Pointed cusped Timurid-style vault recessed 2.5 meters into the marble facade.",
+          "Optically corrected black marble Quranic calligraphy from Surah Al-Fajr.",
+          "Intricate floral spandrels inlaid with semi-precious carnelian and lapis lazuli."
+        ],
+        "gallery": [
+          {
+            "id": "taj-l4-img1",
+            "url": "/images/destinations/taj-mahal.jpg",
+            "caption": "The monumental South Pishtaq framing the main doorway.",
+            "alt": "Taj Mahal South Pishtaq archway",
+            "credit": "UNESCO Public Record"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Epigraphy and Calligraphy of the Taj Mahal",
+            "url": "https://asi.nic.in/taj-mahal-agra/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI Epigraphical Series)"
+          }
+        ]
       },
       {
-        "title": "Charbagh Gardens & Reflecting Pool",
-        "category": "Landscape Architecture",
-        "description": "Persian quadripartite paradise garden with axial water channels and the Al-Hawd al-Kawthar reflecting pool.",
-        "hotspotRef": "hotspot-reflecting-pool"
+        "id": "taj-landmark-5",
+        "destinationId": "taj-mahal",
+        "name": "Charbagh Gardens & Reflecting Pool",
+        "hindiName": "चारबाग़ एवं अल-हौज़ अल-कौसर",
+        "category": "Landscape & Hydraulic Architecture",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 64
+        },
+        "shortDescription": "The quadripartite paradise garden layout with its axial reflecting pool mirroring the white marble monument.",
+        "detailedDescription": "Laid out according to the Persian Charbagh (four-quartered garden) concept representing the four rivers of Paradise. In the center lies the raised marble lotus tank (Al-Hawd al-Kawthar), flanked by a long reflecting canal bordered by solemn evergreen cypress trees.",
+        "historicalSignificance": "Envisioned as an earthly recreation of Jannat (Paradise), with the still waters creating a perfect double reflection of the luminous tomb.",
+        "architecturalHighlights": [
+          "Rigid four-part geometric division separated by axial stone walkways and channels.",
+          "Central raised marble tank with scalloped edges and five fountain spouts.",
+          "Subterranean copper piping engineered to equalize pressure across all fountains simultaneously."
+        ],
+        "gallery": [
+          {
+            "id": "taj-l5-img1",
+            "url": "/images/destinations/taj-mahal.jpg",
+            "caption": "The axial reflecting canal capturing the mirror reflection of the Taj Mahal.",
+            "alt": "Taj Mahal reflecting pool and garden",
+            "credit": "UNESCO World Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Mughal Garden: Interpretation, Conservation and Implications",
+            "url": "https://whc.unesco.org/en/list/252/",
+            "authorOrPublisher": "M. Hussain & J. L. Wescoat (UNESCO)"
+          }
+        ]
       }
     ],
-    "historicalContext": {
-      "period": "1631–1648 CE (Reign of Mughal Emperor Shah Jahan)",
-      "architecturalStyle": "Classical Mughal Imperial Architecture",
-      "significance": "Inscribed as a UNESCO World Heritage Site in 1983 (Criterion i, Ref #252) as the supreme masterpiece of Indo-Islamic architecture.",
-      "detailedStory": [
-        "Commissioned in 1631 by Mughal Emperor Shah Jahan to house the tomb of his beloved chief consort Mumtaz Mahal, the Taj Mahal stands on the southern bank of the Yamuna River in Agra. Designed by imperial architect Ustad Ahmad Lahori, the complex was completed over 17 years by more than 20,000 artisans and craftsmen.",
-        "The monument is celebrated worldwide for its perfect bilateral symmetry, pure white Makrana marble facade, double-shell bulbous dome, and elaborate Pietra Dura gemstone inlays using semi-precious stones imported from across Asia.",
-        "Beyond its aesthetic perfection, the complex incorporates pioneering structural and hydraulic engineering—including massive underground wells to stabilize the riverbank foundation, intentional outward-tilted minarets for seismic defense, and an intricate subterranean piping network feeding the Charbagh reflecting fountains."
-      ]
-    },
-    "assetCredits": [
+    "timeline": [
       {
-        "assetName": "Procedural 3D Taj Mahal Model (scene.glb)",
-        "source": "In-Engine Three.js Procedural GLTF Generator",
-        "creator": "NewArambh 3D Engineering",
-        "license": "MIT / CC0 Public Domain",
-        "notes": "100% zero-budget procedural Three.js geometry, PBR Makrana marble, and site architecture"
+        "year": "1631",
+        "title": "Death of Mumtaz Mahal",
+        "description": "Empress Mumtaz Mahal passes away in Burhanpur. Emperor Shah Jahan vows to erect an unprecedented memorial."
       },
       {
-        "assetName": "Historical Documentation & Inscriptions",
-        "source": "UNESCO World Heritage Centre & Archaeological Survey of India",
-        "creator": "UNESCO / ASI Open Heritage Records",
-        "license": "Official UNESCO Public Heritage Archive",
-        "notes": "UNESCO World Heritage Site Inscription #252 (Criterion i)"
+        "year": "1632",
+        "title": "Construction Begins",
+        "description": "Foundation wells are dug along the Yamuna River bank under chief architect Ustad Ahmad Lahori."
+      },
+      {
+        "year": "1648",
+        "title": "Main Mausoleum Completed",
+        "description": "The white marble tomb, dome, and Quranic calligraphy bands are finished after 16 years of labor."
+      },
+      {
+        "year": "1653",
+        "title": "Complex Fully Inundated",
+        "description": "The Charbagh gardens, Great Gate, and flanking red sandstone buildings are formally completed."
+      },
+      {
+        "year": "1983",
+        "title": "UNESCO World Heritage Inscription",
+        "description": "Inscribed on the UNESCO World Heritage List under Criterion (i) as a masterpiece of human creative genius."
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "Built By",
+        "value": "Mughal Emperor Shah Jahan"
+      },
+      {
+        "label": "Chief Architect",
+        "value": "Ustad Ahmad Lahori"
+      },
+      {
+        "label": "Construction Period",
+        "value": "1632–1653 CE (21 years)"
+      },
+      {
+        "label": "Primary Material",
+        "value": "Makrana White Marble from Rajasthan"
+      },
+      {
+        "label": "Dome Height",
+        "value": "73 meters (240 feet)"
+      },
+      {
+        "label": "UNESCO Ref",
+        "value": "Inscription #252 (1983)"
+      }
+    ],
+    "architecturalSignificance": "Represents the highest artistic and technical peak of Mughal architecture. Features rigorous bilateral symmetry, modular proportioning based on the Shahjahani gaz unit, double-shell dome engineering, and optical perspective adjustments on the calligraphic portals.",
+    "culturalSignificance": "Universal monument to eternal devotion and Indo-Islamic cultural synthesis, celebrated in Rabindranath Tagore’s poetry as \"a teardrop on the cheek of time.\"",
+    "historicalReferences": [
+      {
+        "title": "Taj Mahal — UNESCO World Heritage Centre",
+        "organization": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/252/",
+        "relevantClaim": "Inscribed in 1983 under Criterion (i) as the supreme achievement in the whole range of Indo-Islamic architecture.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Taj Mahal, Agra — Archaeological Survey of India",
+        "organization": "Archaeological Survey of India (ASI)",
+        "url": "https://asi.nic.in/taj-mahal-agra/",
+        "relevantClaim": "Centrally protected national monument administered under the Ancient Monuments and Archaeological Sites and Remains Act.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Taj Mahal Sunset Photograph",
+        "source": "UNESCO / Unsplash Open Heritage Records",
+        "creator": "Public Heritage Archives",
+        "license": "Public Domain / Free Educational Use"
       }
     ],
     "stats": {
@@ -83,209 +307,2855 @@
       "hotspotsCount": 5,
       "yearBuilt": "1648 CE"
     },
-    "tags": ["Architecture", "UNESCO", "Mughal", "Taj Mahal", "Heritage", "Agra", "Wonder of the World", "Interactive 3D"]
+    "tags": [
+      "UNESCO",
+      "Mughal",
+      "Agra",
+      "Marble",
+      "Tomb",
+      "Dome",
+      "Minaret",
+      "Charbagh"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
   },
   {
-    "id": "konark-sun-temple",
-    "name": "Konark Sun Sanctuary",
-    "subtitle": "The monumental stone chariot of the Sun God Surya",
-    "description": "An upcoming interactive 3D digital recreation of the 13th-century Kalinga masterpiece, featuring colossal carved stone wheels that function as precise solar sundials.",
-    "location": "Odisha, India",
-    "period": "13th Century (c. 1250 CE, Eastern Ganga Dynasty)",
-    "category": "religious",
-    "categoryLabel": "Religious Places",
-    "thumbnailUrl": "/images/destinations/konark-thumb.svg",
-    "heroImageUrl": "/images/destinations/konark-hero.svg",
-    "galleryImages": [],
-    "isDemo": false,
-    "reconstructionType": "Illustrative Reconstruction",
-    "availableModes": ["walk", "inspect", "tour"],
-    "highlights": [
-      {
-        "title": "Astronomical Chariot Wheels",
-        "category": "Solar Horology",
-        "description": "Twelve pairs of intricately sculpted stone wheels capable of telling exact time by shadow angles."
-      },
-      {
-        "title": "Nata Mandir (Dance Pavilion)",
-        "category": "Sacred Performance",
-        "description": "Pillared ceremonial hall carved with thousands of figures in classical Odissi dance postures."
-      }
+    "id": "red-fort",
+    "slug": "red-fort",
+    "name": "Red Fort Complex (Lal Qila)",
+    "shortName": "Red Fort",
+    "hindiName": "लाल किला परिसर",
+    "subtitle": "The majestic red sandstone seat of Mughal imperial governance in Shahjahanabad",
+    "description": "A monumental 17th-century palace-fort complex built by Emperor Shah Jahan along the Yamuna River in Delhi. Known for its massive 33-meter defensive walls, vaulted bazaar, ornate marble audience halls, and the celestial Nahr-i-Behisht water system.",
+    "detailedHistory": [
+      "In 1638, Emperor Shah Jahan decided to shift the Mughal capital from Agra to Delhi and founded the walled city of Shahjahanabad. Construction of the Red Fort (Qila-i-Mubarak, or \"The Blessed Fort\") commenced under the supervision of architects Ustad Ahmad and Ustad Hamid in 1639 and concluded in 1648.",
+      "The fort served as the principal residence of the Mughal emperors for nearly 200 years until the revolt of 1857. It became the epicenter of cultural refinement, hosting Persian poetic gatherings, master miniature painters, and imperial court ceremonies.",
+      "The complex synthesizes Persian palace architecture, Timurid geometric layouts, and indigenous Indian red sandstone craftsmanship, serving as a template for subsequent palatial architecture across northern India."
     ],
-    "historicalContext": {
-      "period": "1250 CE (King Narasimhadeva I)",
-      "architecturalStyle": "Kalinga Deula Architecture",
-      "significance": "UNESCO World Heritage monument celebrated as one of India's paramount architectural and astronomical achievements.",
-      "detailedStory": [
-        "Conceived as a colossal chariot drawn by seven galloping horses across the heavens, the Sun Temple at Konark represents the zenith of medieval stone sculpture.",
-        "Upcoming digital recreation under research for future release in NewArambh."
-      ]
-    },
-    "assetCredits": [
-      {
-        "assetName": "Archaeological reference notes",
-        "source": "Archaeological Survey of India (Open Heritage Archives)",
-        "creator": "ASI Public Records",
-        "license": "Public Information"
-      }
-    ],
-    "stats": {
-      "estimatedVisitMinutes": 18,
-      "hotspotsCount": 8,
-      "yearBuilt": "1250 CE"
-    },
-    "tags": ["Temple", "Astronomy", "UNESCO", "Sun Temple", "Kalinga"]
-  },
-  {
-    "id": "amber-fort-diwan",
-    "name": "Diwan-i-Khas Mirror Pavilion",
-    "subtitle": "The shimmering Sheesh Mahal of Amber Fort",
-    "description": "An upcoming 3D exploration of Raja Man Singh's palace, where thousands of convex Belgian mirrors embedded into floral plaster create a cosmos of starlight under candlelight.",
-    "location": "Jaipur, Rajasthan",
-    "period": "16th – 17th Century (Kachwaha Dynasty)",
+    "location": "Old Delhi, New Delhi, India",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "country": "India",
+    "period": "1639–1648 CE (Mughal Empire, Shah Jahan)",
     "category": "forts-palaces",
     "categoryLabel": "Forts & Palaces",
-    "thumbnailUrl": "/images/destinations/amber-thumb.svg",
-    "heroImageUrl": "/images/destinations/amber-hero.svg",
-    "galleryImages": [],
-    "isDemo": false,
-    "reconstructionType": "Illustrative Reconstruction",
-    "availableModes": ["walk", "inspect", "tour"],
-    "highlights": [
+    "heritageClassification": "unesco",
+    "unescoInscriptionYear": 2007,
+    "unescoUrl": "https://whc.unesco.org/en/list/231/",
+    "officialUrl": "https://asi.nic.in/red-fort-delhi/",
+    "thumbnailUrl": "/images/destinations/red-fort-thumb.jpg",
+    "heroImageUrl": "/images/destinations/red-fort.jpg",
+    "galleryImages": [
       {
-        "title": "Sheesh Mahal Mirror Murals",
-        "category": "Optical Art",
-        "description": "Thousands of miniature glass pieces reflecting flickering candlelight across the vaulted ceiling."
+        "url": "/images/destinations/red-fort.jpg",
+        "caption": "Monumental Lahori Gate and the octagonal ramparts of the Red Fort.",
+        "credit": "Archaeological Survey of India Heritage Archive",
+        "alt": "Red Fort Lahori Gate in Delhi"
       }
     ],
-    "historicalContext": {
-      "period": "1592 CE (Raja Man Singh I)",
-      "architecturalStyle": "Rajput-Mughal Imperial Style",
-      "significance": "A hilltop fortress palace combining impenetrable outer ramparts with delicate, jeweled inner royal courts.",
-      "detailedStory": [
-        "Upcoming digital recreation under research for future release in NewArambh."
-      ]
-    },
-    "assetCredits": [],
-    "stats": {
-      "estimatedVisitMinutes": 15,
-      "hotspotsCount": 6,
-      "yearBuilt": "1592 CE"
-    },
-    "tags": ["Fort", "Palace", "Mirror Palace", "Jaipur", "Rajasthan"]
-  },
-  {
-    "id": "nalanda-university",
-    "name": "Nalanda Ancient Monastic University",
-    "subtitle": "The legendary seat of universal Buddhist learning",
-    "description": "An upcoming digital architectural model of ancient Nalanda's red brick monasteries, meditation stupas, and grand tiered lecture courtyards from the Gupta era.",
-    "location": "Bihar, India",
-    "period": "5th – 12th Century CE (Gupta & Pala Dynasties)",
-    "category": "museums",
-    "categoryLabel": "Museums & Collections",
-    "thumbnailUrl": "/images/destinations/nalanda-thumb.svg",
-    "heroImageUrl": "/images/destinations/nalanda-hero.svg",
-    "galleryImages": [],
-    "isDemo": false,
-    "reconstructionType": "Illustrative Reconstruction",
-    "availableModes": ["walk", "tour"],
-    "highlights": [
+    "reconstructionType": "Schematic Digital Exploration",
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
       {
-        "title": "Great Stupa No. 3",
-        "category": "Monastic Core",
-        "description": "Tiered votive stupa with carved stucco sculptures of the Buddha and Bodhisattvas."
+        "id": "redfort-landmark-1",
+        "destinationId": "red-fort",
+        "name": "Lahori Gate",
+        "hindiName": "लाहौरी दरवाज़ा",
+        "category": "Monumental Gateways",
+        "mapCoordinates": {
+          "x": 18,
+          "y": 55
+        },
+        "shortDescription": "The primary ceremonial entrance to the Red Fort, flanked by octagonal towers and crowned with white marble cupolas.",
+        "detailedDescription": "Named for its orientation toward the historical city of Lahore, this imposing red sandstone gate rises 33 meters high. Flanked by twin semi-octagonal bastions, it was later fortified with a barbican wall by Emperor Aurangzeb. Today, it is where the Prime Minister of India addresses the nation on Independence Day.",
+        "historicalSignificance": "The ceremonial threshold between the bustling urban fabric of Chandni Chowk and the imperial palace precinct.",
+        "architecturalHighlights": [
+          "Soaring multi-tiered battlements flanked by semi-octagonal defensive towers.",
+          "Seven miniature marble chhatris crowning the center parapet.",
+          "Barbican outer courtyard added during Aurangzeb’s reign to protect the main entrance."
+        ],
+        "gallery": [
+          {
+            "id": "rf-l1-img1",
+            "url": "/images/destinations/red-fort.jpg",
+            "caption": "Lahori Gate frontal elevation and defensive ramparts.",
+            "alt": "Lahori Gate at Red Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Red Fort Complex Inscription #231",
+            "url": "https://whc.unesco.org/en/list/231/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "redfort-landmark-2",
+        "destinationId": "red-fort",
+        "name": "Chatta Chowk (Meena Bazaar)",
+        "hindiName": "छत्ता चौक (मीना बाज़ार)",
+        "category": "Covered Palatial Markets",
+        "mapCoordinates": {
+          "x": 30,
+          "y": 55
+        },
+        "shortDescription": "A rare 17th-century covered vaulted arcade lined with two-storey merchant shops.",
+        "detailedDescription": "Directly following the Lahori Gate is Chatta Chowk (\"covered market\"), an innovative vaulted indoor bazaar modeled after marketplaces Shah Jahan observed in Persia. Historically, high-ranking royal merchants sold luxury silks, brocades, gemstones, perfumes, and jewels directly to imperial courtiers and royal ladies.",
+        "historicalSignificance": "One of the earliest and finest examples of an enclosed commercial shopping arcade integrated within a royal fortress.",
+        "architecturalHighlights": [
+          "Two-storey arcade spanning 70 meters in length.",
+          "Central cross-vaulted octagonal hall (Chatrashala) filtering sunlight and air.",
+          "Originally decorated with fine stucco plaster and floral ceiling murals."
+        ],
+        "gallery": [
+          {
+            "id": "rf-l2-img1",
+            "url": "/images/destinations/red-fort.jpg",
+            "caption": "Vaulted corridor of the Chatta Chowk arcade.",
+            "alt": "Chatta Chowk at Red Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Red Fort, Delhi: Monograph",
+            "url": "https://asi.nic.in/red-fort-delhi/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "redfort-landmark-3",
+        "destinationId": "red-fort",
+        "name": "Diwan-i-Aam (Hall of Public Audience)",
+        "hindiName": "दीवान-ए-आम (जन साधारण सभा)",
+        "category": "Imperial Audience Architecture",
+        "mapCoordinates": {
+          "x": 52,
+          "y": 55
+        },
+        "shortDescription": "The grand pillared red sandstone assembly hall featuring the Emperor’s elevated marble throne jharokha.",
+        "detailedDescription": "A magnificent hypostyle pavilion measuring 540 square meters, supported by 27 multi-faceted sandstone columns dividing the space into three bays. At the rear stands the Emperor’s marble baldachin throne (Nashiman-i-Zill-i-Ilahi), adorned with Italian Florentine pietra dura inlays including depictions of Orpheus taming wild animals with his harp.",
+        "historicalSignificance": "The arena of daily imperial justice where the Emperor heard petitions from subjects and reviewed military regiments.",
+        "architecturalHighlights": [
+          "Nine engraved cusped arches spanning the facade facing a vast open courtyard.",
+          "Intricately carved white marble royal throne baldachin resting on four bulbous columns.",
+          "Florentine Pietra Dura inlays crafted by European master lapidary Austin of Bordeaux."
+        ],
+        "gallery": [
+          {
+            "id": "rf-l3-img1",
+            "url": "/images/destinations/red-fort.jpg",
+            "caption": "The pillared hall of Diwan-i-Aam showing cusped arches.",
+            "alt": "Diwan-i-Aam at Red Fort",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Mughal Architecture: An Outline of Its History and Development",
+            "url": "https://whc.unesco.org/en/list/231/",
+            "authorOrPublisher": "Ebba Koch (UNESCO)"
+          }
+        ]
+      },
+      {
+        "id": "redfort-landmark-4",
+        "destinationId": "red-fort",
+        "name": "Diwan-i-Khas (Hall of Private Audience)",
+        "hindiName": "दीवान-ए-खास (विशिष्ट सभा)",
+        "category": "Imperial Funerary & Statecraft",
+        "mapCoordinates": {
+          "x": 70,
+          "y": 44
+        },
+        "shortDescription": "The pure white marble pavilion where the Peacock Throne stood, inscribed: \"If there is paradise on earth, it is here.\"",
+        "detailedDescription": "Overlooking the Yamuna River, this exquisite white marble pavilion is supported by square fluted pillars decorated with delicate floral pietra dura work and gilded foliate carvings. Here, Shah Jahan received royal princes, ambassadors, and state ministers atop the famed jeweled Peacock Throne (Takht-i-Taus).",
+        "historicalSignificance": "The intellectual and geopolitical heart of the Mughal Empire, bearing the famous Persian couplet by Amir Khusrow on its corner arches.",
+        "architecturalHighlights": [
+          "Polished white marble floor with open arcades framing cooling river breezes.",
+          "Gilded silver ceiling and polychrome pietra dura floral dados.",
+          "Central marble pedestal that originally supported the legendary Peacock Throne."
+        ],
+        "gallery": [
+          {
+            "id": "rf-l4-img1",
+            "url": "/images/destinations/red-fort.jpg",
+            "caption": "The delicate marble arcades of Diwan-i-Khas.",
+            "alt": "Diwan-i-Khas at Red Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Red Fort UNESCO World Heritage Advisory Evaluation #231",
+            "url": "https://whc.unesco.org/en/list/231/",
+            "authorOrPublisher": "ICOMOS"
+          }
+        ]
+      },
+      {
+        "id": "redfort-landmark-5",
+        "destinationId": "red-fort",
+        "name": "Rang Mahal (Palace of Colours)",
+        "hindiName": "रंग महल (रंगों का महल)",
+        "category": "Imperial Zenana Architecture",
+        "mapCoordinates": {
+          "x": 70,
+          "y": 65
+        },
+        "shortDescription": "The chief residential palace for imperial consorts, featuring a sunken carved lotus fountain and mirrored ceilings.",
+        "detailedDescription": "Situated south of the Diwan-i-Khas, the Rang Mahal served as the primary residence of the chief royal wives. The palace derived its name from its vibrantly painted ceilings and mirrored mosaics (Sheesh Mahal). In the center of the hall lies an exquisite sunken marble pool carved in the form of an open blooming lotus flower.",
+        "historicalSignificance": "Central pavilion of the imperial Zenana (private women’s quarters), cooled by continuous streams of flowing canal water.",
+        "architecturalHighlights": [
+          "Central sunken lotus-shaped marble basin with scalloped petals.",
+          "Convex mirrored glass mosaics embedded into floral wall plaster.",
+          "Water canal channel flowing directly through the center of the palace floor."
+        ],
+        "gallery": [
+          {
+            "id": "rf-l5-img1",
+            "url": "/images/destinations/red-fort.jpg",
+            "caption": "Lotus fountain basin inside the Rang Mahal.",
+            "alt": "Rang Mahal at Red Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Monograph on the Red Fort Palaces",
+            "url": "https://asi.nic.in/red-fort-delhi/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "redfort-landmark-6",
+        "destinationId": "red-fort",
+        "name": "Nahr-i-Behisht (Stream of Paradise)",
+        "hindiName": "नहर-ए-बहिश्त (स्वर्ग की धारा)",
+        "category": "Hydraulic & Landscape Engineering",
+        "mapCoordinates": {
+          "x": 72,
+          "y": 55
+        },
+        "shortDescription": "A continuous water canal connecting all royal riverfront pavilions, cooling the palaces naturally.",
+        "detailedDescription": "Fed by water diverted from the Yamuna River via the historic Western Yamuna Canal, the Nahr-i-Behisht flowed continuously through the center of the Shah Burj tower, Hammam, Diwan-i-Khas, Rang Mahal, and Mumtaz Mahal. It cooled the living spaces during scorching Delhi summers and powered fountains and cascaded water chutes (chadars).",
+        "historicalSignificance": "Masterpiece of pre-modern passive microclimate cooling and hydraulic engineering inside a desert-border imperial fortress.",
+        "architecturalHighlights": [
+          "Raised marble channel with shallow cascades (chadars) creating gentle white-noise acoustics.",
+          "Continuous subterranean pressure systems powering multiple bubbling fountains.",
+          "Engineered slope maintaining steady water circulation before emptying into the palace gardens."
+        ],
+        "gallery": [
+          {
+            "id": "rf-l6-img1",
+            "url": "/images/destinations/red-fort.jpg",
+            "caption": "The marble canal running through the pavilion floors.",
+            "alt": "Nahr-i-Behisht canal at Red Fort",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Hydraulic Systems in Mughal Forts",
+            "url": "https://whc.unesco.org/en/list/231/",
+            "authorOrPublisher": "UNESCO / ASI Research Studies"
+          }
+        ]
+      },
+      {
+        "id": "redfort-landmark-7",
+        "destinationId": "red-fort",
+        "name": "Moti Masjid (Pearl Mosque)",
+        "hindiName": "मोती मस्जिद (मुक्ता मस्जिद)",
+        "category": "Imperial Sacred Architecture",
+        "mapCoordinates": {
+          "x": 64,
+          "y": 36
+        },
+        "shortDescription": "A private royal mosque constructed entirely of glistening white marble by Emperor Aurangzeb in 1659.",
+        "detailedDescription": "Commissioned by Aurangzeb shortly after his accession to serve as his private place of daily worship adjacent to the royal bedchambers (Khabgah). Built entirely from fine white marble with grey veining, the prayer hall features three bulbous domes and a high brass-covered entrance door, oriented slightly askew to align precisely with Mecca.",
+        "historicalSignificance": "A jewel of later 17th-century Mughal sacred architecture, standing in intimate contrast to the monumental red sandstone surrounding it.",
+        "architecturalHighlights": [
+          "Three ribbed bulbous domes originally covered in gilded copper.",
+          "Intricate marble floor carved with outlines of individual prayer rugs (musallahs).",
+          "High enclosing screen wall shielding the Emperor from the outside courtyard."
+        ],
+        "gallery": [
+          {
+            "id": "rf-l7-img1",
+            "url": "/images/destinations/red-fort.jpg",
+            "caption": "White marble prayer hall and triple domes of Moti Masjid.",
+            "alt": "Moti Masjid at Red Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Moti Masjid Architectural Survey",
+            "url": "https://asi.nic.in/red-fort-delhi/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
       }
     ],
-    "historicalContext": {
-      "period": "5th Century CE",
-      "architecturalStyle": "Ancient Buddhist Terracotta & Brick Architecture",
-      "significance": "One of the world's first residential universities, hosting over 10,000 scholars from across Asia.",
-      "detailedStory": [
-        "Upcoming digital recreation under research for future release in NewArambh."
-      ]
-    },
-    "assetCredits": [],
-    "stats": {
-      "estimatedVisitMinutes": 20,
-      "hotspotsCount": 10,
-      "yearBuilt": "427 CE"
-    },
-    "tags": ["University", "Monastery", "Buddhism", "Ancient", "Gupta"]
-  },
-  {
-    "id": "meenakshi-thousand-pillar",
-    "name": "Thousand Pillar Colonnade",
-    "subtitle": "The sculpted stone labyrinth of Meenakshi Amman",
-    "description": "An upcoming 3D exploration of Madurai's iconic Aayiram Kaal Mandapam, where 985 carved granite pillars form a breathtaking forest of mythological figures.",
-    "location": "Madurai, Tamil Nadu",
-    "period": "16th Century (Nayak Dynasty)",
-    "category": "heritage",
-    "categoryLabel": "Heritage Locations",
-    "thumbnailUrl": "/images/destinations/madurai-thumb.svg",
-    "heroImageUrl": "/images/destinations/madurai-hero.svg",
-    "galleryImages": [],
-    "isDemo": false,
-    "reconstructionType": "Illustrative Reconstruction",
-    "availableModes": ["walk", "inspect"],
-    "highlights": [
+    "timeline": [
       {
-        "title": "Yali Guardian Columns",
-        "category": "Granite Sculpture",
-        "description": "Monolithic pillars carved with roaring Yali creatures holding stone balls inside their jaws."
+        "year": "1639",
+        "title": "Foundation Stone Laid",
+        "description": "Emperor Shah Jahan initiates construction of Shahjahanabad and the royal fortress Qila-i-Mubarak."
+      },
+      {
+        "year": "1648",
+        "title": "Formal Inauguration",
+        "description": "The fortress is inaugurated as the imperial residence with grand celebrations and the installation of the Peacock Throne."
+      },
+      {
+        "year": "1659",
+        "title": "Moti Masjid Added",
+        "description": "Emperor Aurangzeb constructs the private white marble Pearl Mosque inside the fort."
+      },
+      {
+        "year": "1857",
+        "title": "The Great Uprising",
+        "description": "The last Mughal Emperor Bahadur Shah Zafar is captured; the fort passes to British administration."
+      },
+      {
+        "year": "2007",
+        "title": "UNESCO World Heritage Inscription",
+        "description": "Inscribed on the UNESCO World Heritage List for its outstanding universal value in representing Mughal creativity and urban planning."
       }
     ],
-    "historicalContext": {
-      "period": "1569 CE (Ariyanatha Mudaliar)",
-      "architecturalStyle": "Dravidian Nayak Architecture",
-      "significance": "Masterpiece of south Indian stone engineering with acoustic musical pillars.",
-      "detailedStory": [
-        "Upcoming digital recreation under research for future release in NewArambh."
-      ]
-    },
-    "assetCredits": [],
+    "quickFacts": [
+      {
+        "label": "Commissioned By",
+        "value": "Mughal Emperor Shah Jahan"
+      },
+      {
+        "label": "Construction Period",
+        "value": "1639–1648 CE (9 years)"
+      },
+      {
+        "label": "Perimeter Wall Height",
+        "value": "18 to 33 meters (60–110 ft)"
+      },
+      {
+        "label": "Primary Material",
+        "value": "Agra Red Sandstone & Makrana Marble"
+      },
+      {
+        "label": "Total Enclosure Area",
+        "value": "254 acres (103 hectares)"
+      },
+      {
+        "label": "UNESCO Ref",
+        "value": "Inscription #231 (2007)"
+      }
+    ],
+    "architecturalSignificance": "The architectural planning of the Red Fort represents the zenith of Mughal palatial design, blending Persian, Timurid, and Indian regional traditions into an integrated urban citadel that influenced later Rajasthani and Sikh fortifications.",
+    "culturalSignificance": "An enduring symbol of Indian sovereignty and historic nationhood, where the national tricolor flag is unfurled every Independence Day from the ramparts of Lahori Gate.",
+    "historicalReferences": [
+      {
+        "title": "Red Fort Complex — UNESCO World Heritage Centre",
+        "organization": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/231/",
+        "relevantClaim": "Inscribed in 2007 as an outstanding example of Mughal architecture and planning, synthesizing Persian, Timurid, and Hindu traditions.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Red Fort, Delhi — Archaeological Survey of India",
+        "organization": "Archaeological Survey of India (ASI)",
+        "url": "https://asi.nic.in/red-fort-delhi/",
+        "relevantClaim": "National protected monument and museum complex under the statutory protection of the Archaeological Survey of India.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Red Fort Architectural Elevation Vector",
+        "source": "NewArambh Cultural Heritage Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0"
+      }
+    ],
     "stats": {
       "estimatedVisitMinutes": 25,
-      "hotspotsCount": 12,
-      "yearBuilt": "1569 CE"
+      "hotspotsCount": 7,
+      "yearBuilt": "1648 CE"
     },
-    "tags": ["Temple", "Dravidian", "Madurai", "Pillars", "Sculpture"]
+    "tags": [
+      "UNESCO",
+      "Mughal",
+      "Delhi",
+      "Sandstone",
+      "Fortress",
+      "Shah Jahan",
+      "Lahori Gate",
+      "Palace"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
   },
   {
-    "id": "kailasa-canyon",
-    "name": "Kailasa Monolithic Cliff Sanctuary",
-    "subtitle": "The rock-cut mountain carved top-down from living stone",
-    "description": "An upcoming 3D exploration of Cave 16 at Ellora—the largest monolithic rock-cut monument on Earth, excavated entirely by hand using chisels and hammers.",
-    "location": "Ellora, Maharashtra",
-    "period": "8th Century CE (Rashtrakuta Dynasty, King Krishna I)",
-    "category": "natural",
-    "categoryLabel": "Natural Attractions",
-    "thumbnailUrl": "/images/destinations/ellora-thumb.svg",
-    "heroImageUrl": "/images/destinations/ellora-hero.svg",
-    "galleryImages": [],
-    "isDemo": false,
-    "reconstructionType": "Illustrative Reconstruction",
-    "availableModes": ["walk", "tour"],
-    "highlights": [
+    "id": "agra-fort",
+    "slug": "agra-fort",
+    "name": "Agra Fort",
+    "shortName": "Agra Fort",
+    "hindiName": "आगरा का किला",
+    "subtitle": "The red sandstone walled imperial citadel of Akbar, Jahangir, and Shah Jahan",
+    "description": "A colossal 16th-century Mughal fortress rising along the banks of the Yamuna River. Comprising 2.5-kilometer semicircular defensive walls, royal palaces, private audience halls, and the octagonal Musamman Burj tower overlooking the distant Taj Mahal.",
+    "detailedHistory": [
+      "Originally a brick fortress known as Badalgarh, Agra Fort was captured and entirely reconstructed in fine red sandstone by Emperor Akbar the Great between 1565 and 1573. Over 4,000 workers were employed daily over eight years to erect its monumental double-rampart walls.",
+      "Akbar’s grandson, Shah Jahan, transformed the military citadel into an opulent palatial residence by adding white Makrana marble pavilions including the Khas Mahal, Diwan-i-Khas, and the Sheesh Mahal mirror palace.",
+      "During his final eight years of life (1658–1666), after being deposed by his son Aurangzeb, Shah Jahan was confined inside the fort’s Musamman Burj, where he spent his days gazing out across the Yamuna River at his beloved Taj Mahal."
+    ],
+    "location": "Agra, Uttar Pradesh, India",
+    "city": "Agra",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "period": "1565–1573 CE (Expanded through 1658 CE)",
+    "category": "forts-palaces",
+    "categoryLabel": "Forts & Palaces",
+    "heritageClassification": "unesco",
+    "unescoInscriptionYear": 1983,
+    "unescoUrl": "https://whc.unesco.org/en/list/251/",
+    "officialUrl": "https://asi.nic.in/agra-fort-agra/",
+    "thumbnailUrl": "/images/destinations/agra-fort-thumb.jpg",
+    "heroImageUrl": "/images/destinations/agra-fort.jpg",
+    "galleryImages": [
       {
-        "title": "Ravana Shaking Mount Kailasa",
-        "category": "High-Relief Sculpture",
-        "description": "Dramatic multi-tiered narrative relief carved directly into the bedrock cliff face."
+        "url": "/images/destinations/agra-fort.jpg",
+        "caption": "Massive red sandstone ramparts and bastions of Agra Fort.",
+        "credit": "Archaeological Survey of India Heritage Archive",
+        "alt": "Agra Fort ramparts in Agra"
       }
     ],
-    "historicalContext": {
-      "period": "756–773 CE",
-      "architecturalStyle": "Rock-Cut Rashtrakuta Architecture",
-      "significance": "Over 200,000 tonnes of basalt rock were removed from top to bottom over two centuries.",
-      "detailedStory": [
-        "Upcoming digital recreation under research for future release in NewArambh."
-      ]
-    },
-    "assetCredits": [],
+    "reconstructionType": "Schematic Digital Exploration",
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
+      {
+        "id": "agrafort-landmark-1",
+        "destinationId": "agra-fort",
+        "name": "Amar Singh Gate",
+        "hindiName": "अमर सिंह दरवाज़ा",
+        "category": "Fortified Entrances",
+        "mapCoordinates": {
+          "x": 30,
+          "y": 78
+        },
+        "shortDescription": "The heavily fortified southern entry portal with drawbridge, right-angled bends, and massive circular bastions.",
+        "detailedDescription": "Originally named Akbar Darwaza and later renamed after Rathore hero Rao Amar Singh of Nagaur, this gate was designed with formidable defense mechanics. It features an outer drawbridge across the deep crocodile moat, a steep ramp flanked by high walls, and a sharp 90-degree turn engineered to neutralize enemy war elephants.",
+        "historicalSignificance": "The primary surviving public entrance to the fort, illustrating Akbar’s innovative military defensive architecture.",
+        "architecturalHighlights": [
+          "Curved drawbridge crossing the 10-meter deep water moat.",
+          "Right-angled blind-turn gateway rendering battering rams ineffective.",
+          "Intricate glazed tilework and carved bracket details on the upper facade."
+        ],
+        "gallery": [
+          {
+            "id": "af-l1-img1",
+            "url": "/images/destinations/agra-fort.jpg",
+            "caption": "Amar Singh Gate showing military ramparts and defensive bastions.",
+            "alt": "Amar Singh Gate at Agra Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Agra Fort Inscription #251",
+            "url": "https://whc.unesco.org/en/list/251/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "agrafort-landmark-2",
+        "destinationId": "agra-fort",
+        "name": "Jahangir Palace (Jahangiri Mahal)",
+        "hindiName": "जहाँगीरी महल",
+        "category": "Imperial Residential Palaces",
+        "mapCoordinates": {
+          "x": 55,
+          "y": 70
+        },
+        "shortDescription": "The oldest surviving residential palace in Agra Fort, showcasing Akbar’s synthesis of Rajput and Islamic styles.",
+        "detailedDescription": "Built by Akbar for his son Jahangir (Prince Salim) and the royal women, this grand red sandstone palace is renowned for its trans-cultural architecture. It features heavy serpentine stone brackets, Gujarat-style carved lintels, deep eaves (chhajjas), and an open central courtyard without arches, reflecting traditional indigenous carpentry translated into solid sandstone.",
+        "historicalSignificance": "Supreme architectural testament to Akbar’s religious tolerance and deliberate patronage of indigenous Indian craftsmen.",
+        "architecturalHighlights": [
+          "Transverse stone ceiling beams resting on multi-tiered peacock and lotus brackets.",
+          "Fine white marble inlay geometric panels set into deep red sandstone.",
+          "Monolithic bowl of Jahangir (Hauz-i-Jahangiri) carved from a single piece of porphyry rock."
+        ],
+        "gallery": [
+          {
+            "id": "af-l2-img1",
+            "url": "/images/destinations/agra-fort.jpg",
+            "caption": "Carved brackets and sandstone court of Jahangiri Mahal.",
+            "alt": "Jahangir Palace at Agra Fort",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Agra Fort Palaces Survey",
+            "url": "https://asi.nic.in/agra-fort-agra/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "agrafort-landmark-3",
+        "destinationId": "agra-fort",
+        "name": "Khas Mahal",
+        "hindiName": "खास महल (शाही शयनकक्ष)",
+        "category": "Imperial Living Quarters",
+        "mapCoordinates": {
+          "x": 68,
+          "y": 55
+        },
+        "shortDescription": "Shah Jahan’s pristine white marble private sleeping palace overlooking the Anguri Bagh grape garden.",
+        "detailedDescription": "Constructed between 1636 and 1637, the Khas Mahal (Aramgah-i-Muqaddas) served as Shah Jahan’s private apartment. Built from polished Makrana marble, it is flanked by two gilded pavilions with curved Bengali chhajja roofs (Bangla pavilions) and overlooks the lush sunken geometric parterres of the Anguri Bagh.",
+        "historicalSignificance": "Showcases Shah Jahan’s transition from Akbar’s austere red sandstone to delicate, gilded white marble luxury.",
+        "architecturalHighlights": [
+          "Curved curved eaves (Bangaldar roofs) derived from regional Bengal vernacular architecture.",
+          "Polychrome floral wall paintings and ceiling gold leafing.",
+          "Air-conditioned cavity walls built with hollow clay tiles for summer insulation."
+        ],
+        "gallery": [
+          {
+            "id": "af-l3-img1",
+            "url": "/images/destinations/agra-fort.jpg",
+            "caption": "Khas Mahal marble arcades facing the garden.",
+            "alt": "Khas Mahal at Agra Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Shah Jahan’s Marble Architecture in Agra Fort",
+            "url": "https://whc.unesco.org/en/list/251/",
+            "authorOrPublisher": "UNESCO Heritage Monograph"
+          }
+        ]
+      },
+      {
+        "id": "agrafort-landmark-4",
+        "destinationId": "agra-fort",
+        "name": "Diwan-i-Aam (Hall of Public Audience)",
+        "hindiName": "दीवान-ए-आम",
+        "category": "Imperial Court Architecture",
+        "mapCoordinates": {
+          "x": 42,
+          "y": 48
+        },
+        "shortDescription": "The vast hypostyle red sandstone hall where the Emperor administered justice to thousands of subjects.",
+        "detailedDescription": "Originally an open wooden assembly area under Akbar, Shah Jahan reconstructed this monumental hall in 1628 with 27 bays of white-plastered sandstone columns and three rows of multi-cusped arches. At the back is the raised alcove throne (Jharokha-i-Daulat Khana) where the Emperor sat adorned with gemstones.",
+        "historicalSignificance": "The primary ceremonial theater of public Mughal statecraft, where foreign ambassadors presented credentials.",
+        "architecturalHighlights": [
+          "Three aisles of cusped arches finished in gleaming white shell plaster (chunam).",
+          "Inlaid white marble imperial throne canopy with pietra dura floral motifs.",
+          "Raised sandstone podium where court clerks (Wazirs) received petitions."
+        ],
+        "gallery": [
+          {
+            "id": "af-l4-img1",
+            "url": "/images/destinations/agra-fort.jpg",
+            "caption": "The vast colonnade of Diwan-i-Aam.",
+            "alt": "Diwan-i-Aam at Agra Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Agra Fort Monograph #251",
+            "url": "https://whc.unesco.org/en/list/251/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "agrafort-landmark-5",
+        "destinationId": "agra-fort",
+        "name": "Diwan-i-Khas (Hall of Private Audience)",
+        "hindiName": "दीवान-ए-खास",
+        "category": "Imperial Privy Council",
+        "mapCoordinates": {
+          "x": 62,
+          "y": 38
+        },
+        "shortDescription": "An exquisite marble pavilion with double columns, where the black marble throne of Jahangir overlooks the Yamuna.",
+        "detailedDescription": "Erected in 1635, this white marble pavilion consists of two halls connected by three delicate cusped arches. Outside on the open river terrace rests the monumental Black Marble Throne (Takht-i-Jahangir) carved from a single slab of Belgian black slate in Allahabad in 1602.",
+        "historicalSignificance": "Reserved exclusively for confidential state discussions with chief ministers, commanders, and honored foreign diplomats.",
+        "architecturalHighlights": [
+          "Coupled marble columns with floral capitals inlaid with lapis lazuli and jasper.",
+          "Black marble throne bearing Persian inscriptions and royal chronograms.",
+          "Elevated open terrace commanding panoramic views across the river plain."
+        ],
+        "gallery": [
+          {
+            "id": "af-l5-img1",
+            "url": "/images/destinations/agra-fort.jpg",
+            "caption": "Delicate double columns of the Diwan-i-Khas.",
+            "alt": "Diwan-i-Khas at Agra Fort",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Imperial Inscriptions of Agra Fort",
+            "url": "https://asi.nic.in/agra-fort-agra/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "agrafort-landmark-6",
+        "destinationId": "agra-fort",
+        "name": "Musamman Burj (Octagonal Tower)",
+        "hindiName": "मुसम्मन बुर्ज (अष्टकोणीय बुर्ज)",
+        "category": "Imperial Palatial Towers",
+        "mapCoordinates": {
+          "x": 74,
+          "y": 44
+        },
+        "shortDescription": "The octagonal white marble tower where Shah Jahan spent his final years gazing at the Taj Mahal.",
+        "detailedDescription": "Perched dramatically over the river on the eastern rampart, the Musamman Burj is an octagonal multi-storey tower built by Shah Jahan for Mumtaz Mahal. It features exquisite pierced marble jali screens, floral pietra dura inlay, and a central scalloped fountain basin. In this tower, Shah Jahan was kept under house arrest by Aurangzeb until his death in 1666.",
+        "historicalSignificance": "Poignant monument of imperial tragedy and artistic perfection, offering an unbroken line of sight to the Taj Mahal downstream.",
+        "architecturalHighlights": [
+          "Delicate floral pietra dura inlays covering every marble surface.",
+          "Octagonal pierced marble lattice balustrades filtering cool river winds.",
+          "Pachisi courtyard paved in black and white marble squares for imperial board games."
+        ],
+        "gallery": [
+          {
+            "id": "af-l6-img1",
+            "url": "/images/destinations/agra-fort.jpg",
+            "caption": "Musamman Burj projecting over the Yamuna River.",
+            "alt": "Musamman Burj at Agra Fort",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Incarceration of Shah Jahan: Historic Records",
+            "url": "https://whc.unesco.org/en/list/251/",
+            "authorOrPublisher": "UNESCO Heritage Monograph"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1565",
+        "title": "Akbar Begins Construction",
+        "description": "Emperor Akbar demolishes the ruined brick fort of Badalgarh and begins erecting red sandstone ramparts."
+      },
+      {
+        "year": "1573",
+        "title": "Sandstone Citadel Completed",
+        "description": "The monumental double-walled defense system and Jahangiri Mahal are finished after eight years of work."
+      },
+      {
+        "year": "1628",
+        "title": "Shah Jahan’s Marble Additions",
+        "description": "Shah Jahan rebuilds core audience halls and palaces in pure white Makrana marble."
+      },
+      {
+        "year": "1658",
+        "title": "Shah Jahan Confined",
+        "description": "Aurangzeb seizes power; Shah Jahan is imprisoned within the Musamman Burj."
+      },
+      {
+        "year": "1983",
+        "title": "UNESCO World Heritage Inscription",
+        "description": "Inscribed on the UNESCO World Heritage List under Criterion (iii) as a masterpiece of Mughal architecture."
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "Reconstructed By",
+        "value": "Mughal Emperor Akbar (1565–1573)"
+      },
+      {
+        "label": "Key Additions By",
+        "value": "Jahangir & Shah Jahan"
+      },
+      {
+        "label": "Rampart Circumference",
+        "value": "2.5 kilometers (1.5 miles)"
+      },
+      {
+        "label": "Wall Height",
+        "value": "21 meters (70 feet)"
+      },
+      {
+        "label": "UNESCO Ref",
+        "value": "Inscription #251 (1983)"
+      }
+    ],
+    "architecturalSignificance": "Represents an extraordinary architectural evolution from Akbar’s muscular, synthesis-driven red sandstone military fortress to Shah Jahan’s refined, delicate white marble palatial retreat.",
+    "culturalSignificance": "The premier power center of the Mughal Empire during its golden age, housing four successive emperors and serving as the capital of northern India.",
+    "historicalReferences": [
+      {
+        "title": "Agra Fort — UNESCO World Heritage Centre",
+        "organization": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/251/",
+        "relevantClaim": "Inscribed in 1983 as an outstanding example of Mughal architecture and imperial residential fortification.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Agra Fort, Agra — Archaeological Survey of India",
+        "organization": "Archaeological Survey of India (ASI)",
+        "url": "https://asi.nic.in/agra-fort-agra/",
+        "relevantClaim": "Centrally protected Monument of National Importance under the administrative custody of ASI Agra Circle.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Agra Fort Architectural Diagram",
+        "source": "NewArambh Open Heritage Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0"
+      }
+    ],
     "stats": {
       "estimatedVisitMinutes": 22,
-      "hotspotsCount": 9,
-      "yearBuilt": "757 CE"
+      "hotspotsCount": 6,
+      "yearBuilt": "1573 CE"
     },
-    "tags": ["Monolith", "Rock-cut", "Ellora", "UNESCO", "Cave"]
+    "tags": [
+      "UNESCO",
+      "Mughal",
+      "Agra",
+      "Sandstone",
+      "Marble",
+      "Akbar",
+      "Shah Jahan",
+      "Fortress"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
+  },
+  {
+    "id": "rani-ki-vav",
+    "slug": "rani-ki-vav",
+    "name": "Rani-ki-Vav (The Queen’s Stepwell)",
+    "shortName": "Rani-ki-Vav",
+    "hindiName": "रानी की वाव (पाटन)",
+    "subtitle": "The masterwork of subterranean Maru-Gurjara water architecture and sculpture",
+    "description": "An extraordinary 11th-century subterranean stepwell built by Queen Udayamati on the banks of the Saraswati River. Designed as an inverted temple honoring the sanctity of water, descending seven storeys deep with over 500 principal high-relief sculptures.",
+    "detailedHistory": [
+      "Constructed around 1063 CE during the Chaulukya (Solanki) dynasty by Queen Udayamati in memory of her deceased husband King Bhimadeva I (1022–1064 CE), as recorded in Merutunga’s 1304 text Prabandha Chintamani.",
+      "Over centuries, the Saraswati River changed course and silted over the monumental stepwell with massive flood sediments, preserving the delicate sandstone sculptures in near-immaculate condition for nearly eight centuries until scientific excavation by the Archaeological Survey of India in the 1980s.",
+      "Engineered in the Maru-Gurjara architectural style, the stepwell is oriented west-to-east, measuring 65 meters in length, 20 meters in width, and 28 meters in depth. Its architectural layout combines functional aquifer access with profound spiritual cosmology."
+    ],
+    "location": "Patan, Gujarat, India",
+    "city": "Patan",
+    "state": "Gujarat",
+    "country": "India",
+    "period": "c. 1063 CE (Chaulukya Dynasty, Queen Udayamati)",
+    "category": "stepwells",
+    "categoryLabel": "Stepwells & Water Architecture",
+    "heritageClassification": "unesco",
+    "unescoInscriptionYear": 2014,
+    "unescoUrl": "https://whc.unesco.org/en/list/922/",
+    "officialUrl": "https://asi.nic.in/rani-ki-vav-patan/",
+    "thumbnailUrl": "/images/destinations/rani-ki-vav-thumb.jpg",
+    "heroImageUrl": "/images/destinations/rani-ki-vav.jpg",
+    "galleryImages": [
+      {
+        "url": "/images/destinations/rani-ki-vav.jpg",
+        "caption": "The seven descending terraced levels and pillared pavilions of Rani-ki-Vav.",
+        "credit": "Archaeological Survey of India Heritage Archive",
+        "alt": "Rani-ki-Vav stepwell in Patan, Gujarat"
+      }
+    ],
+    "reconstructionType": "Schematic Digital Exploration",
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
+      {
+        "id": "ranikivav-landmark-1",
+        "destinationId": "rani-ki-vav",
+        "name": "Entrance Staircase",
+        "hindiName": "प्रवेश सोपान मार्ग",
+        "category": "Stepped Thresholds",
+        "mapCoordinates": {
+          "x": 18,
+          "y": 50
+        },
+        "shortDescription": "The broad eastern stepped entry ramp where visitors leave ground level and begin descending into the cool earth.",
+        "detailedDescription": "The monument begins at ground level on the east with an expansive open stepped corridor leading downward. As visitors descend the first stone flights, the outside desert heat is replaced by natural subterranean cooling and acoustic quiet.",
+        "historicalSignificance": "Represents the conceptual threshold into the subterranean inverted temple, preparing the visitor to transition from the mortal world to the sacred depths.",
+        "architecturalHighlights": [
+          "Stepped flight measuring 20 meters across, engineered with drainage channels.",
+          "Flanked by sculpted retaining walls decorated with geometric floral bands.",
+          "Wide landing terraces providing resting spaces for pilgrims."
+        ],
+        "gallery": [
+          {
+            "id": "rkv-l1-img1",
+            "url": "/images/destinations/rani-ki-vav.jpg",
+            "caption": "Eastern stepped descent into Rani-ki-Vav.",
+            "alt": "Entrance staircase at Rani-ki-Vav",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Rani-ki-Vav Inscription #922",
+            "url": "https://whc.unesco.org/en/list/922/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "ranikivav-landmark-2",
+        "destinationId": "rani-ki-vav",
+        "name": "Seven Descending Levels",
+        "hindiName": "सात अवतरण स्तर (सप्त-भूमि)",
+        "category": "Subterranean Terraces",
+        "mapCoordinates": {
+          "x": 40,
+          "y": 50
+        },
+        "shortDescription": "Seven distinct terraced levels descending 28 meters below ground level, each supported by intricately carved pavilions.",
+        "detailedDescription": "The stepwell descends through seven distinct storeys of stepped corridors, pillared pavilions, and recessed galleries. Each level features pillared walkways allowing visitors to descend directly to the water level regardless of seasonal monsoon fluctuations.",
+        "historicalSignificance": "A technical masterpiece of medieval hydraulic engineering designed to withstand immense subterranean lateral earth pressure for a millennium.",
+        "architecturalHighlights": [
+          "Total depth of 28 meters (over 90 feet) below the ground surface.",
+          "Carefully calculated stepped ratios preventing lateral collapse of the desert sand walls.",
+          "Continuous horizontal stone bracing connecting opposite wall faces."
+        ],
+        "gallery": [
+          {
+            "id": "rkv-l2-img1",
+            "url": "/images/destinations/rani-ki-vav.jpg",
+            "caption": "Looking down through the tiered descending levels.",
+            "alt": "Seven levels of Rani-ki-Vav",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Stepwells of Gujarat: Inverted Architecture",
+            "url": "https://whc.unesco.org/en/list/922/",
+            "authorOrPublisher": "UNESCO / ASI Research Monographs"
+          }
+        ]
+      },
+      {
+        "id": "ranikivav-landmark-3",
+        "destinationId": "rani-ki-vav",
+        "name": "Pillared Pavilions (Mandapas)",
+        "hindiName": "स्तंभयुक्त मंडप",
+        "category": "Subterranean Structural Pavilions",
+        "mapCoordinates": {
+          "x": 55,
+          "y": 50
+        },
+        "shortDescription": "Multi-tiered colonnaded pavilions spanning the corridor, providing structural support and shaded communal resting areas.",
+        "detailedDescription": "At regular intervals along the descent, the trench is spanned by multi-storey pillared pavilions (mandapas). These stone colonnades are decorated with cusped brackets, pot-and-foliage (Ghatapallava) capitals, and carved lintels that stabilize the side walls while providing shaded rest for travelers.",
+        "historicalSignificance": "Translates classical freestanding temple pavilion engineering directly into subterranean structural bracing.",
+        "architecturalHighlights": [
+          "Multi-storey pavilion frames with octagonal and square fluted pillars.",
+          "Stone beam grid designed to distribute earth pressure across transverse arches.",
+          "Exquisitely carved bracket figures of Apsaras and Nayikas."
+        ],
+        "gallery": [
+          {
+            "id": "rkv-l3-img1",
+            "url": "/images/destinations/rani-ki-vav.jpg",
+            "caption": "Pillared pavilions supporting the subterranean corridor.",
+            "alt": "Pillared pavilions at Rani-ki-Vav",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Chaulukya Architecture of Gujarat",
+            "url": "https://asi.nic.in/rani-ki-vav-patan/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "ranikivav-landmark-4",
+        "destinationId": "rani-ki-vav",
+        "name": "Sculptural Galleries",
+        "hindiName": "मूर्तिकला वीथिकाएं",
+        "category": "Medieval Stone Sculpture",
+        "mapCoordinates": {
+          "x": 68,
+          "y": 50
+        },
+        "shortDescription": "More than 500 major stone sculptures and over 1,000 minor reliefs lining the vertical side walls of every level.",
+        "detailedDescription": "The retaining walls of the seven terraces are adorned with an astonishing pantheon of Hindu iconography. The panels depict the ten avatars of Vishnu (Dasavatara), celestial maidens (Apsaras), Dikpalas (guardians of cardinal directions), and scenes of daily 11th-century life with breathtaking anatomical precision.",
+        "historicalSignificance": "Recognized by UNESCO as the pinnacle of Maru-Gurjara sculptural art, displaying unsurpassed mastery of movement, ornamentation, and spiritual symbolism.",
+        "architecturalHighlights": [
+          "Over 500 monumental high-relief sculptures in pristine white sandstone niches.",
+          "High-relief Apsaras applying makeup, wringing hair, and playing musical instruments.",
+          "Intricate jewelry, drapery, and hair ornaments carved in microscopic detail."
+        ],
+        "gallery": [
+          {
+            "id": "rkv-l4-img1",
+            "url": "/images/destinations/rani-ki-vav.jpg",
+            "caption": "High-relief sculptural panels on the third terrace.",
+            "alt": "Sculptural galleries at Rani-ki-Vav",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Iconography of Rani-ki-Vav",
+            "url": "https://whc.unesco.org/en/list/922/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "ranikivav-landmark-5",
+        "destinationId": "rani-ki-vav",
+        "name": "Central Deep Well (Kupa)",
+        "hindiName": "केंद्रीय कूप (जल स्रोत)",
+        "category": "Hydraulic Well Architecture",
+        "mapCoordinates": {
+          "x": 84,
+          "y": 50
+        },
+        "shortDescription": "The massive circular stone well shaft at the western terminus, penetrating the natural groundwater aquifer.",
+        "detailedDescription": "At the deepest western end of the monument is the massive circular well shaft, measuring 10 meters in diameter and descending to the natural subterranean aquifer. Even inside the circular well walls, every stone course is carved with rings of decorative brackets and sculptural niches.",
+        "historicalSignificance": "The physical and sacred climax of the stepwell, providing perennial drinking water and irrigation to the surrounding arid plains of Patan.",
+        "architecturalHighlights": [
+          "Circular stone shaft reinforced with interlocking ashlar masonry without mortar keys.",
+          "Submerged stone galleries allowing maintenance during low-water summer months.",
+          "Direct connection to the ancient hydrological floodplains of the Saraswati River."
+        ],
+        "gallery": [
+          {
+            "id": "rkv-l5-img1",
+            "url": "/images/destinations/rani-ki-vav.jpg",
+            "caption": "Circular carved well shaft at the western terminus.",
+            "alt": "Central well shaft at Rani-ki-Vav",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Hydraulic Systems in Ancient Indian Stepwells",
+            "url": "https://whc.unesco.org/en/list/922/",
+            "authorOrPublisher": "UNESCO / ASI Documentation"
+          }
+        ]
+      },
+      {
+        "id": "ranikivav-landmark-6",
+        "destinationId": "rani-ki-vav",
+        "name": "Vishnu-Related Sculptural Panels (Sheshashayi Vishnu)",
+        "hindiName": "शेषशायी विष्णु फलक",
+        "category": "Masterpiece Sacred Sculpture",
+        "mapCoordinates": {
+          "x": 78,
+          "y": 38
+        },
+        "shortDescription": "The master relief of Lord Vishnu reclining peacefully upon the thousand-headed serpent Sheshanaga on the ocean of milk.",
+        "detailedDescription": "The spiritual dedication of Rani-ki-Vav to Lord Vishnu is celebrated in three colossal reliefs of Sheshashayi Vishnu placed at the water level. Vishnu reclines upon the coiled serpent Sheshanaga on the cosmic ocean (Kshirasagara), watched by Lakshmi, Brahma rising from his navel, and the celestial pantheon.",
+        "historicalSignificance": "The crowning devotional centerpiece of the stepwell, sanctifying water as the cosmic primordial element from which the universe emerged.",
+        "architecturalHighlights": [
+          "Multi-figure composition carved with fluid depth and graceful tranquility.",
+          "Thousand hoods of Sheshanaga forming a protective canopy above Vishnu’s crown.",
+          "Positioned so that rising seasonal water would submerge and ritually wash the feet of the deity."
+        ],
+        "gallery": [
+          {
+            "id": "rkv-l6-img1",
+            "url": "/images/destinations/rani-ki-vav.jpg",
+            "caption": "Sheshashayi Vishnu panel at water level.",
+            "alt": "Sheshashayi Vishnu sculpture at Rani-ki-Vav",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Vaishnava Iconography in Rani-ki-Vav",
+            "url": "https://whc.unesco.org/en/list/922/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1063",
+        "title": "Commissioned by Queen Udayamati",
+        "description": "Queen Udayamati commissions the stepwell as a grand memorial for King Bhimadeva I of the Chaulukya dynasty."
+      },
+      {
+        "year": "1304",
+        "title": "Historical Chronicle Record",
+        "description": "Merutunga records in Prabandha Chintamani that Queen Udayamati built a stepwell surpassing all others in Sahasralinga."
+      },
+      {
+        "year": "c. 1350",
+        "title": "Silting by Saraswati River",
+        "description": "Floods deposit silt and sand over the monument, creating a subterranean time capsule for over 700 years."
+      },
+      {
+        "year": "1986",
+        "title": "ASI Excavation & Restoration",
+        "description": "The Archaeological Survey of India methodically unearths the stepwell, revealing its intact sculptures."
+      },
+      {
+        "year": "2014",
+        "title": "UNESCO World Heritage Inscription",
+        "description": "Inscribed on the UNESCO World Heritage List under Criteria (i) and (iv) as an exceptional example of subterranean architecture."
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "Built By",
+        "value": "Queen Udayamati (Chaulukya Dynasty)"
+      },
+      {
+        "label": "Construction Date",
+        "value": "c. 1063 CE (11th Century)"
+      },
+      {
+        "label": "Depth",
+        "value": "28 meters (92 feet)"
+      },
+      {
+        "label": "Length & Width",
+        "value": "65m long × 20m wide"
+      },
+      {
+        "label": "Number of Levels",
+        "value": "7 Terraced Subterranean Storeys"
+      },
+      {
+        "label": "UNESCO Ref",
+        "value": "Inscription #922 (2014)"
+      }
+    ],
+    "architecturalSignificance": "Rani-ki-Vav was designed as an inverted temple highlighting the sacredness of water. Divided into seven levels with pillared pavilions, stepped corridors, and retaining walls adorned with over 500 major sculptures in the Maru-Gurjara style.",
+    "culturalSignificance": "Exemplifies the ancient Indian ethos of Jal Mandir (water sanctuary), where water conservation was elevated to an act of spiritual devotion and public service.",
+    "historicalReferences": [
+      {
+        "title": "Rani-ki-Vav (the Queen’s Stepwell) at Patan, Gujarat — UNESCO",
+        "organization": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/922/",
+        "relevantClaim": "Inscribed in 2014 under Criteria (i) and (iv) as a subterranean masterpiece of water management and architectural art.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Rani-ki-Vav, Patan — Archaeological Survey of India",
+        "organization": "Archaeological Survey of India (ASI)",
+        "url": "https://asi.nic.in/rani-ki-vav-patan/",
+        "relevantClaim": "Centrally protected national monument under the ASI Vadodara Circle.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Rani-ki-Vav Architectural Elevation Vector",
+        "source": "NewArambh Open Heritage Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0"
+      }
+    ],
+    "stats": {
+      "estimatedVisitMinutes": 24,
+      "hotspotsCount": 6,
+      "yearBuilt": "1063 CE"
+    },
+    "tags": [
+      "UNESCO",
+      "Stepwell",
+      "Gujarat",
+      "Patan",
+      "Water",
+      "Chaulukya",
+      "Vishnu",
+      "Subterranean"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
+  },
+  {
+    "id": "dholavira",
+    "slug": "dholavira",
+    "name": "Dholavira: A Harappan City",
+    "shortName": "Dholavira",
+    "hindiName": "धोलावीरा: हड़प्पा कालीन नगर",
+    "subtitle": "The ancient stone metropolis and hydraulic marvel of the Indus Valley Civilisation",
+    "description": "An extraordinary Bronze Age urban settlement on Khadir Bet island in the Great Rann of Kutch (c. 3000–1500 BCE). Distinguished by its massive ashlar stone fortifications, tripartite urban division, monumental rock-cut water reservoirs, and the famous 10-character Indus Signboard.",
+    "detailedHistory": [
+      "Occupied for over 1,500 years across seven distinct cultural stages (c. 3000–1500 BCE), Dholavira represents the most complete and best-preserved fortified city of the Indus Valley Civilisation (Harappan Civilisation) in South Asia.",
+      "Discovered by archaeologist J. P. Joshi in 1968 and excavated extensively by Dr. R. S. Bisht of the Archaeological Survey of India between 1990 and 2005, revealing an unprecedented urban plan divided into Citadel, Middle Town, and Lower Town surrounded by sixteen giant water reservoirs.",
+      "Surrounded by salty desert marshlands on Khadir Bet island, the Harappan engineers devised a visionary water conservation system, harnessing the monsoon torrents of two seasonal storm streams (Manhar and Mansar) through a network of dams, weirs, and stone-cut holding basins that stored over 300,000 cubic meters of fresh water."
+    ],
+    "location": "Khadir Bet, Kutch, Gujarat, India",
+    "city": "Khadir Bet, Bhachau",
+    "state": "Gujarat",
+    "country": "India",
+    "period": "c. 3000–1500 BCE (Indus Valley Civilisation)",
+    "category": "archaeological",
+    "categoryLabel": "Archaeological Sites",
+    "heritageClassification": "unesco",
+    "unescoInscriptionYear": 2021,
+    "unescoUrl": "https://whc.unesco.org/en/list/1642/",
+    "officialUrl": "https://asi.nic.in/dholavira-kutch/",
+    "thumbnailUrl": "/images/destinations/dholavira-thumb.jpg",
+    "heroImageUrl": "/images/destinations/dholavira.jpg",
+    "galleryImages": [
+      {
+        "url": "/images/destinations/dholavira.jpg",
+        "caption": "The massive stone-cut Citadel and Harappan reservoir system of Dholavira.",
+        "credit": "Archaeological Survey of India Heritage Archive",
+        "alt": "Dholavira archaeological site in Kutch, Gujarat"
+      }
+    ],
+    "reconstructionType": "Schematic Digital Exploration",
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
+      {
+        "id": "dholavira-landmark-1",
+        "destinationId": "dholavira",
+        "name": "The Citadel (Acropolis)",
+        "hindiName": "दुर्ग (सिटाडेल)",
+        "category": "Fortified Acropolis",
+        "mapCoordinates": {
+          "x": 38,
+          "y": 55
+        },
+        "shortDescription": "The elevated stone-walled fortress overlooking the entire city, built with dressed stone masonry and towering bastions.",
+        "detailedDescription": "The Citadel stands at the southwestern zone of the city, rising commands over the ceremonial ground and residential quarters. Unlike Indus cities like Mohenjo-daro which used sun-dried bricks, Dholavira’s Citadel was built using dressed limestone blocks and white marble veneer with massive circular corner bastions.",
+        "historicalSignificance": "The administrative, ceremonial, and elite residence of Dholavira’s governing council and priest-merchants.",
+        "architecturalHighlights": [
+          "Massive double-rampart walls up to 18 meters thick at the base.",
+          "Imposing North Gate chamber where the famous 10-character Indus Signboard was unearthed.",
+          "High polished limestone pillar bases and monolithic door sockets."
+        ],
+        "gallery": [
+          {
+            "id": "dh-l1-img1",
+            "url": "/images/destinations/dholavira.jpg",
+            "caption": "Stone walls and gateways of the Dholavira Citadel.",
+            "alt": "Citadel walls at Dholavira",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Dholavira: A Harappan City Inscription #1642",
+            "url": "https://whc.unesco.org/en/list/1642/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "dholavira-landmark-2",
+        "destinationId": "dholavira",
+        "name": "Castle and Bailey Areas",
+        "hindiName": "प्रसाद एवं उप-प्राचीर (कैसल व बेली)",
+        "category": "Elite Administrative Enclosures",
+        "mapCoordinates": {
+          "x": 42,
+          "y": 48
+        },
+        "shortDescription": "The fortified inner sanctuary (Castle) and its adjoining defensive terrace (Bailey).",
+        "detailedDescription": "The Citadel is bisected into two specialized sectors: the supreme \"Castle\" where the chief administrator resided, and the adjoining \"Bailey\" terrace to the west, which housed military guards, retainers, and workshop craftsmen.",
+        "historicalSignificance": "Demonstrates sophisticated hierarchical division of space within Bronze Age civic governance.",
+        "architecturalHighlights": [
+          "Paved stone streets with subterranean stone drain covers.",
+          "Guard rooms flanking monumental stone staircase ramps.",
+          "Inner ceremonial courtyard with carved drainage slopes."
+        ],
+        "gallery": [
+          {
+            "id": "dh-l2-img1",
+            "url": "/images/destinations/dholavira.jpg",
+            "caption": "Castle and Bailey partition walls.",
+            "alt": "Castle and Bailey at Dholavira",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Excavations at Dholavira (1990–2005)",
+            "url": "https://asi.nic.in/dholavira-kutch/",
+            "authorOrPublisher": "R. S. Bisht (Archaeological Survey of India)"
+          }
+        ]
+      },
+      {
+        "id": "dholavira-landmark-3",
+        "destinationId": "dholavira",
+        "name": "Middle Town (Madhyama Nagara)",
+        "hindiName": "मध्यम नगर",
+        "category": "Civic Urban Planning",
+        "mapCoordinates": {
+          "x": 48,
+          "y": 32
+        },
+        "shortDescription": "The fortified settlement of traders, officials, and master craftspeople, laid out on a grid of wide stone avenues.",
+        "detailedDescription": "Situated to the north of the Citadel and separated by an expansive ceremonial stadium, the Middle Town is enclosed by its own independent stone fortification wall. It features multi-room houses, shell-working and bead-making workshops, and wide streets intersecting at perfect right angles.",
+        "historicalSignificance": "Pioneering evidence of deliberate civic urban zoning, housing the flourishing merchant and artisan classes of the Harappan civilization.",
+        "architecturalHighlights": [
+          "Grid-pattern stone avenues up to 5 meters wide.",
+          "Sophisticated individual house drains connecting to primary stone-covered sewers.",
+          "Dedicated copper smithing, carnelian bead, and marine shell bangle workshops."
+        ],
+        "gallery": [
+          {
+            "id": "dh-l3-img1",
+            "url": "/images/destinations/dholavira.jpg",
+            "caption": "Grid streets and residential stone foundations of Middle Town.",
+            "alt": "Middle Town at Dholavira",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Urban Planning in the Indus Civilization",
+            "url": "https://whc.unesco.org/en/list/1642/",
+            "authorOrPublisher": "UNESCO Heritage Monograph"
+          }
+        ]
+      },
+      {
+        "id": "dholavira-landmark-4",
+        "destinationId": "dholavira",
+        "name": "Lower Town (Avama Nagara)",
+        "hindiName": "अधो नगर (निचला नगर)",
+        "category": "Residential Urban Quarters",
+        "mapCoordinates": {
+          "x": 68,
+          "y": 35
+        },
+        "shortDescription": "The expansive residential zone for the general urban population, protected within the outer city perimeter.",
+        "detailedDescription": "Occupying the eastern portion of the enclosed city, the Lower Town provided spacious residential accommodation for farmers, laborers, and service communities. Excavations reveal multi-roomed dwellings with private courtyards, bathing platforms, and soak pits.",
+        "historicalSignificance": "Illustrates that even everyday working communities enjoyed sanitation, stone-paved lanes, and protection within the colossal fortified city boundary.",
+        "architecturalHighlights": [
+          "Houses organized into self-contained residential blocks.",
+          "Clay-lined silos and stone grain-storage structures.",
+          "Direct access to eastern and northern water reservoirs."
+        ],
+        "gallery": [
+          {
+            "id": "dh-l4-img1",
+            "url": "/images/destinations/dholavira.jpg",
+            "caption": "Stone foundations and streets of the Lower Town.",
+            "alt": "Lower Town at Dholavira",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Dholavira Archaeological Reports",
+            "url": "https://asi.nic.in/dholavira-kutch/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "dholavira-landmark-5",
+        "destinationId": "dholavira",
+        "name": "Reservoir Systems & Dams",
+        "hindiName": "जलाशय प्रणाली एवं बांध",
+        "category": "Bronze Age Hydraulic Engineering",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 78
+        },
+        "shortDescription": "Sixteen colossal rock-cut water reservoirs engineered around the city to harvest and store seasonal monsoon floods.",
+        "detailedDescription": "The defining achievement of Dholavira is its hydraulic management system. Surrounded by sixteen massive stone-cut reservoirs capable of storing an estimated 300,000 cubic meters of rainwater, the system channeled runoff from the ephemeral Manhar and Mansar torrents through masonry dams, siltation traps, and interconnecting canals.",
+        "historicalSignificance": "The earliest and most advanced hydraulic engineering system discovered anywhere in the ancient Bronze Age world.",
+        "architecturalHighlights": [
+          "East Reservoir measuring 73 meters long, 29 meters wide, and over 10 meters deep.",
+          "Rock-cut stairs descending into the reservoir basin with water level gauge marks.",
+          "Masonry check-dams and stone feeder channels with desilting chambers."
+        ],
+        "gallery": [
+          {
+            "id": "dh-l5-img1",
+            "url": "/images/destinations/dholavira.jpg",
+            "caption": "The monumental stone-cut East Reservoir showing descending steps.",
+            "alt": "Reservoir systems at Dholavira",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Hydraulic Architecture of Harappan Dholavira",
+            "url": "https://whc.unesco.org/en/list/1642/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "dholavira-landmark-6",
+        "destinationId": "dholavira",
+        "name": "Archaeological Remains & Indus Signboard",
+        "hindiName": "पुरातात्विक अवशेष एवं धोलावीरा साइनबोर्ड",
+        "category": "Ancient Epigraphy & Artifacts",
+        "mapCoordinates": {
+          "x": 38,
+          "y": 40
+        },
+        "shortDescription": "The famous ten-character gypsum signboard, polished limestone pillars, and monumental ceremonial stadium.",
+        "detailedDescription": "In a guardroom beside the Northern Gate of the Citadel, archaeologists discovered nine monumental wooden characters made of white crystalline gypsum inlay (the Dholavira Signboard), each letter 37cm tall. Also excavated was a vast 283-meter-long ceremonial stadium with stepped stone seating for thousands of spectators.",
+        "historicalSignificance": "The longest single inscribed text of the undeciphered Indus script, providing profound clues to Bronze Age public communication.",
+        "architecturalHighlights": [
+          "The Dholavira Signboard: 10 large characters made of mineral gypsum paste.",
+          "Grand ceremonial ground (283m × 47m) flanked by tiered stone seating.",
+          "Rare polished monolithic limestone column drums and decorative capitals."
+        ],
+        "gallery": [
+          {
+            "id": "dh-l6-img1",
+            "url": "/images/destinations/dholavira.jpg",
+            "caption": "Ceremonial ground and Northern Gate where the Signboard was found.",
+            "alt": "Indus Signboard location at Dholavira",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Dholavira Signboard and Indus Epigraphy",
+            "url": "https://whc.unesco.org/en/list/1642/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "c. 3000 BCE",
+        "title": "Stage I: Pre-Harappan Settlement",
+        "description": "Founding of the first fortified settlement on Khadir Bet utilizing mud-brick and local sandstone."
+      },
+      {
+        "year": "c. 2600 BCE",
+        "title": "Stage III: Urban Expansion & Reservoirs",
+        "description": "Citadel, Middle Town, and the monumental stone water reservoir system are fully engineered."
+      },
+      {
+        "year": "c. 1900 BCE",
+        "title": "Stage V: Late Harappan Transition",
+        "description": "Gradual decline as climatic changes reduce monsoon rainfall in the Rann of Kutch."
+      },
+      {
+        "year": "1968",
+        "title": "Archaeological Discovery",
+        "description": "Archaeologist J. P. Joshi discovers the site during an exploratory survey of the Kutch desert."
+      },
+      {
+        "year": "2021",
+        "title": "UNESCO World Heritage Inscription",
+        "description": "Inscribed on the UNESCO World Heritage List under Criteria (iii) and (iv) as an exceptional Harappan metropolis."
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "Civilisation",
+        "value": "Indus Valley (Harappan Civilisation)"
+      },
+      {
+        "label": "Date of Settlement",
+        "value": "c. 3000–1500 BCE (Bronze Age)"
+      },
+      {
+        "label": "Excavated By",
+        "value": "Dr. R. S. Bisht & ASI (1990–2005)"
+      },
+      {
+        "label": "Primary Building Material",
+        "value": "Dressed Limestone, Sandstone & Gypsum"
+      },
+      {
+        "label": "Site Dimensions",
+        "value": "Fortified perimeter covering 100 hectares"
+      },
+      {
+        "label": "UNESCO Ref",
+        "value": "Inscription #1642 (2021)"
+      }
+    ],
+    "architecturalSignificance": "Dholavira represents a triumph of stone construction in a civilisation primarily celebrated for brickwork. Its tripartite urban division, monumental rock-cut water reservoirs, and stone-paved sewage networks demonstrate supreme urban foresight.",
+    "culturalSignificance": "Key commercial gateway connecting maritime trade routes across the Arabian Sea to ancient Mesopotamia, Oman, and the Indus heartland.",
+    "historicalReferences": [
+      {
+        "title": "Dholavira: a Harappan City — UNESCO World Heritage Centre",
+        "organization": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/1642/",
+        "relevantClaim": "Inscribed in 2021 as one of the most remarkable and best preserved urban settlements in South Asia from the 3rd to mid-2nd millennium BCE.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Dholavira Excavations — Archaeological Survey of India",
+        "organization": "Archaeological Survey of India (ASI)",
+        "url": "https://asi.nic.in/dholavira-kutch/",
+        "relevantClaim": "Centrally protected archaeological site under the jurisdiction of the ASI Vadodara Circle.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Dholavira Site Plan Schematic Vector",
+        "source": "NewArambh Open Heritage Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0"
+      }
+    ],
+    "stats": {
+      "estimatedVisitMinutes": 28,
+      "hotspotsCount": 6,
+      "yearBuilt": "c. 2600 BCE"
+    },
+    "tags": [
+      "UNESCO",
+      "Harappan",
+      "Indus Valley",
+      "Gujarat",
+      "Kutch",
+      "Bronze Age",
+      "Reservoir",
+      "Archaeology"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
+  },
+  {
+    "id": "champaner-pavagadh",
+    "slug": "champaner-pavagadh",
+    "name": "Champaner-Pavagadh Archaeological Park",
+    "shortName": "Champaner-Pavagadh",
+    "hindiName": "चांपानेर-पावागढ़ पुरातत्व उद्यान",
+    "subtitle": "The medieval capital landscape of fortifications, grand Sultanate mosques, and sacred hill shrines",
+    "description": "A magnificent concentration of largely unexcavated archaeological and living heritage spanning from the 8th to 16th centuries. Set against the dramatic volcanic peak of Pavagadh Hill, featuring monumental mosques of the Gujarat Sultanate, ancient Hindu fortresses, and water harvesting structures.",
+    "detailedHistory": [
+      "Founded in the 8th century by Vanraj Chavda of the Chavda Kingdom and later held by the Khichi Chauhan Rajputs who fortified the imposing volcanic outcrop of Pavagadh Hill.",
+      "In 1484, Sultan Mahmud Begada of the Gujarat Sultanate conquered the citadel after a 20-month siege and made Champaner his imperial capital (renamed Muhammadabad), initiating a golden age of Indo-Islamic mosque architecture that synthesized Gujarati stone carving with Islamic geometry.",
+      "Abandonment occurred in 1535 following its capture by Mughal Emperor Humayun, preserving the entire 16th-century city layout, fortifications, palaces, and hydraulic engineering untouched by modern urban encroachment."
+    ],
+    "location": "Panchmahal, Gujarat, India",
+    "city": "Champaner",
+    "state": "Gujarat",
+    "country": "India",
+    "period": "8th–16th Century CE (Chauhan & Gujarat Sultanate)",
+    "category": "archaeological",
+    "categoryLabel": "Archaeological Sites",
+    "heritageClassification": "unesco",
+    "unescoInscriptionYear": 2004,
+    "unescoUrl": "https://whc.unesco.org/en/list/1101/",
+    "officialUrl": "https://asi.nic.in/champaner-pavagadh-archaeological-park/",
+    "thumbnailUrl": "/images/destinations/champaner-thumb.jpg",
+    "heroImageUrl": "/images/destinations/champaner.jpg",
+    "galleryImages": [
+      {
+        "url": "/images/destinations/champaner.jpg",
+        "caption": "Jami Masjid’s monumental minarets set against the volcanic slopes of Pavagadh Hill.",
+        "credit": "Archaeological Survey of India Heritage Archive",
+        "alt": "Champaner-Pavagadh Archaeological Park in Gujarat"
+      }
+    ],
+    "reconstructionType": "Schematic Digital Exploration",
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
+      {
+        "id": "champaner-landmark-1",
+        "destinationId": "champaner-pavagadh",
+        "name": "Jami Masjid",
+        "hindiName": "जामा मस्जिद",
+        "category": "Monumental Sultanate Mosques",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 55
+        },
+        "shortDescription": "The crowning masterpiece of the Gujarat Sultanate style, featuring two 30-meter carved minarets and 172 stone pillars.",
+        "detailedDescription": "Completed in 1508 CE by Sultan Mahmud Begada, the Jami Masjid is widely celebrated as one of the finest mosques in western India. Its central entrance portal is flanked by twin five-storey minarets intricately carved with floral arabesques and geometric bands. The prayer hall features a three-tier central dome that draws natural ventilation and soft daylight.",
+        "historicalSignificance": "The primary congregational mosque of Sultan Mahmud Begada’s capital, embodying the absolute pinnacle of Gujarati Islamic architecture.",
+        "architecturalHighlights": [
+          "Twin 30-meter high carved stone minarets with delicate balcony projections.",
+          "Prayer hall supported by 172 intricately sculpted stone pillars.",
+          "High central dome raised on an octagonal clerestory filtering natural air and light.",
+          "Seven mihrabs adorned with delicate perforated stone jali latticework."
+        ],
+        "gallery": [
+          {
+            "id": "cp-l1-img1",
+            "url": "/images/destinations/champaner.jpg",
+            "caption": "Facade and minarets of the Jami Masjid.",
+            "alt": "Jami Masjid at Champaner",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Champaner-Pavagadh Archaeological Park Inscription #1101",
+            "url": "https://whc.unesco.org/en/list/1101/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "champaner-landmark-2",
+        "destinationId": "champaner-pavagadh",
+        "name": "Kevada Masjid and Cenotaph",
+        "hindiName": "केवड़ा मस्जिद एवं छतरी",
+        "category": "Sultanate Mosque & Tombs",
+        "mapCoordinates": {
+          "x": 38,
+          "y": 65
+        },
+        "shortDescription": "A serene stone mosque situated amidst orchards, flanked by a square floral cenotaph pavilion with fluted columns.",
+        "detailedDescription": "Built during the late 15th century, Kevada Masjid is distinguished by its harmonious relationship with the natural landscape. Opposite the prayer hall stands an elegant open cenotaph pavilion with four corner minarets and carved floral lintels, set within traditional water-harvesting cistern channels.",
+        "historicalSignificance": "Exemplifies the integration of mortuary architecture, garden settings, and hydraulic cooling in provincial Sultanate planning.",
+        "architecturalHighlights": [
+          "Central prayer hall entrance flanked by fluted minarets with carved moldings.",
+          "Freestanding square cenotaph with carved eaves and lotus dome.",
+          "Sunken rainwater holding cistern integrated directly beneath the ablution court."
+        ],
+        "gallery": [
+          {
+            "id": "cp-l2-img1",
+            "url": "/images/destinations/champaner.jpg",
+            "caption": "Kevada Masjid and the open cenotaph pavilion.",
+            "alt": "Kevada Masjid at Champaner",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Mosques of the Gujarat Sultanate",
+            "url": "https://asi.nic.in/champaner-pavagadh-archaeological-park/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "champaner-landmark-3",
+        "destinationId": "champaner-pavagadh",
+        "name": "Nagina Masjid (The Jewel Mosque)",
+        "hindiName": "नगीना मस्जिद",
+        "category": "Refined Stone Architecture",
+        "mapCoordinates": {
+          "x": 62,
+          "y": 65
+        },
+        "shortDescription": "The \"Jewel Mosque\", sculpted from gleaming white stone with exquisite geometric carvings and an ornate tomb canopy.",
+        "detailedDescription": "Constructed in pure white stone, Nagina (\"Jewel\") Masjid is known for its pristine craftsmanship and delicate proportions. Adjacent to the main prayer hall stands a domed tomb pavilion resting on a raised carved plinth adorned with horizontal geometric moldings of extraordinary delicacy.",
+        "historicalSignificance": "Celebrated for possessing the most refined and intricate stone carving among all the regional mosques of Champaner.",
+        "architecturalHighlights": [
+          "Ornate multi-tier projecting balconies (jharokhas) on the minaret towers.",
+          "Tomb plinth carved with stepped geometric and floral friezes.",
+          "Perforated jali windows framing views across the surrounding forest."
+        ],
+        "gallery": [
+          {
+            "id": "cp-l3-img1",
+            "url": "/images/destinations/champaner.jpg",
+            "caption": "Delicate stone carving of Nagina Masjid.",
+            "alt": "Nagina Masjid at Champaner",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Champaner Heritage Monograph",
+            "url": "https://whc.unesco.org/en/list/1101/",
+            "authorOrPublisher": "UNESCO Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "champaner-landmark-4",
+        "destinationId": "champaner-pavagadh",
+        "name": "Sahar ki Masjid (Citadel Mosque)",
+        "hindiName": "शहर की मस्जिद",
+        "category": "Royal Citadel Mosques",
+        "mapCoordinates": {
+          "x": 35,
+          "y": 48
+        },
+        "shortDescription": "The private royal mosque of the royal enclosure, featuring five arched portals and large fluted domes.",
+        "detailedDescription": "Located near the eastern gateway of the royal citadel (Bhadra), Sahar ki Masjid served as the private mosque for the Sultan, his nobles, and royal guards. It is characterized by five frontal arched openings, three large central domes, and two slender minarets flanking the central entrance.",
+        "historicalSignificance": "The primary state mosque directly connected to the royal palaces inside the fortified citadel of Muhammadabad.",
+        "architecturalHighlights": [
+          "Five arched entry bays fronting a spacious paved stone court.",
+          "Twin slender minarets with relief carvings of dancing leaf patterns.",
+          "Large hemispherical central domes resting on squinches."
+        ],
+        "gallery": [
+          {
+            "id": "cp-l4-img1",
+            "url": "/images/destinations/champaner.jpg",
+            "caption": "Sahar ki Masjid frontal arches.",
+            "alt": "Sahar ki Masjid at Champaner",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Citadel of Champaner",
+            "url": "https://asi.nic.in/champaner-pavagadh-archaeological-park/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "champaner-landmark-5",
+        "destinationId": "champaner-pavagadh",
+        "name": "Pavagadh Hill & Sacred Summit",
+        "hindiName": "पावागढ़ पहाड़ी एवं कालिका माता शिखर",
+        "category": "Sacred Hilltop Landscape",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 18
+        },
+        "shortDescription": "The 800-meter volcanic mountain carrying the sacred Kalika Mata temple, ancient caves, and Rajput fortifications.",
+        "detailedDescription": "Dominating the landscape is the dramatic volcanic ridge of Pavagadh Hill, soaring nearly 800 meters above the plains. Reached via an ancient fortified pilgrimage trail passing through defensive bastions, the summit is crowned by the revered Kalika Mata temple, making it an enduring center of Shakti worship since antiquity.",
+        "historicalSignificance": "A sacred pilgrimage destination and nearly impregnable military bastion of the Khichi Chauhan rulers before the Sultanate conquest.",
+        "architecturalHighlights": [
+          "Natural volcanic cliff formations reinforced with medieval stone battlements.",
+          "Pilgrimage stone staircase climbing through eight historic defensive gates.",
+          "Summit shrine complex revered as one of the 51 sacred Shakti Peethas."
+        ],
+        "gallery": [
+          {
+            "id": "cp-l5-img1",
+            "url": "/images/destinations/champaner.jpg",
+            "caption": "The towering peak of Pavagadh Hill rising above Champaner.",
+            "alt": "Pavagadh Hill near Champaner",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Cultural Geography of Pavagadh Hill",
+            "url": "https://whc.unesco.org/en/list/1101/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "champaner-landmark-6",
+        "destinationId": "champaner-pavagadh",
+        "name": "Historic Fortification Areas & Gates",
+        "hindiName": "ऐतिहासिक प्राचीर एवं प्रवेश द्वार",
+        "category": "Military Fortifications",
+        "mapCoordinates": {
+          "x": 25,
+          "y": 38
+        },
+        "shortDescription": "Concentric stone fortification walls, battlements, and bastions winding from the valley plain up to the mountain peak.",
+        "detailedDescription": "The defensive network consists of multiple concentric circuits of massive stone walls that connect the valley city to the mountain citadel. Key fortified thresholds include the Atak Gate, Medhi Gate, and Godhra Gate, engineered with arrow slits, machicolations, and elevated watchtowers.",
+        "historicalSignificance": "Illustrates the military strategy of an unassailable mountain fortress defending the trade routes between Gujarat and Malwa.",
+        "architecturalHighlights": [
+          "Dry-stone masonry ramparts following the natural contours of the steep ridge.",
+          "Defensive barbicans and multi-level soldier barracks built into the cliff faces.",
+          "Rock-cut water cisterns (Talaos) built at high altitudes to sustain prolonged sieges."
+        ],
+        "gallery": [
+          {
+            "id": "cp-l6-img1",
+            "url": "/images/destinations/champaner.jpg",
+            "caption": "Ancient stone fortification walls winding up Pavagadh.",
+            "alt": "Fortifications at Champaner-Pavagadh",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Military Architecture of Pavagadh Fort",
+            "url": "https://asi.nic.in/champaner-pavagadh-archaeological-park/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "746 CE",
+        "title": "Founding of Champaner",
+        "description": "King Vanraj Chavda founds the original settlement near the base of sacred Pavagadh Hill."
+      },
+      {
+        "year": "1484 CE",
+        "title": "Sultanate Conquest",
+        "description": "Sultan Mahmud Begada captures the Chauhan fortress after a 20-month siege, establishing his capital Muhammadabad."
+      },
+      {
+        "year": "1508 CE",
+        "title": "Jami Masjid Completed",
+        "description": "The monumental congregational mosque is completed as the architectural crown of the capital."
+      },
+      {
+        "year": "1535 CE",
+        "title": "Humayun’s Sack and Abandonment",
+        "description": "Mughal Emperor Humayun sacks the city; the capital shifts to Ahmedabad, leaving Champaner frozen in time."
+      },
+      {
+        "year": "2004 CE",
+        "title": "UNESCO World Heritage Inscription",
+        "description": "Inscribed on the UNESCO World Heritage List under Criteria (iii), (iv), (v), and (vi) as a complete medieval landscape."
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "Built By",
+        "value": "Chavda, Khichi Chauhan & Gujarat Sultans"
+      },
+      {
+        "label": "Peak Period",
+        "value": "1484–1535 CE (Mahmud Begada)"
+      },
+      {
+        "label": "Key Mountain",
+        "value": "Pavagadh Hill (800 meters / 2,600 ft)"
+      },
+      {
+        "label": "Protected Area",
+        "value": "Over 1,328 hectares (3,280 acres)"
+      },
+      {
+        "label": "UNESCO Ref",
+        "value": "Inscription #1101 (2004)"
+      }
+    ],
+    "architecturalSignificance": "The site is the only complete and unchanged Islamic pre-Mughal city in India. It preserves a rare architectural synthesis of Hindu, Jain, and Islamic traditions alongside sophisticated water-retaining structures.",
+    "culturalSignificance": "A living landscape of continuous cultural devotion spanning centuries, where the ancient Shakti temple on Pavagadh Hill coexists with monumental 16th-century Sultanate mosques.",
+    "historicalReferences": [
+      {
+        "title": "Champaner-Pavagadh Archaeological Park — UNESCO",
+        "organization": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/1101/",
+        "relevantClaim": "Inscribed in 2004 as an outstanding concentration of archaeological, historic, and living cultural heritage.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Champaner-Pavagadh, Gujarat — Archaeological Survey of India",
+        "organization": "Archaeological Survey of India (ASI)",
+        "url": "https://asi.nic.in/champaner-pavagadh-archaeological-park/",
+        "relevantClaim": "Centrally protected archaeological park under the administrative custody of ASI Vadodara Circle.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Champaner-Pavagadh Site Plan Vector",
+        "source": "NewArambh Open Heritage Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0"
+      }
+    ],
+    "stats": {
+      "estimatedVisitMinutes": 30,
+      "hotspotsCount": 6,
+      "yearBuilt": "1508 CE"
+    },
+    "tags": [
+      "UNESCO",
+      "Gujarat",
+      "Champaner",
+      "Pavagadh",
+      "Mosque",
+      "Sultanate",
+      "Hill Fortress",
+      "Archaeology"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
+  },
+  {
+    "id": "sarnath",
+    "slug": "sarnath",
+    "name": "Ancient Buddhist Site of Sarnath",
+    "shortName": "Sarnath",
+    "hindiName": "सारनाथ का प्राचीन बौद्ध स्थल",
+    "subtitle": "The sacred Deer Park where Lord Buddha preached his First Sermon and set in motion the Wheel of Law",
+    "description": "One of the four paramount holy places of Buddhism, located 10 kilometers northeast of Varanasi. Comprising two inscribed UNESCO component parts: the monumental Chaukhandi Stupa and the Archaeological Remains of Sarnath including the colossal Dhamek Stupa, ancient monasteries, and the Ashokan Lion Capital pillar site.",
+    "detailedHistory": [
+      "Following his enlightenment under the Bodhi tree at Bodh Gaya, Gautama Buddha journeyed to the Isipatana Deer Park (Mrigadava) at Sarnath in c. 528 BCE. Here he delivered his first discourse, the Dhammacakkappavattana Sutta (\"Turning of the Wheel of Law\"), to his five former ascetic companions, establishing the sacred Buddhist Sangha (monastic community).",
+      "During the 3rd century BCE, Mauryan Emperor Ashoka visited Sarnath and erected the monumental Dharmarajika Stupa and a 15-meter polished sandstone pillar topped by the four-lion capital, which was later adopted as the official State Emblem of modern India.",
+      "Sarnath flourished as a major international center of Buddhist philosophy, art, and monastic education under the Gupta and Pala dynasties (4th–12th centuries CE), known worldwide for the delicate Sarnath school of Buddhist sculpture, until its destruction in the late 12th century."
+    ],
+    "location": "Varanasi, Uttar Pradesh, India",
+    "city": "Varanasi",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "period": "6th Century BCE – 12th Century CE (Mauryan to Gupta)",
+    "category": "religious",
+    "categoryLabel": "Religious Places & Temples",
+    "heritageClassification": "unesco",
+    "unescoInscriptionYear": 2026,
+    "unescoUrl": "https://whc.unesco.org/en/list/927/",
+    "officialUrl": "https://asi.nic.in/sarnath-varanasi/",
+    "thumbnailUrl": "/images/destinations/sarnath-thumb.jpg",
+    "heroImageUrl": "/images/destinations/sarnath.jpg",
+    "galleryImages": [
+      {
+        "url": "/images/destinations/sarnath.jpg",
+        "caption": "The towering cylindrical Dhamek Stupa rising in the sacred Deer Park of Sarnath.",
+        "credit": "Archaeological Survey of India Heritage Archive",
+        "alt": "Dhamek Stupa at Sarnath, Varanasi"
+      }
+    ],
+    "reconstructionType": "Schematic Digital Exploration",
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
+      {
+        "id": "sarnath-landmark-1",
+        "destinationId": "sarnath",
+        "name": "Chaukhandi Stupa (Component Part I)",
+        "hindiName": "चौखंडी स्तूप",
+        "category": "Monumental Stupa Architecture",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 85
+        },
+        "shortDescription": "The massive terraced brick stupa marking where the Buddha was reunited with his five former companions.",
+        "detailedDescription": "Situated 800 meters south of the main monastic precinct, Chaukhandi Stupa forms one of the two discrete component parts of the UNESCO property. Built as a terraced rectangular brick stupa during the Gupta period (4th–6th centuries CE), it was later crowned in 1588 CE with an octagonal red sandstone tower built by Raja Todar Mal’s son Govardhan to commemorate the visit of Mughal Emperor Humayun.",
+        "historicalSignificance": "A designated component part of the UNESCO World Heritage property, marking the exact geographical spot where the Buddha first met the Panchavargiya monks upon arriving in Sarnath.",
+        "architecturalHighlights": [
+          "Multi-tiered stepped rectangular brick terraces built with ancient mud mortar.",
+          "Superimposed 16th-century octagonal Mughal watchtower with arched openings.",
+          "High vantage point commanding views across the entire historic landscape."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l1-img1",
+            "url": "/images/destinations/sarnath.jpg",
+            "caption": "Chaukhandi Stupa with its crowning octagonal Mughal tower.",
+            "alt": "Chaukhandi Stupa at Sarnath",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Ancient Buddhist Site of Sarnath Inscription #927",
+            "url": "https://whc.unesco.org/en/list/927/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "sarnath-landmark-2",
+        "destinationId": "sarnath",
+        "name": "Archaeological Remains of Sarnath (Component Part II)",
+        "hindiName": "सारनाथ का पुरातात्विक क्षेत्र",
+        "category": "Excavated Monastic Precinct",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 48
+        },
+        "shortDescription": "The main protected archaeological zone encompassing excavated monastic courtyards, votive stupas, and ancient walkways.",
+        "detailedDescription": "The primary inscribed monastic area contains the excavated layers of centuries of Buddhist devotion. It includes paved circumambulatory paths (Pradakshina-pathas), clusters of hundreds of miniature votive stupas offered by pilgrims, and deep brick drainage canals that served the ancient monastic community.",
+        "historicalSignificance": "The heart of the UNESCO inscribed property, documenting continuous monastic development from the Mauryan Emperor Ashoka to the 12th century Gahadavala dynasty.",
+        "architecturalHighlights": [
+          "Over 200 carved stone and brick votive stupas of varied historical epochs.",
+          "Preserved brick circumambulatory pathways connecting ancient shrines.",
+          "Paved stone courtyards reflecting centuries of international pilgrim veneration."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l2-img1",
+            "url": "/images/destinations/sarnath.jpg",
+            "caption": "Excavated monastic remains and votive stupas across Sarnath.",
+            "alt": "Archaeological Remains at Sarnath",
+            "credit": "UNESCO Public Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Sarnath Excavation Reports",
+            "url": "https://asi.nic.in/sarnath-varanasi/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "sarnath-landmark-3",
+        "destinationId": "sarnath",
+        "name": "Dhamek Stupa",
+        "hindiName": "धमेख स्तूप",
+        "category": "Colossal Sacred Stupas",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 38
+        },
+        "shortDescription": "The colossal 43.6-meter cylindrical stupa marking the revered spot where the Buddha proclaimed the Four Noble Truths.",
+        "detailedDescription": "The colossal Dhamek Stupa (from Dharma Chakra, or \"Wheel of Law\") is the most imposing monument at Sarnath. Built in 500 CE over an earlier Mauryan foundation, it rises to a height of 43.6 meters with a base diameter of 28 meters. Its lower stone section is covered in masterly Gupta floral scroll carvings, geometric chevrons, and swastika medallions.",
+        "historicalSignificance": "The definitive physical landmark marking the turning of the Wheel of Dharma (Dharmachakra Pravartana) and the birth of the Buddhist Sangha.",
+        "architecturalHighlights": [
+          "Massive cylindrical stone base rising 13 meters, surmounted by a brick dome.",
+          "Eight arched niches in the cardinal directions that originally held life-size Buddha statues.",
+          "Intricate Gupta stone carvings displaying birds, leafy creepers, and geometric fretwork."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l3-img1",
+            "url": "/images/destinations/sarnath.jpg",
+            "caption": "Delicate Gupta floral carvings wrapping the stone base of Dhamek Stupa.",
+            "alt": "Dhamek Stupa at Sarnath",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Dhamek Stupa Architectural Study",
+            "url": "https://whc.unesco.org/en/list/927/",
+            "authorOrPublisher": "UNESCO World Heritage Centre"
+          }
+        ]
+      },
+      {
+        "id": "sarnath-landmark-4",
+        "destinationId": "sarnath",
+        "name": "Ancient Monastic Remains (Viharas)",
+        "hindiName": "प्राचीन बौद्ध विहार (मठ)",
+        "category": "Monastic Residential Architecture",
+        "mapCoordinates": {
+          "x": 30,
+          "y": 40
+        },
+        "shortDescription": "The excavated brick foundations of historic Buddhist monasteries where resident monks lived and studied.",
+        "detailedDescription": "Excavations have revealed several large monasteries (Viharas I to VII), most notably the massive 12th-century Dharmachakra Jina Vihara built by Queen Kumaradevi of the Gahadavala dynasty. Each monastery typically followed a standard quadrangular plan with a central courtyard surrounded by individual monk cells and an entrance gateway.",
+        "historicalSignificance": "Provides tangible archaeological evidence of daily monastic life, institutional organization, and scholarly training in ancient India.",
+        "architecturalHighlights": [
+          "Quadrangular brick plans with open central assembly courtyards.",
+          "Individual monks’ cells with raised sleeping platforms and clay lamp niches.",
+          "Ingenious brick water-well and covered drainage networks."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l4-img1",
+            "url": "/images/destinations/sarnath.jpg",
+            "caption": "Brick foundations of Monastery VII at Sarnath.",
+            "alt": "Monastic Remains at Sarnath",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Buddhist Monasteries of Sarnath",
+            "url": "https://asi.nic.in/sarnath-varanasi/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      },
+      {
+        "id": "sarnath-landmark-5",
+        "destinationId": "sarnath",
+        "name": "Archaeological and Sculptural Remains (Ashoka Pillar Site)",
+        "hindiName": "अशोक स्तंभ स्थल एवं धर्मराजिका स्तूप",
+        "category": "Mauryan Imperial Relics",
+        "mapCoordinates": {
+          "x": 65,
+          "y": 45
+        },
+        "shortDescription": "The original sandstone pillar base of Emperor Ashoka and the sacred circular foundations of the Dharmarajika Stupa.",
+        "detailedDescription": "Near the Main Shrine lies the stone base of the famous Ashoka Pillar erected in 250 BCE. It bears an inscription warning against schisms in the Buddhist order. The magnificent four-lion capital that once crowned this column is preserved in the nearby archaeological museum and serves as the National Emblem of India.",
+        "historicalSignificance": "The physical nexus of Emperor Ashoka’s patronage of Buddhism and the source of India’s most revered national symbol.",
+        "architecturalHighlights": [
+          "Intact lower section of the monolithic polished Chunar sandstone pillar.",
+          "Mauryan Brahmi script edicts warning monks against creating division.",
+          "Concentric brick foundation rings of the ancient Dharmarajika Stupa."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l5-img1",
+            "url": "/images/destinations/sarnath.jpg",
+            "caption": "Base of the Ashoka Pillar enclosed in the archaeological park.",
+            "alt": "Ashoka Pillar site at Sarnath",
+            "credit": "ASI Heritage Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Ashokan Inscriptions and Pillars at Sarnath",
+            "url": "https://whc.unesco.org/en/list/927/",
+            "authorOrPublisher": "Archaeological Survey of India (ASI)"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "c. 528 BCE",
+        "title": "The First Sermon",
+        "description": "Gautama Buddha delivers the Dhammacakkappavattana Sutta at Isipatana, founding the Buddhist Sangha."
+      },
+      {
+        "year": "c. 250 BCE",
+        "title": "Emperor Ashoka’s Visit",
+        "description": "Emperor Ashoka erects the monolithic stone pillar with the Lion Capital and builds the Dharmarajika Stupa."
+      },
+      {
+        "year": "500 CE",
+        "title": "Dhamek Stupa Reconstructed",
+        "description": "The colossal Dhamek Stupa is rebuilt in carved stone and brick during the golden age of Gupta Buddhist art."
+      },
+      {
+        "year": "1114 CE",
+        "title": "Kumaradevi’s Monastery Built",
+        "description": "Queen Kumaradevi constructs the grand Dharmachakra Jina Vihara, the last great Buddhist monastery at Sarnath."
+      },
+      {
+        "year": "2026",
+        "title": "UNESCO World Heritage Inscription",
+        "description": "Inscribed on the UNESCO World Heritage List for its profound spiritual, historical, and architectural universal value."
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "Religious Tradition",
+        "value": "Buddhism (First Sermon Site)"
+      },
+      {
+        "label": "Founding Period",
+        "value": "6th Century BCE (Buddha’s Era)"
+      },
+      {
+        "label": "Dhamek Stupa Height",
+        "value": "43.6 meters (143 feet)"
+      },
+      {
+        "label": "UNESCO Components",
+        "value": "2 Parts: Chaukhandi Stupa & Main Remains"
+      },
+      {
+        "label": "National Significance",
+        "value": "Site of the Lion Capital (Emblem of India)"
+      },
+      {
+        "label": "UNESCO Ref",
+        "value": "Inscription #927 (2026)"
+      }
+    ],
+    "architecturalSignificance": "Sarnath preserves over 1,500 years of Buddhist architectural evolution—from early Mauryan monolithic polished stone pillars and brick tumuli to colossal Gupta cyclopean stupas and elaborate medieval Gahadavala quadrangular viharas.",
+    "culturalSignificance": "One of the four paramount international pilgrimage destinations of world Buddhism, reverently visited by millions of pilgrims and scholars from across Asia.",
+    "historicalReferences": [
+      {
+        "title": "Ancient Buddhist Site of Sarnath — UNESCO World Heritage Centre",
+        "organization": "UNESCO World Heritage Centre",
+        "url": "https://whc.unesco.org/en/list/927/",
+        "relevantClaim": "Inscribed in 2026 as the sacred site of Buddha’s first discourse, comprising two component parts: Chaukhandi Stupa and Archaeological Remains of Sarnath.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Sarnath, Varanasi — Archaeological Survey of India",
+        "organization": "Archaeological Survey of India (ASI)",
+        "url": "https://asi.nic.in/sarnath-varanasi/",
+        "relevantClaim": "Centrally protected monument of national importance under the ASI Sarnath Circle.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Sarnath Site Blueprint Vector",
+        "source": "NewArambh Open Heritage Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0"
+      }
+    ],
+    "stats": {
+      "estimatedVisitMinutes": 25,
+      "hotspotsCount": 5,
+      "yearBuilt": "500 CE"
+    },
+    "tags": [
+      "UNESCO",
+      "Buddhist",
+      "Sarnath",
+      "Varanasi",
+      "Stupa",
+      "Ashoka",
+      "Dhamek",
+      "Archaeology"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
+  },
+  {
+    "id": "somnath",
+    "slug": "somnath",
+    "name": "Somnath Temple",
+    "shortName": "Somnath Mandir",
+    "hindiName": "सोमनाथ मंदिर (प्रभात पाटन)",
+    "subtitle": "The eternal Jyotirlinga shrine of Lord Shiva rising upon the Arabian Sea coast",
+    "description": "A revered Hindu pilgrimage destination traditionally celebrated as the first (Adya) among the twelve sacred Jyotirlinga shrines of India. Reconstructed in magnificent Chaulukya (Kailash Mahameru Prasad) architectural style and dedicated to the nation by President Dr. Rajendra Prasad in 1951.",
+    "detailedHistory": [
+      "Mentioned in the Rigveda and the Skanda Purana’s Prabhasa Khanda, the shrine at Prabhas Patan has been a paramount pilgrimage center for millennia, situated at the sacred confluence of the mythical Saraswati, Hiran, and Kapila rivers.",
+      "Over centuries, the temple witnessed successive destructions and faithful reconstructions by royal patrons including the Maitrakas of Vallabhi, the Chaulukya King Kumarapala, and the Maratha queen Ahilyabai Holkar of Indore in 1783.",
+      "Following Indian independence in 1947, Deputy Prime Minister Sardar Vallabhbhai Patel pledged the reconstruction of the grand temple. Guided by master architect Prabhashankar Sompura, the current temple was built in classical Chaulukya sandstone masonry, culminating in its formal consecration in May 1951."
+    ],
+    "location": "Prabhas Patan, Gir Somnath, Gujarat, India",
+    "city": "Prabhas Patan, Veraval",
+    "state": "Gujarat",
+    "country": "India",
+    "period": "1951 CE Reconstruction (Ancient Holy Site)",
+    "category": "religious",
+    "categoryLabel": "Religious Places & Temples",
+    "heritageClassification": "cultural",
+    "officialUrl": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+    "thumbnailUrl": "/images/destinations/somnath-thumb.jpg",
+    "heroImageUrl": "/images/destinations/somnath.jpg",
+    "galleryImages": [
+      {
+        "url": "/images/destinations/somnath.jpg",
+        "caption": "The majestic sandstone Shikhara of Somnath Temple fronting the Arabian Sea.",
+        "credit": "Shree Somnath Trust Public Documentation",
+        "alt": "Somnath Temple in Prabhas Patan, Gujarat"
+      }
+    ],
+    "reconstructionType": "Schematic Digital Exploration",
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
+      {
+        "id": "somnath-landmark-1",
+        "destinationId": "somnath",
+        "name": "Main Temple Exterior",
+        "hindiName": "मंदिर का मुख्य बहिर्भाग",
+        "category": "Chaulukya Temple Architecture",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 50
+        },
+        "shortDescription": "The colossal yellow sandstone temple constructed in the classical Kailash Mahameru Prasad architectural plan.",
+        "detailedDescription": "The main temple is constructed entirely of dressed golden sandstone from Dhrangadhra quarries, assembled without modern cement or iron bars using ancient interlocking stone joinery. The layout comprises the Garbhagriha (sanctum sanctorum), the intermediate Antarala, the spacious Gudhamandapa (assembly hall), and three grand entrance porches (Mukhamandapas).",
+        "historicalSignificance": "A triumphant 20th-century revival of medieval Indian temple architecture, supervised by master Sompura sthapatis.",
+        "architecturalHighlights": [
+          "Built strictly in accordance with classical Shilpa Shastra canons.",
+          "High stone plinth (Pitha) carved with tiered elephant, horse, and human friezes.",
+          "Triple-columned porticos facing north, south, and east."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l1-img1",
+            "url": "/images/destinations/somnath.jpg",
+            "caption": "Golden sandstone exterior of Somnath Temple.",
+            "alt": "Somnath Temple exterior",
+            "credit": "Shree Somnath Trust"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Somnath Temple — District Administration Gir Somnath",
+            "url": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+            "authorOrPublisher": "Government of Gujarat"
+          }
+        ]
+      },
+      {
+        "id": "somnath-landmark-2",
+        "destinationId": "somnath",
+        "name": "Main Shikhara and Kalash",
+        "hindiName": "मुख्य शिखर एवं स्वर्ण कलश",
+        "category": "Temple Spire & Finials",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 44
+        },
+        "shortDescription": "The soaring 155-foot pyramidal Shikhara crowned with a massive 10-tonne gold-plated Kalash and flag mast.",
+        "detailedDescription": "Soaring 155 feet (47 meters) above the coastal sands, the main Shikhara is composed of intricate cluster spirelets (Urushringas) ascending in rhythmic tiers toward the crowning Amalaka. Atop the spire rests a solid stone Kalash weighing nearly 10 tonnes, gold-plated with copper, supporting a 27-foot-tall flag pole that carries the sacred temple Dhwaja.",
+        "historicalSignificance": "The defining silhouette of Somnath, visible miles away across the Arabian Sea to returning fishing vessels and pilgrims.",
+        "architecturalHighlights": [
+          "155-foot tall multi-turreted Nagara-style Chaulukya tower.",
+          "Massive ribbed Amalaka stone ring crowning the spire.",
+          "Golden Kalash and 27-foot flag pole carrying the saffron flag depicting the Trishul."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l2-img1",
+            "url": "/images/destinations/somnath.jpg",
+            "caption": "The soaring 155-foot Shikhara of Somnath Temple.",
+            "alt": "Somnath Shikhara and Kalash",
+            "credit": "District Tourism Portal Gir Somnath"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Sompura Architecture of Somnath",
+            "url": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+            "authorOrPublisher": "Shree Somnath Trust Research Archives"
+          }
+        ]
+      },
+      {
+        "id": "somnath-landmark-3",
+        "destinationId": "somnath",
+        "name": "Architectural Carvings & Mandapa",
+        "hindiName": "उत्कीर्ण प्रस्तर शिल्प एवं नृत्य मंडप",
+        "category": "Stone Sculptural Friezes",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 58
+        },
+        "shortDescription": "Exquisitely sculpted horizontal bands depicting celestial dancers, musicians, deities, and sacred flora.",
+        "detailedDescription": "The outer walls of the Gudhamandapa and sanctum are covered in continuous horizontal stone courses (Tharas). The Gajathara (elephant band), Asvathara (horse band), and Narathara (human narrative band) are capped by majestic standing figures of Lord Shiva in his diverse manifestations, accompanied by Brahma, Vishnu, Surya, and the Ashta Dikpalas.",
+        "historicalSignificance": "Exemplifies traditional Gujarati stone craftsmanship preserving oral sculptural traditions uninterrupted for centuries.",
+        "architecturalHighlights": [
+          "Hundreds of individual hand-chiseled sandstone deities in recessed niches.",
+          "Domed mandapa ceiling carved with concentric lotus petal corbels.",
+          "Heavy fluted stone columns with bracket capitals bearing flying celestial figures."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l3-img1",
+            "url": "/images/destinations/somnath.jpg",
+            "caption": "Carved sculptural friezes on the southern mandapa wall.",
+            "alt": "Carvings at Somnath Temple",
+            "credit": "Shree Somnath Trust"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Art and Architecture of Somnath",
+            "url": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+            "authorOrPublisher": "Gujarat Tourism"
+          }
+        ]
+      },
+      {
+        "id": "somnath-landmark-4",
+        "destinationId": "somnath",
+        "name": "Temple Surroundings & Digvijay Dwar",
+        "hindiName": "परिसर एवं दिग्विजय द्वार",
+        "category": "Sacred Courtyard & Portals",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 72
+        },
+        "shortDescription": "The spacious granite-paved prakara courtyard entered via the monumental Digvijay Dwar gateway.",
+        "detailedDescription": "The temple is enclosed within a broad fortified courtyard paved in polished granite. Visitors enter through the Digvijay Dwar, a monumental ceremonial gateway named in honor of Jam Saheb Digvijaysinhji of Nawanagar, a key patron of the temple’s modern revival. Also in the courtyard stands the historic Baan Stambh (Arrow Pillar).",
+        "historicalSignificance": "A serene gathering ground accommodating thousands of pilgrims daily, providing sheltered corridors and sacred pradakshina paths.",
+        "architecturalHighlights": [
+          "Monumental multi-storey Digvijay Dwar gatehouse with carved balconies.",
+          "Historic Baan Stambh (Arrow Pillar) pointing directly southward.",
+          "Spacious coastal perimeter wall shielding the complex from tidal squalls."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l4-img1",
+            "url": "/images/destinations/somnath.jpg",
+            "caption": "Digvijay Dwar gateway and the granite temple courtyard.",
+            "alt": "Temple surroundings at Somnath",
+            "credit": "Gujarat Tourism Public Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Pilgrimage Infrastructure at Somnath",
+            "url": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+            "authorOrPublisher": "District Administration Gir Somnath"
+          }
+        ]
+      },
+      {
+        "id": "somnath-landmark-5",
+        "destinationId": "somnath",
+        "name": "Arabian Sea-Facing Setting & Baan Stambh",
+        "hindiName": "अरब सागर तटीय प्राचीर एवं बाण स्तंभ",
+        "category": "Coastal Setting & Ancient Geography",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 32
+        },
+        "shortDescription": "The dramatic sea-facing cliff terrace and the ancient Baan Stambh indicating an unobstructed sea path to Antarctica.",
+        "detailedDescription": "The temple is built right at the water’s edge where the roaring waves of the Arabian Sea crash against the high stone sea-wall. In the courtyard stands the famous Baan Stambh (Arrow Pillar) with an ancient Sanskrit inscription stating that from this point on the globe, an arrow travels south to the South Pole (Antarctica) without encountering a single landmass.",
+        "historicalSignificance": "A testament to the astonishing geographical knowledge of ancient Indian navigators and astronomers.",
+        "architecturalHighlights": [
+          "Heavy fortified basalt sea-wall engineered to withstand monsoon tidal surges.",
+          "Baan Stambh arrow marker pointing due South across the open ocean.",
+          "Sea-promenade walkway offering breathtaking sunset views over the coastal waters."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l5-img1",
+            "url": "/images/destinations/somnath.jpg",
+            "caption": "The temple sea-wall overlooking the crashing Arabian Sea waves.",
+            "alt": "Arabian Sea setting of Somnath",
+            "credit": "Gujarat Tourism"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "The Arrow Pillar of Somnath",
+            "url": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+            "authorOrPublisher": "Shree Somnath Trust"
+          }
+        ]
+      },
+      {
+        "id": "somnath-landmark-6",
+        "destinationId": "somnath",
+        "name": "Triveni Sangam (Nearby Sacred Confluence)",
+        "hindiName": "त्रिवेणी संगम (पवित्र संगम स्थल)",
+        "category": "Sacred Hydrological Geography",
+        "mapCoordinates": {
+          "x": 78,
+          "y": 78
+        },
+        "shortDescription": "A separately identified sacred river confluence 2km east, where Hiran, Kapila, and Saraswati rivers meet the ocean.",
+        "detailedDescription": "Located approximately 2 kilometers east of the main temple complex, the Triveni Sangam is the holy confluence where the rivers Hiran, Kapila, and the subterranean Saraswati meet the Arabian Sea. It is traditionally revered as a sacred spot for spiritual ablutions and ancestor rites, and marks the vicinity where Lord Krishna completed his earthly pastimes (Dehotsarg Teerth).",
+        "historicalSignificance": "Separately identified sacred location of immense antiquity, inextricably linked to the religious sanctity of the Somnath pilgrimage circuit.",
+        "architecturalHighlights": [
+          "Stone ghat steps descending to the river confluence.",
+          "Ancient shrines and parasols dedicated to Lord Krishna and Baladeva.",
+          "Serene confluence view where tranquil river currents blend into sea waves."
+        ],
+        "gallery": [
+          {
+            "id": "sn-l6-img1",
+            "url": "/images/destinations/somnath.jpg",
+            "caption": "Stepped ghats at the sacred Triveni Sangam.",
+            "alt": "Triveni Sangam near Somnath",
+            "credit": "Gujarat Tourism Public Archive"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Triveni Sangam and Dehotsarg Teerth",
+            "url": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+            "authorOrPublisher": "District Administration Gir Somnath"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "c. 1st Mill. BCE",
+        "title": "Ancient Prabhas Teerth Mentioned",
+        "description": "Prabhas Patan is venerated in the Rigveda and Mahabharata as a holy seaside shrine of the Moon God Chandra."
+      },
+      {
+        "year": "1169 CE",
+        "title": "Kumarapala’s Stone Temple",
+        "description": "Chaulukya King Kumarapala constructs a grand stone temple in the majestic Kailash Mahameru style."
+      },
+      {
+        "year": "1783 CE",
+        "title": "Ahilyabai Holkar’s Shrine",
+        "description": "Queen Ahilyabai Holkar of Indore constructs a protected underground Shiva temple nearby to preserve worship."
+      },
+      {
+        "year": "1947 CE",
+        "title": "Sardar Patel’s Pledge",
+        "description": "Sardar Vallabhbhai Patel visits Prabhas Patan and pledges the public reconstruction of the historic temple."
+      },
+      {
+        "year": "1951 CE",
+        "title": "Pran Pratishtha Consecration",
+        "description": "President Dr. Rajendra Prasad dedicates the newly completed Chaulukya temple to the Indian nation."
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "Deity",
+        "value": "Lord Shiva (First of 12 Jyotirlingas)"
+      },
+      {
+        "label": "Architectural Style",
+        "value": "Chaulukya / Kailash Mahameru Prasad"
+      },
+      {
+        "label": "Chief Architect",
+        "value": "Prabhashankar Sompura"
+      },
+      {
+        "label": "Shikhara Height",
+        "value": "155 feet (47 meters)"
+      },
+      {
+        "label": "Crowning Kalash",
+        "value": "10 tonnes gold-plated stone"
+      },
+      {
+        "label": "Classification",
+        "value": "Culturally Significant (Protected Pilgrimage)"
+      }
+    ],
+    "architecturalSignificance": "Built without modern iron or concrete using classical interlocked dry-sandstone joinery. The multi-tiered Shikhara, projecting pillared porches, and deeply carved horizontal friezes showcase the living traditions of the Sompura master builder community of Gujarat.",
+    "culturalSignificance": "Revered across India as the \"Shrine Eternal,\" standing as a symbol of cultural resilience and sacred devotion against centuries of destruction and reconstruction.",
+    "historicalReferences": [
+      {
+        "title": "The Somnath Temple — District Administration Gir Somnath",
+        "organization": "Government of Gujarat",
+        "url": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+        "relevantClaim": "Official district portal describing the temple history, architecture, and sacred pilgrimage geography.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Shree Somnath Trust Official Records",
+        "organization": "Shree Somnath Trust",
+        "url": "https://girsomnath.nic.in/tourist-place/the-somnath-temple/",
+        "relevantClaim": "Statutory religious and cultural trust administering the temple complex under Gujarat state trust legislation.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Somnath Temple Architectural Schematic Vector",
+        "source": "NewArambh Open Heritage Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0"
+      }
+    ],
+    "stats": {
+      "estimatedVisitMinutes": 25,
+      "hotspotsCount": 6,
+      "yearBuilt": "1951 CE"
+    },
+    "tags": [
+      "Cultural",
+      "Gujarat",
+      "Somnath",
+      "Jyotirlinga",
+      "Shiva",
+      "Chaulukya",
+      "Arabian Sea",
+      "Temple"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
+  },
+  {
+    "id": "dwarkadhish",
+    "slug": "dwarkadhish",
+    "name": "Dwarkadhish Temple (Jagat Mandir)",
+    "shortName": "Dwarka Mandir",
+    "hindiName": "द्वारकाधीश मंदिर (जगत मंदिर)",
+    "subtitle": "The five-storey Char Dham sanctuary of Lord Krishna at the sacred Gomti confluence",
+    "description": "An ancient and sacred Hindu pilgrimage destination revered as one of the four cardinal Char Dham sites of India. The monumental Jagat Mandir (\"Universal Temple\") rises five storeys high upon 72 exquisitely carved limestone pillars, topped by a 78-meter Shikhara flying the iconic 52-yard sacred flag.",
+    "detailedHistory": [
+      "Traditional history attributes the founding of the original shrine to Vajranabha, the great-grandson of Lord Krishna, over the residential palace (Hari Griha) in the legendary submerged island kingdom of ancient Dvaraka.",
+      "The present temple architecture reflects consecutive building phases from the 16th century CE during the Chaulukya (Solanki) revival, constructed with soft limestone quarried from the Saurashtra coast.",
+      "Situated at the sacred mouth of the Gomti Creek where it meets the Arabian Sea, the complex has two grand ceremonial entryways: Swarga Dwar (56 steps ascending from the Gomti River) and Moksha Dwar (exiting toward the holy market square)."
+    ],
+    "location": "Dwarka, Devbhumi Dwarka, Gujarat, India",
+    "city": "Dwarka",
+    "state": "Gujarat",
+    "country": "India",
+    "period": "16th Century CE (Ancient Pilgrimage Heritage)",
+    "category": "religious",
+    "categoryLabel": "Religious Places & Temples",
+    "heritageClassification": "cultural",
+    "officialUrl": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+    "thumbnailUrl": "/images/destinations/dwarkadhish-thumb.jpg",
+    "heroImageUrl": "/images/destinations/dwarkadhish.jpg",
+    "galleryImages": [
+      {
+        "url": "/images/destinations/dwarkadhish.jpg",
+        "caption": "The towering 78-meter Shikhara of Jagat Mandir flying the sacred 52-yard flag.",
+        "credit": "Shree Dwarkadhish Devasthan Samiti Public Records",
+        "alt": "Dwarkadhish Temple in Dwarka, Gujarat"
+      }
+    ],
+    "reconstructionType": "Schematic Digital Exploration",
+    "availableModes": [
+      "map",
+      "tour",
+      "inspect"
+    ],
+    "landmarks": [
+      {
+        "id": "dwarka-landmark-1",
+        "destinationId": "dwarkadhish",
+        "name": "Jagat Mandir Exterior",
+        "hindiName": "जगत मंदिर मुख्य प्रासाद",
+        "category": "Multi-Storey Temple Architecture",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 48
+        },
+        "shortDescription": "The five-storey limestone temple supported by 72 exquisitely carved pillars housing the sanctum of the King of Dwarka.",
+        "detailedDescription": "The main sanctuary (Jagat Mandir) rises in five distinct tiers supported by 72 monolithic stone pillars. Built from warm coastal limestone, the temple houses the black marble four-armed deity of Lord Krishna as Dwarkadhish (King of Dwarka), holding the Shankha, Chakra, Gada, and Padma.",
+        "historicalSignificance": "One of the paramount sacred shrines of Vaishnavism and one of the four supreme Char Dham destinations established by Adi Shankaracharya.",
+        "architecturalHighlights": [
+          "Five-storey elevation supported on 72 load-bearing stone columns without internal iron.",
+          "Intricate stepped stone bracket capitals supporting multi-tiered balconies.",
+          "Spacious inner circumambulatory passage (pradakshina-patha) around the inner sanctum."
+        ],
+        "gallery": [
+          {
+            "id": "dw-l1-img1",
+            "url": "/images/destinations/dwarkadhish.jpg",
+            "caption": "Five-tiered facade of the Jagat Mandir.",
+            "alt": "Jagat Mandir at Dwarkadhish",
+            "credit": "Devbhumi Dwarka District Administration"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Dwarkadhish Temple — District Portal Devbhumi Dwarka",
+            "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+            "authorOrPublisher": "Government of Gujarat"
+          }
+        ]
+      },
+      {
+        "id": "dwarka-landmark-2",
+        "destinationId": "dwarkadhish",
+        "name": "Main Shikhara and 52-Yard Flag (Dhwaja)",
+        "hindiName": "मुख्य शिखर एवं बावन गज ध्वज",
+        "category": "Spire & Ritual Epigraphy",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 38
+        },
+        "shortDescription": "The 78-meter towering stone spire crowned by the monumental 52-yard triangular silk flag changed five times daily.",
+        "detailedDescription": "The main Shikhara ascends 78 meters (256 feet) into the sky, composed of rhythmically tiered miniature spires. Atop the spire flies the legendary 52-yard triangular silk flag (Dhwajaji), representing the 52 administrative subdivisions of ancient Dvaraka and the 52 cosmic gates of spiritual liberation. The flag is ritually changed five times each day by hereditary temple Brahmins (Abotis).",
+        "historicalSignificance": "The living emblem of the King of Dwarka, visible for miles across the Arabian Sea.",
+        "architecturalHighlights": [
+          "78-meter soaring pyramidal sandstone spire with rhythmic spirelets.",
+          "Massive crowning ribbed stone Amalaka and golden Kalash finial.",
+          "Ritual flag staff supporting a triangular flag measuring 52 yards of pure silk."
+        ],
+        "gallery": [
+          {
+            "id": "dw-l2-img1",
+            "url": "/images/destinations/dwarkadhish.jpg",
+            "caption": "The 78-meter Shikhara with the sacred fluttering flag.",
+            "alt": "Dwarkadhish Shikhara and flag",
+            "credit": "Shree Dwarkadhish Devasthan Samiti"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Traditions of the Dwarkadhish Flag Ceremony",
+            "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+            "authorOrPublisher": "Gujarat Tourism"
+          }
+        ]
+      },
+      {
+        "id": "dwarka-landmark-3",
+        "destinationId": "dwarkadhish",
+        "name": "Carved Architectural Facade",
+        "hindiName": "अलंकृत प्रस्तर मुखौटा",
+        "category": "Medieval Stone Reliefs",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 55
+        },
+        "shortDescription": "Intricate friezes of celestial dancers, elephant bands, and epic narrative scenes from the life of Lord Krishna.",
+        "detailedDescription": "The exterior walls feature dense horizontal friezes depicting scenes from the Srimad Bhagavatam, including Krishna’s childhood pastimes in Gokula, the lifting of Mount Govardhana, and maritime trade galleys of ancient Gujarat. These are complemented by sculptures of celestial nymphs (Surasundaris) and dancing musicians.",
+        "historicalSignificance": "A magnificent visual encyclopedia of medieval Chaulukya stone carving illustrating Vaishnava devotional narratives.",
+        "architecturalHighlights": [
+          "Multi-tiered horizontal stone courses (pithas) with elephants and galloping cavalry.",
+          "Deeply undercut niches housing standing figures of the avatars of Vishnu.",
+          "Geometric stone lattices admitting ocean breezes while screening the sanctuary interior."
+        ],
+        "gallery": [
+          {
+            "id": "dw-l3-img1",
+            "url": "/images/destinations/dwarkadhish.jpg",
+            "caption": "Carved friezes on the main temple wall.",
+            "alt": "Carvings at Dwarkadhish Temple",
+            "credit": "District Tourism Portal"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Stone Architecture of Dwarka Temples",
+            "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+            "authorOrPublisher": "Gujarat Tourism Research"
+          }
+        ]
+      },
+      {
+        "id": "dwarka-landmark-4",
+        "destinationId": "dwarkadhish",
+        "name": "Swarga Dwar (Gate to Heaven)",
+        "hindiName": "स्वर्ग द्वार (५६ सीढ़ियां)",
+        "category": "Ceremonial Stepped Portals",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 68
+        },
+        "shortDescription": "The southern ceremonial gate featuring a monumental flight of 56 stone steps ascending from the sacred Gomti Ghats.",
+        "detailedDescription": "The main entrance for pilgrims approaching from the river is Swarga Dwar (\"Gate to Heaven\"). Pilgrims ascend 56 wide stone steps—representing the 56 crore Yadavas of Krishna’s clan or the 56 varieties of sacred bhoga offerings—to reach the elevated temple courtyard.",
+        "historicalSignificance": "The symbolic pilgrimage ascent from the cleansing waters of the Gomti River into the divine court of the Lord.",
+        "architecturalHighlights": [
+          "56 wide monumental stone stairs flanked by carved balustrades.",
+          "Ornamental gateway arch adorned with guardian figures and floral festoons.",
+          "Direct axial alignment connecting the riverfront ghats to the main temple mandapa."
+        ],
+        "gallery": [
+          {
+            "id": "dw-l4-img1",
+            "url": "/images/destinations/dwarkadhish.jpg",
+            "caption": "The 56 steps of Swarga Dwar ascending from the river.",
+            "alt": "Swarga Dwar at Dwarkadhish",
+            "credit": "District Administration Devbhumi Dwarka"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Dwarkadhish Pilgrimage Route Architecture",
+            "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+            "authorOrPublisher": "Devbhumi Dwarka Tourism"
+          }
+        ]
+      },
+      {
+        "id": "dwarka-landmark-5",
+        "destinationId": "dwarkadhish",
+        "name": "Moksha Dwar (Gate to Liberation)",
+        "hindiName": "मोक्ष द्वार",
+        "category": "Ceremonial Portals",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 28
+        },
+        "shortDescription": "The northern exit gate leading toward the vibrant holy market square of modern Dwarka town.",
+        "detailedDescription": "Following darshan and pradakshina, pilgrims depart through the northern portal known as Moksha Dwar (\"Gate to Liberation\"). This doorway leads directly into the ancient town square, symbolizing liberation from the cycle of worldly existence and the return of the devotee into daily life with spiritual blessings.",
+        "historicalSignificance": "Represents the traditional philosophical sequence of Indian temple pilgrimage: entry through heaven (Swarga) and departure into spiritual freedom (Moksha).",
+        "architecturalHighlights": [
+          "Heavily carved stone door frame with auspicious Ganga and Yamuna river goddess carvings.",
+          "Decorative lintel carrying an image of Ganesha and celestial guardians.",
+          "Wide egress corridor opening into the temple town bazaar."
+        ],
+        "gallery": [
+          {
+            "id": "dw-l5-img1",
+            "url": "/images/destinations/dwarkadhish.jpg",
+            "caption": "Moksha Dwar exit gateway facing the town square.",
+            "alt": "Moksha Dwar at Dwarkadhish",
+            "credit": "Shree Dwarkadhish Devasthan Samiti"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Spiritual Significance of the Gates of Dwarka",
+            "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+            "authorOrPublisher": "Gujarat Tourism"
+          }
+        ]
+      },
+      {
+        "id": "dwarka-landmark-6",
+        "destinationId": "dwarkadhish",
+        "name": "Gomti Ghat and Riverfront",
+        "hindiName": "गोमती घाट",
+        "category": "Sacred Water Ghats",
+        "mapCoordinates": {
+          "x": 50,
+          "y": 84
+        },
+        "shortDescription": "The sacred stepped bathing ghats on the Gomti River where it merges into the open Arabian Sea.",
+        "detailedDescription": "At the foot of the Swarga Dwar stairs lies the sacred Gomti Ghat. The Gomti Creek flows gracefully alongside the temple before meeting the turquoise waters of the Arabian Sea (Gomti Sangam). Pilgrims take holy dips in the gentle river current, feed sacred river fishes, and perform traditional aarti ceremonies at sunset.",
+        "historicalSignificance": "Ancient sacred hydrological landscape mentioned in the Mahabharata as the sacred bathing place of pilgrims visiting Dvaravati.",
+        "architecturalHighlights": [
+          "Stepped stone ghat terraces lining the tranquil riverbank.",
+          "Chakra Tirtha stone platform inscribed with the sacred Sudarshana Chakra.",
+          "Riverfront pavilion shelters for daily aarti and religious rituals."
+        ],
+        "gallery": [
+          {
+            "id": "dw-l6-img1",
+            "url": "/images/destinations/dwarkadhish.jpg",
+            "caption": "Stepped bathing ghats along the Gomti River.",
+            "alt": "Gomti Ghat at Dwarka",
+            "credit": "Devbhumi Dwarka District Administration"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Gomti Riverfront Heritage at Dwarka",
+            "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+            "authorOrPublisher": "District Tourism Portal"
+          }
+        ]
+      },
+      {
+        "id": "dwarka-landmark-7",
+        "destinationId": "dwarkadhish",
+        "name": "Sudama Setu (Nearby Pedestrian Bridge)",
+        "hindiName": "सुदामा सेतु (झूला पुल)",
+        "category": "Modern Coastal Infrastructure",
+        "mapCoordinates": {
+          "x": 72,
+          "y": 86
+        },
+        "shortDescription": "A separately identified modern pedestrian suspension bridge across the Gomti Creek connecting the temple to the beach.",
+        "detailedDescription": "Inaugurated in 2016 and named in honor of Krishna’s childhood friend Sudama, this 166-meter pedestrian suspension bridge spans the Gomti Creek. It connects the historic Jagat Mandir on the northern bank to the pristine Panchnad Tirth (Five Sweet Water Wells) and Arabian Sea beach on the southern bank.",
+        "historicalSignificance": "A separately identified modern civic landmark providing safe pedestrian connectivity and panoramic views of the temple silhouette.",
+        "architecturalHighlights": [
+          "166-meter pedestrian cable-stayed suspension bridge.",
+          "Elevated deck providing uninterrupted views of the temple Shikhara and Gomti confluence.",
+          "Illuminated with decorative LED lighting during evening twilight."
+        ],
+        "gallery": [
+          {
+            "id": "dw-l7-img1",
+            "url": "/images/destinations/dwarkadhish.jpg",
+            "caption": "Sudama Setu suspension bridge spanning Gomti Creek.",
+            "alt": "Sudama Setu near Dwarkadhish",
+            "credit": "Gujarat Tourism"
+          }
+        ],
+        "sourceReferences": [
+          {
+            "title": "Sudama Setu Tourist Attraction",
+            "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+            "authorOrPublisher": "Devbhumi Dwarka District Administration"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "c. 1500 BCE",
+        "title": "Ancient Dvaravati Kingdom",
+        "description": "Traditional era of Lord Krishna establishing the island fortress city of Dvaravati on the Saurashtra coast."
+      },
+      {
+        "year": "c. 8th Cent. CE",
+        "title": "Adi Shankaracharya Establishes Peeth",
+        "description": "Adi Shankaracharya visits Dwarka and establishes the Sharda Peeth, designating Dwarka as one of the Char Dham."
+      },
+      {
+        "year": "15th–16th Cent.",
+        "title": "Reconstruction of Jagat Mandir",
+        "description": "The monumental five-storey limestone temple and soaring Shikhara are constructed in classical Chaulukya style."
+      },
+      {
+        "year": "2016 CE",
+        "title": "Sudama Setu Inaugurated",
+        "description": "The pedestrian suspension bridge across the Gomti Creek is opened to pilgrims and visitors."
+      }
+    ],
+    "quickFacts": [
+      {
+        "label": "Deity",
+        "value": "Lord Krishna (Dwarkadhish — King of Dwarka)"
+      },
+      {
+        "label": "Pilgrimage Status",
+        "value": "One of the Four Sacred Char Dham Sites"
+      },
+      {
+        "label": "Architectural Style",
+        "value": "Chaulukya / Solanki Limestone Masonry"
+      },
+      {
+        "label": "Shikhara Height",
+        "value": "78 meters (256 feet)"
+      },
+      {
+        "label": "Pillars",
+        "value": "72 Carved Monolithic Columns"
+      },
+      {
+        "label": "Classification",
+        "value": "Culturally Significant (Protected Pilgrimage)"
+      }
+    ],
+    "architecturalSignificance": "A magnificent five-storey coastal limestone monument built on 72 monolithic carved columns. Its two monumental gates (Swarga Dwar and Moksha Dwar) and 78-meter high Shikhara represent the pinnacle of medieval western Indian temple architecture.",
+    "culturalSignificance": "One of the holiest pilgrimage destinations on earth for Vaishnava Hindus, revered as the earthly capital of Lord Krishna and an enduring beacon of spiritual liberation.",
+    "historicalReferences": [
+      {
+        "title": "Dwarkadhish Temple — District Portal Devbhumi Dwarka",
+        "organization": "Government of Gujarat",
+        "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+        "relevantClaim": "Official government portal describing the temple history, architectural features, flag ritual, and pilgrimage infrastructure.",
+        "lastVerifiedDate": "2026-11"
+      },
+      {
+        "title": "Shree Dwarkadhish Devasthan Samiti Records",
+        "organization": "Devasthan Samiti",
+        "url": "https://devbhumidwarka.nic.in/tourist-place/dwarkadhish-temple/",
+        "relevantClaim": "Statutory religious committee managing the daily worship, 52-yard flag rituals, and pilgrim services.",
+        "lastVerifiedDate": "2026-11"
+      }
+    ],
+    "assetCredits": [
+      {
+        "assetName": "Dwarkadhish Temple Architectural Schematic Vector",
+        "source": "NewArambh Open Heritage Library",
+        "creator": "NewArambh Curatorial Team",
+        "license": "CC-BY 4.0"
+      }
+    ],
+    "stats": {
+      "estimatedVisitMinutes": 28,
+      "hotspotsCount": 7,
+      "yearBuilt": "16th Century CE"
+    },
+    "tags": [
+      "Cultural",
+      "Gujarat",
+      "Dwarka",
+      "Krishna",
+      "Char Dham",
+      "Chaulukya",
+      "Gomti",
+      "Temple"
+    ],
+    "mapConfig": {
+      "viewBox": "0 0 500 500",
+      "schematicDisclaimer": "Schematic educational site map — not to scale.",
+      "aspectRatio": "1/1"
+    }
   }
 ]

@@ -37,7 +37,7 @@ export default function FeaturedDestination() {
           <div className="lg:col-span-7 relative min-h-[380px] lg:min-h-[520px] overflow-hidden group">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: `url('/images/destinations/hero-taj-sunset.jpg')` }}
+              style={{ backgroundImage: `url('/images/destinations/taj-mahal.jpg')` }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-zinc-950/60 hidden lg:block" />

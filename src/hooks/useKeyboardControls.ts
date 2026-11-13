@@ -8,6 +8,7 @@ export interface KeyboardState {
   left: boolean;
   right: boolean;
   sprint: boolean;
+  jump: boolean;
 }
 
 export function useKeyboardControls(enabled: boolean = true) {
@@ -17,6 +18,7 @@ export function useKeyboardControls(enabled: boolean = true) {
     left: false,
     right: false,
     sprint: false,
+    jump: false,
   });
 
   useEffect(() => {
@@ -27,6 +29,7 @@ export function useKeyboardControls(enabled: boolean = true) {
         left: false,
         right: false,
         sprint: false,
+        jump: false,
       };
       return;
     }
@@ -62,6 +65,9 @@ export function useKeyboardControls(enabled: boolean = true) {
         case 'ShiftRight':
           keys.current.sprint = true;
           break;
+        case 'Space':
+          keys.current.jump = true;
+          break;
       }
     };
 
@@ -87,6 +93,9 @@ export function useKeyboardControls(enabled: boolean = true) {
         case 'ShiftRight':
           keys.current.sprint = false;
           break;
+        case 'Space':
+          keys.current.jump = false;
+          break;
       }
     };
 
@@ -97,6 +106,7 @@ export function useKeyboardControls(enabled: boolean = true) {
         left: false,
         right: false,
         sprint: false,
+        jump: false,
       };
     };
 

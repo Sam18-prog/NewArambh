@@ -9,6 +9,9 @@ export interface MobileInputState {
   // Touch sprint active
   touchSprint: boolean;
 
+  // Touch jump active
+  touchJump?: boolean;
+
   // Accumulated touch look rotation deltas (in radians)
   touchLookYaw: number;
   touchLookPitch: number;

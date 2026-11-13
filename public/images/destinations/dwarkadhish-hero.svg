@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dwSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="40%" stop-color="#1e3a8a"/>
+      <stop offset="70%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="dwGomti" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="60%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <linearGradient id="dwLimestone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="50%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#d4a373"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="750" fill="url(#dwSky)"/>
+
+  <!-- Radiant Divine Sun/Aura -->
+  <circle cx="580" cy="240" r="150" fill="#fef08a" opacity="0.25" filter="blur(40px)"/>
+
+  <!-- Sacred Gomti Creek & Ghats Foreground -->
+  <rect x="0" y="520" width="1200" height="230" fill="url(#dwGomti)"/>
+  <path d="M 0 540 Q 300 515 600 540 T 1200 530" fill="none" stroke="#bae6fd" stroke-width="2.5" opacity="0.7"/>
+
+  <!-- Swarga Dwar 56-Step Stepped Ghats (Center-Right Ascent) -->
+  <g fill="#d4a373" stroke="#8c582f" stroke-width="1">
+    <rect x="520" y="470" width="160" height="12"/>
+    <rect x="530" y="458" width="140" height="12"/>
+    <rect x="540" y="446" width="120" height="12"/>
+    <rect x="550" y="434" width="100" height="12"/>
+    <rect x="560" y="422" width="80" height="12"/>
+    <rect x="570" y="410" width="60" height="12"/>
+  </g>
+  <text x="600" y="505" fill="#fef08a" font-size="10" font-family="sans-serif" font-weight="bold" text-anchor="middle">SWARGA DWAR (56 STEPS)</text>
+
+  <!-- Jagat Mandir Five-Storey Limestone Structure -->
+  <g transform="translate(380, 80)">
+    <!-- Five Stepped Storeys -->
+    <rect x="80" y="300" width="280" height="40" fill="url(#dwLimestone)" rx="2"/>
+    <rect x="100" y="260" width="240" height="40" fill="url(#dwLimestone)" rx="2"/>
+    <rect x="120" y="220" width="200" height="40" fill="url(#dwLimestone)" rx="2"/>
+    <rect x="140" y="180" width="160" height="40" fill="url(#dwLimestone)" rx="2"/>
+    <rect x="160" y="140" width="120" height="40" fill="url(#dwLimestone)" rx="2"/>
+
+    <!-- 72 Pillars Schematic Arcades -->
+    <g fill="#78350f">
+      <rect x="100" y="305" width="12" height="30" rx="3"/>
+      <rect x="130" y="305" width="12" height="30" rx="3"/>
+      <rect x="160" y="305" width="12" height="30" rx="3"/>
+      <rect x="270" y="305" width="12" height="30" rx="3"/>
+      <rect x="300" y="305" width="12" height="30" rx="3"/>
+      <rect x="330" y="305" width="12" height="30" rx="3"/>
+    </g>
+
+    <!-- Towering 78-Meter Main Shikhara Spire -->
+    <polygon points="170,140 270,140 230,10 210,10" fill="url(#dwLimestone)"/>
+    <!-- Intricate Spirelet Ribs -->
+    <polygon points="160,140 200,140 185,70 170,70" fill="#d4a373"/>
+    <polygon points="240,140 280,140 270,70 255,70" fill="#d4a373"/>
+
+    <!-- Crowning Amalaka and Kalash -->
+    <ellipse cx="220" cy="10" rx="22" ry="8" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+    <circle cx="220" cy="-2" r="10" fill="#f59e0b"/>
+
+    <!-- Sacred 52-Yard Triangular Dhwaja Flag Flying -->
+    <line x1="220" y1="-2" x2="220" y2="-55" stroke="#f59e0b" stroke-width="3"/>
+    <polygon points="220,-55 310,-40 220,-25" fill="#f97316"/>
+    <!-- Sun and Moon Emblem on Flag -->
+    <circle cx="250" cy="-40" r="5" fill="#ffffff"/>
+  </g>
+
+  <!-- Sudama Setu Suspension Bridge in Background (Left side) -->
+  <g transform="translate(60, 470)">
+    <!-- Tower Pylons -->
+    <line x1="80" y1="50" x2="80" y2="-40" stroke="#f59e0b" stroke-width="4"/>
+    <line x1="220" y1="50" x2="220" y2="-40" stroke="#f59e0b" stroke-width="4"/>
+    <!-- Suspension Cables -->
+    <path d="M 10 30 Q 80 -40 150 15 Q 220 -40 290 30" fill="none" stroke="#fef08a" stroke-width="2"/>
+    <!-- Bridge Deck -->
+    <line x1="10" y1="30" x2="290" y2="30" stroke="#ffffff" stroke-width="3"/>
+    <text x="150" y="55" fill="#bae6fd" font-size="9" font-family="sans-serif" text-anchor="middle">SUDAMA SETU (SUSPENSION BRIDGE)</text>
+  </g>
+
+  <!-- Ground Shadows -->
+  <rect x="0" y="650" width="1200" height="100" fill="#0c1a2e" opacity="0.9"/>
+
+  <!-- Badge & Typography (CULTURALLY SIGNIFICANT - NO UNESCO) -->
+  <rect x="50" y="50" width="300" height="42" rx="21" fill="#090505" fill-opacity="0.85" stroke="#10b981" stroke-width="1.5"/>
+  <circle cx="75" cy="71" r="5" fill="#10b981"/>
+  <text x="200" y="76" fill="#6ee7b7" font-family="sans-serif" font-size="14" font-weight="bold" letter-spacing="2" text-anchor="middle">CULTURALLY SIGNIFICANT</text>
+  <text x="50" y="680" fill="#ffffff" font-family="sans-serif" font-size="36" font-weight="900" letter-spacing="1">DWARKADHISH TEMPLE</text>
+  <text x="50" y="714" fill="#93c5fd" font-family="sans-serif" font-size="18" font-weight="500">Dwarka, Gujarat • Char Dham Pilgrimage • 78m Jagat Mandir Shikhara</text>
+</svg>

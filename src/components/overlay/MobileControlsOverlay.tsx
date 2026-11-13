@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Zap, Pause } from 'lucide-react';
+import { Zap, Pause, ArrowUp } from 'lucide-react';
 import VirtualJoystick from '@/components/overlay/VirtualJoystick';
 import TouchLookZone from '@/components/overlay/TouchLookZone';
 import { MobileInputState, TouchControlSettings } from '@/types/input';
@@ -12,6 +12,7 @@ interface MobileControlsOverlayProps {
   onPause: () => void;
   settings: TouchControlSettings;
   forceVisible?: boolean;
+  allowJump?: boolean;
 }
 
 export default function MobileControlsOverlay({
@@ -20,6 +21,7 @@ export default function MobileControlsOverlay({
   onPause,
   settings,
   forceVisible = false,
+  allowJump = true,
 }: MobileControlsOverlayProps) {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [isSprinting, setIsSprinting] = useState(false);
@@ -154,11 +156,31 @@ export default function MobileControlsOverlay({
           />
         </div>
 
-        {/* Right: Touch Look Hint Badge (Fades after touch) */}
-        <div className="pointer-events-none mb-4 hidden sm:block text-right">
-          <span className="inline-block px-3 py-1.5 rounded-full text-[10px] font-semibold text-zinc-400 bg-zinc-950/60 backdrop-blur-md border border-zinc-800">
-            Swipe right area to look around
-          </span>
+        {/* Right: Jump Button & Touch Look Hint */}
+        <div className="pointer-events-auto flex flex-col items-end gap-3 mb-2">
+          {allowJump && (
+            <button
+              type="button"
+              onPointerDown={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (mobileInputRef.current) {
+                  mobileInputRef.current.touchJump = true;
+                }
+              }}
+              style={{ touchAction: 'none' }}
+              className="flex items-center justify-center w-14 h-14 rounded-full bg-zinc-950/80 border border-amber-500/40 text-amber-300 backdrop-blur-md active:scale-90 shadow-xl"
+              aria-label="Jump"
+            >
+              <ArrowUp className="w-6 h-6 stroke-[2.5]" />
+            </button>
+          )}
+
+          <div className="pointer-events-none hidden sm:block text-right">
+            <span className="inline-block px-3 py-1.5 rounded-full text-[10px] font-semibold text-zinc-400 bg-zinc-950/60 backdrop-blur-md border border-zinc-800">
+              Swipe right area to look around
+            </span>
+          </div>
         </div>
       </div>
     </div>

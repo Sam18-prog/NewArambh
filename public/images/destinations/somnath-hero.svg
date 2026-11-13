@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="somSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="45%" stop-color="#0369a1"/>
+      <stop offset="80%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="somSea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="50%" stop-color="#075985"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <linearGradient id="somSandstone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="750" fill="url(#somSky)"/>
+
+  <!-- Golden Sun over Ocean -->
+  <circle cx="280" cy="380" r="140" fill="#fef08a" opacity="0.3" filter="blur(35px)"/>
+  <circle cx="280" cy="380" r="50" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Arabian Sea Waters & Crashing Waves -->
+  <rect x="0" y="440" width="1200" height="310" fill="url(#somSea)"/>
+  <path d="M 0 540 Q 150 510 300 540 T 600 540 T 900 540 T 1200 540 L 1200 750 L 0 750 Z" fill="#0369a1" opacity="0.5"/>
+  <!-- Sea Foam & Coastal Surf -->
+  <path d="M 0 570 Q 200 555 400 570 T 800 570 T 1200 570" fill="none" stroke="#bae6fd" stroke-width="4" opacity="0.8"/>
+  <path d="M 0 610 Q 250 595 500 610 T 1000 610 T 1200 610" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/>
+
+  <!-- Coastal Fortified Stone Sea-Wall Platform -->
+  <polygon points="320,440 1200,440 1200,750 320,750" fill="#78350f"/>
+  <rect x="360" y="430" width="840" height="25" fill="#92400e" rx="3"/>
+
+  <!-- Somnath Temple Main Structure (Chaulukya Kailash Mahameru) -->
+  <g transform="translate(480, 110)">
+    <!-- Main Gudhamandapa Lower Assembly Hall -->
+    <rect x="180" y="240" width="320" height="110" fill="url(#somSandstone)" rx="4"/>
+    <!-- Mandapa Pyramidal Tiered Roof (Samvarana) -->
+    <polygon points="210,240 470,240 340,150" fill="#eab308"/>
+    <circle cx="340" cy="142" r="14" fill="#fef08a"/>
+
+    <!-- Soaring 155-Foot Main Shikhara (Sanctum Spire) -->
+    <!-- Lower Body -->
+    <rect x="60" y="220" width="160" height="130" fill="url(#somSandstone)"/>
+    <!-- Pyramidal Clustered Spire -->
+    <polygon points="60,220 220,220 170,40 110,40" fill="url(#somSandstone)"/>
+    <!-- Spirelets (Urushringas) -->
+    <polygon points="50,220 110,220 90,120 70,120" fill="#ca8a04"/>
+    <polygon points="170,220 230,220 210,120 190,120" fill="#ca8a04"/>
+
+    <!-- Ribbed Amalaka Ring & 10-Tonne Gold Kalash -->
+    <ellipse cx="140" cy="38" rx="35" ry="12" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="140" cy="18" r="16" fill="#f59e0b"/>
+    <!-- Flag Mast & Saffron Dhwaja with Trishul -->
+    <line x1="140" y1="18" x2="140" y2="-45" stroke="#f59e0b" stroke-width="4"/>
+    <polygon points="140,-45 220,-30 140,-15" fill="#ea580c"/>
+    <circle cx="170" cy="-30" r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- Baan Stambh (Arrow Pillar on the Sea Shore) -->
+  <g transform="translate(410, 380)">
+    <rect x="0" y="0" width="14" height="65" fill="#fef08a" rx="2"/>
+    <polygon points="-5,0 19,0 7,-18" fill="#f59e0b"/>
+    <text x="7" y="80" fill="#fef08a" font-size="10" font-family="sans-serif" text-anchor="middle">BAAN STAMBH</text>
+  </g>
+
+  <!-- Digvijay Dwar Entrance Archway on Right -->
+  <g transform="translate(1040, 360)">
+    <rect x="0" y="0" width="110" height="90" fill="#92400e" rx="4"/>
+    <path d="M 25 90 L 25 35 Q 55 10 85 35 L 85 90 Z" fill="#2d1305"/>
+    <circle cx="55" cy="8" r="10" fill="#fef08a"/>
+  </g>
+
+  <!-- Ground Vignette -->
+  <rect x="0" y="620" width="1200" height="130" fill="#031525" opacity="0.8"/>
+
+  <!-- Badge & Typography (CULTURALLY SIGNIFICANT - NO UNESCO) -->
+  <rect x="50" y="50" width="300" height="42" rx="21" fill="#090505" fill-opacity="0.85" stroke="#10b981" stroke-width="1.5"/>
+  <circle cx="75" cy="71" r="5" fill="#10b981"/>
+  <text x="200" y="76" fill="#6ee7b7" font-family="sans-serif" font-size="14" font-weight="bold" letter-spacing="2" text-anchor="middle">CULTURALLY SIGNIFICANT</text>
+  <text x="50" y="680" fill="#ffffff" font-family="sans-serif" font-size="36" font-weight="900" letter-spacing="1">SOMNATH TEMPLE</text>
+  <text x="50" y="714" fill="#bae6fd" font-family="sans-serif" font-size="18" font-weight="500">Prabhas Patan, Gujarat • Adya Jyotirlinga • Arabian Sea Coast</text>
+</svg>

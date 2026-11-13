@@ -259,7 +259,8 @@ export default function ExperienceControlsHUD({
             <div>
               <p className="font-bold text-amber-400 mb-1">Desktop Controls:</p>
               <p>• <strong>W, A, S, D / Arrows:</strong> Move &amp; strafe</p>
-              <p>• <strong>Shift:</strong> Sprint (~7.5 m/s)</p>
+              <p>• <strong>Shift:</strong> Sprint</p>
+              <p>• <strong>Space:</strong> Jump (context-aware)</p>
               <p>• <strong>Mouse:</strong> Look around (yaw &amp; pitch)</p>
               <p>• <strong>Escape / P:</strong> Release cursor or pause</p>
             </div>

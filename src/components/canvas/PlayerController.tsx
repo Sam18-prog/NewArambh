@@ -24,6 +24,7 @@ interface PlayerControllerProps {
   playerConfig?: PlayerCollisionConfig;
   mobileInputRef?: React.RefObject<MobileInputState | null>;
   resetSignal?: number;
+  allowJump?: boolean;
 }
 
 // Scratch vectors outside component to prevent GC pressure
@@ -44,6 +45,7 @@ export default function PlayerController({
   playerConfig = DEFAULT_PLAYER_COLLIDER_CONFIG,
   mobileInputRef,
   resetSignal = 0,
+  allowJump = true,
 }: PlayerControllerProps) {
   const keys = useKeyboardControls(enabled);
 
@@ -64,6 +66,11 @@ export default function PlayerController({
   const position = useRef(new THREE.Vector3(...spawnPosition));
   const velocity = useRef(new THREE.Vector3(0, 0, 0));
   const currentGroundElevation = useRef(0);
+
+  // Vertical Jump & Gravity kinematics
+  const verticalVelocity = useRef(0);
+  const verticalOffset = useRef(0);
+  const isGrounded = useRef(true);
 
   // Orientation: yaw (heading around Y) and pitch (up/down around X)
   const yaw = useRef(0);
@@ -109,6 +116,9 @@ export default function PlayerController({
       position.current.set(...spawnPosition);
       velocity.current.set(0, 0, 0);
       currentGroundElevation.current = 0;
+      verticalVelocity.current = 0;
+      verticalOffset.current = 0;
+      isGrounded.current = true;
       yaw.current = 0;
       pitch.current = 0;
       needsReset.current = false;
@@ -194,6 +204,26 @@ export default function PlayerController({
     const damping = 1 - Math.exp(-12 * dt);
     velocity.current.lerp(_desiredVelocity, damping);
 
+    // Context-Aware Jumping Kinematics
+    const wantsJump = (keys.current.jump || mobileInputRef?.current?.touchJump) && allowJump;
+    if (wantsJump && isGrounded.current) {
+      verticalVelocity.current = 4.8; // jump impulse (m/s)
+      isGrounded.current = false;
+      if (mobileInputRef?.current) {
+        mobileInputRef.current.touchJump = false;
+      }
+    }
+
+    if (!isGrounded.current) {
+      verticalVelocity.current -= 14.0 * dt; // gravity deceleration
+      verticalOffset.current += verticalVelocity.current * dt;
+      if (verticalOffset.current <= 0) {
+        verticalOffset.current = 0;
+        verticalVelocity.current = 0;
+        isGrounded.current = true;
+      }
+    }
+
     // Physical Collision & Tangent Wall-Sliding Resolution
     if (collisionEngine.current) {
       const resolution = collisionEngine.current.resolveMovement(
@@ -212,12 +242,12 @@ export default function PlayerController({
       const targetElevation = resolution.groundElevation;
       const stepDamping = 1 - Math.exp(-14 * dt);
       currentGroundElevation.current += (targetElevation - currentGroundElevation.current) * stepDamping;
-      position.current.y = currentGroundElevation.current + playerConfig.eyeHeight;
+      position.current.y = currentGroundElevation.current + playerConfig.eyeHeight + verticalOffset.current;
     } else {
       // Fallback if engine unavailable
       position.current.x += velocity.current.x * dt;
       position.current.z += velocity.current.z * dt;
-      position.current.y = spawnPosition[1];
+      position.current.y = spawnPosition[1] + verticalOffset.current;
     }
 
     // Enforce courtyard outer boundaries as an ultimate safety margin

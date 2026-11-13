@@ -6,12 +6,12 @@ export default function HeroSection() {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-6 pb-16">
       <div className="max-w-7xl mx-auto">
-        {/* Luxury Framed Container inspired by Visual Direction Image 1 */}
+        {/* Luxury Framed Container */}
         <div className="relative rounded-[2rem] sm:rounded-[2.5rem] border border-amber-500/30 overflow-hidden shadow-2xl shadow-amber-950/40 bg-zinc-950">
           {/* Background Heritage Sunset Image with Gradient Overlays */}
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105"
-            style={{ backgroundImage: `url('/images/destinations/hero-taj-sunset.jpg')` }}
+            style={{ backgroundImage: `url('/images/destinations/taj-mahal.jpg')` }}
           />
 
           {/* Cinematic Vignette and Atmospheric Overlays */}
@@ -29,7 +29,7 @@ export default function HeroSection() {
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-md">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                100% Free & Open Access
+                100% Free &amp; Open Access
               </span>
             </div>
 
@@ -57,23 +57,23 @@ export default function HeroSection() {
                     className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-bold text-zinc-950 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-300 hover:from-amber-300 hover:to-yellow-200 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/35 transition-all hover:scale-105 active:scale-95"
                   >
                     <Compass className="w-4 h-4 stroke-[2.5]" />
-                    <span>Explore Destinations</span>
+                    <span>Explore 9 Destinations</span>
                     <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                   </Link>
 
                   <Link
-                    href="/explore/taj-mahal"
+                    href="/explore/taj-mahal/3d"
                     className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-200 bg-zinc-900/80 hover:bg-zinc-800/90 border border-zinc-700/80 hover:border-amber-400/50 backdrop-blur-md transition-all hover:scale-105 active:scale-95 group"
                   >
                     <div className="w-5 h-5 rounded-full bg-amber-400/20 flex items-center justify-center text-amber-400 group-hover:bg-amber-400 group-hover:text-zinc-950 transition-colors">
                       <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
                     </div>
-                    <span>Enter Taj Mahal 3D</span>
+                    <span>Launch 3D Walkthrough</span>
                   </Link>
                 </div>
               </div>
 
-              {/* Right Column: Floating Frosted Destination Card (Image 1 Aesthetic) */}
+              {/* Right Column: Floating Frosted Destination Card */}
               <div className="lg:col-span-5">
                 <div className="rounded-2xl p-6 sm:p-7 backdrop-blur-xl bg-zinc-950/70 border border-amber-500/30 shadow-2xl space-y-4">
                   <div className="flex items-center justify-between text-xs">
@@ -82,7 +82,7 @@ export default function HeroSection() {
                       Featured Demonstration
                     </span>
                     <span className="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-amber-500/10 text-amber-300 border border-amber-500/20">
-                      Interactive 3D Model
+                      UNESCO #252
                     </span>
                   </div>
 
@@ -91,25 +91,25 @@ export default function HeroSection() {
                       The Taj Mahal
                     </h2>
                     <p className="text-xs text-zinc-400 mt-1">
-                      Agra, Uttar Pradesh, India • UNESCO World Heritage #252
+                      Agra, Uttar Pradesh, India • 1631–1648 CE
                     </p>
                   </div>
 
                   <p className="text-sm text-zinc-300 leading-relaxed">
-                    Step inside an authentic 3D digital exploration of the white Makrana marble masterpiece,
+                    Step inside an authentic interactive digital exploration of the white Makrana marble masterpiece,
                     symmetrical minarets, grand vaulted iwans, and Charbagh reflecting gardens.
                   </p>
 
                   <div className="pt-2 flex items-center justify-between border-t border-zinc-800/80">
                     <div className="flex items-center gap-2 text-xs text-zinc-400">
                       <Layers className="w-3.5 h-3.5 text-amber-400" />
-                      <span>5 Educational Hotspots</span>
+                      <span>5 Landmark Stops</span>
                     </div>
                     <Link
                       href="/explore/taj-mahal"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors group"
                     >
-                      <span>Explore Virtual Experience</span>
+                      <span>Explore Taj Mahal</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -117,23 +117,23 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Bottom Luxury Metric Counters (Image 1 Layout) */}
+            {/* Bottom Luxury Metric Counters */}
             <div className="pt-8 border-t border-zinc-800/60 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">100% Free</p>
-                <p className="text-xs tracking-wider uppercase text-zinc-400 mt-1">Zero Cost & Open Access</p>
+                <p className="text-xs tracking-wider uppercase text-zinc-400 mt-1">Zero Cost &amp; Open Access</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-amber-400 tracking-tight">Real-Time 3D</p>
-                <p className="text-xs tracking-wider uppercase text-zinc-400 mt-1">First-Person Agency</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-amber-400 tracking-tight">9 Sites</p>
+                <p className="text-xs tracking-wider uppercase text-zinc-400 mt-1">India&apos;s Heritage</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">5 Hotspots</p>
-                <p className="text-xs tracking-wider uppercase text-zinc-400 mt-1">Educational Curation</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">54 Stops</p>
+                <p className="text-xs tracking-wider uppercase text-zinc-400 mt-1">Documented Landmarks</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-amber-400 tracking-tight">Guided Tour</p>
-                <p className="text-xs tracking-wider uppercase text-zinc-400 mt-1">Curated Camera Paths</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-amber-400 tracking-tight">7 UNESCO</p>
+                <p className="text-xs tracking-wider uppercase text-zinc-400 mt-1">World Heritage Inscriptions</p>
               </div>
             </div>
           </div>

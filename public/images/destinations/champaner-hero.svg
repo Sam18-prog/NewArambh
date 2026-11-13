@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cpSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e"/>
+      <stop offset="45%" stop-color="#115e59"/>
+      <stop offset="80%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="cpMountain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#134e4a"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </linearGradient>
+    <linearGradient id="cpSandstone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4a373"/>
+      <stop offset="100%" stop-color="#8c582f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="750" fill="url(#cpSky)"/>
+
+  <!-- Pavagadh Volcanic Mountain Peak (Rising in Background) -->
+  <polygon points="150,560 620,180 1050,560" fill="url(#cpMountain)"/>
+  <!-- Summit Kalika Mata Temple Silhouette -->
+  <rect x="610" y="160" width="20" height="20" fill="#fef08a"/>
+  <polygon points="610,160 630,160 620,140" fill="#f59e0b"/>
+
+  <!-- Lower Fortifications and Hill Bastions -->
+  <path d="M 280 480 L 380 440 L 480 470 L 620 400 L 760 470 L 880 430 L 960 490" fill="none" stroke="#2dd4bf" stroke-width="3" stroke-dasharray="8 4" opacity="0.5"/>
+
+  <!-- Valley Plain & Forest Foreground -->
+  <rect x="0" y="520" width="1200" height="230" fill="#042f2e"/>
+
+  <!-- Jami Masjid Monumental Silhouette -->
+  <g transform="translate(320, 290)">
+    <!-- Main Prayer Hall Body -->
+    <rect x="100" y="160" width="360" height="150" fill="url(#cpSandstone)" rx="4"/>
+    <!-- Central Triple-Tier Dome -->
+    <circle cx="280" cy="140" r="45" fill="#fef3c7" stroke="#92400e" stroke-width="2"/>
+    <polygon points="275,95 285,95 280,75" fill="#f59e0b"/>
+    <!-- Flanking Domes -->
+    <circle cx="180" cy="155" r="28" fill="#fef3c7"/>
+    <circle cx="380" cy="155" r="28" fill="#fef3c7"/>
+
+    <!-- Left 30-Meter Carved Minaret Tower -->
+    <rect x="60" y="20" width="45" height="290" fill="#b45309" rx="3"/>
+    <polygon points="50,110 115,110 105,95 60,95" fill="#78350f"/>
+    <polygon points="50,190 115,190 105,175 60,175" fill="#78350f"/>
+    <circle cx="82" cy="15" r="14" fill="#fef3c7"/>
+
+    <!-- Right 30-Meter Carved Minaret Tower -->
+    <rect x="455" y="20" width="45" height="290" fill="#b45309" rx="3"/>
+    <polygon points="445,110 510,110 500,95 455,95" fill="#78350f"/>
+    <polygon points="445,190 510,190 500,175 455,175" fill="#78350f"/>
+    <circle cx="478" cy="15" r="14" fill="#fef3c7"/>
+
+    <!-- Central Grand Arched Portal -->
+    <path d="M 230 310 L 230 200 Q 280 150 330 200 L 330 310 Z" fill="#1e1b4b"/>
+  </g>
+
+  <!-- Kevada and Nagina Cenotaph Pavilions in Foreground -->
+  <g transform="translate(140, 480)">
+    <rect x="0" y="20" width="80" height="60" fill="#a16207" rx="3"/>
+    <circle cx="40" cy="15" r="20" fill="#fef3c7"/>
+  </g>
+  <g transform="translate(960, 480)">
+    <rect x="0" y="20" width="80" height="60" fill="#a16207" rx="3"/>
+    <circle cx="40" cy="15" r="20" fill="#fef3c7"/>
+  </g>
+
+  <!-- Badge & Typography -->
+  <rect x="50" y="50" width="350" height="42" rx="21" fill="#090505" fill-opacity="0.8" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="225" y="76" fill="#fef08a" font-family="sans-serif" font-size="14" font-weight="bold" letter-spacing="2" text-anchor="middle">UNESCO WORLD HERITAGE #1101</text>
+  <text x="50" y="680" fill="#ffffff" font-family="sans-serif" font-size="36" font-weight="900" letter-spacing="1">CHAMPANER-PAVAGADH</text>
+  <text x="50" y="714" fill="#ccfbf1" font-family="sans-serif" font-size="18" font-weight="500">Panchmahal, Gujarat • 1508 CE • Archaeological Park &amp; Sacred Hill</text>
+</svg>

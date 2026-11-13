@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rkvSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#022c22"/>
+      <stop offset="60%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="stepStone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4a373"/>
+      <stop offset="100%" stop-color="#8c582f"/>
+    </linearGradient>
+    <linearGradient id="deepWell" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#rkvSky)"/>
+
+  <!-- Ground Plane Surface -->
+  <rect x="0" y="240" width="1200" height="510" fill="#2d1a0e"/>
+
+  <!-- Seven Inverted Subterranean Terraces Cut into Earth -->
+  <!-- Tier 1 -->
+  <polygon points="100,240 1100,240 1020,310 180,310" fill="#a16207" opacity="0.9"/>
+  <!-- Tier 2 -->
+  <polygon points="180,310 1020,310 950,380 250,380" fill="#854d0e" opacity="0.9"/>
+  <!-- Tier 3 -->
+  <polygon points="250,380 950,380 880,450 320,450" fill="#713f12" opacity="0.95"/>
+  <!-- Tier 4 -->
+  <polygon points="320,450 880,450 810,520 390,520" fill="#582a08"/>
+  <!-- Tier 5 -->
+  <polygon points="390,520 810,520 740,580 460,580" fill="#451e06"/>
+  <!-- Tier 6 -->
+  <polygon points="460,580 740,580 680,640 520,640" fill="#321404"/>
+  <!-- Tier 7 & Deep Well Pool -->
+  <polygon points="520,640 680,640 650,710 550,710" fill="url(#deepWell)"/>
+
+  <!-- Pillared Pavilion Colonnades Across Terraces -->
+  <g fill="#fef3c7" stroke="#92400e" stroke-width="1.5">
+    <!-- Level 3 Pillars -->
+    <rect x="360" y="380" width="16" height="70" rx="3"/>
+    <rect x="440" y="380" width="16" height="70" rx="3"/>
+    <rect x="740" y="380" width="16" height="70" rx="3"/>
+    <rect x="820" y="380" width="16" height="70" rx="3"/>
+    <!-- Level 4 Pillars -->
+    <rect x="420" y="450" width="14" height="70" rx="2"/>
+    <rect x="480" y="450" width="14" height="70" rx="2"/>
+    <rect x="700" y="450" width="14" height="70" rx="2"/>
+    <rect x="760" y="450" width="14" height="70" rx="2"/>
+    <!-- Level 5 Pillars -->
+    <rect x="490" y="520" width="12" height="60" rx="2"/>
+    <rect x="690" y="520" width="12" height="60" rx="2"/>
+  </g>
+
+  <!-- Stepped Geometric Side Stairs (Kangura Motifs) -->
+  <g fill="#d4a373" opacity="0.8">
+    <polygon points="120,240 150,240 150,260 180,260 180,280 210,280 210,310 180,310 150,280 120,260"/>
+    <polygon points="1080,240 1050,240 1050,260 1020,260 1020,280 990,280 990,310 1020,310 1050,280 1080,260"/>
+  </g>
+
+  <!-- Deep Circular Well Shaft (West end) -->
+  <ellipse cx="600" cy="650" rx="60" ry="20" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="600" cy="650" r="10" fill="#38bdf8" opacity="0.6"/>
+
+  <!-- Badge & Typography -->
+  <rect x="50" y="50" width="340" height="42" rx="21" fill="#090505" fill-opacity="0.8" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="220" y="76" fill="#fef08a" font-family="sans-serif" font-size="14" font-weight="bold" letter-spacing="2" text-anchor="middle">UNESCO WORLD HERITAGE #922</text>
+  <text x="50" y="680" fill="#ffffff" font-family="sans-serif" font-size="36" font-weight="900" letter-spacing="1">RANI-KI-VAV</text>
+  <text x="50" y="714" fill="#a7f3d0" font-family="sans-serif" font-size="18" font-weight="500">Patan, Gujarat • c. 1063 CE • Subterranean Stepwell Sanctuary</text>
+</svg>

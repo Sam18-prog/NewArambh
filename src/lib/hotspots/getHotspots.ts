@@ -1,18 +1,59 @@
 import { EducationalHotspot } from '@/types/hotspot';
+import { getDestinationById } from '@/data/destinations/index';
 import tajMahalHotspots from '@/data/hotspots/taj-mahal.json';
-import courtyardHotspots from '@/data/hotspots/heritage-courtyard.json';
-
-const HOTSPOT_REGISTRY: Record<string, EducationalHotspot[]> = {
-  'taj-mahal': tajMahalHotspots as EducationalHotspot[],
-  'heritage-courtyard': courtyardHotspots as EducationalHotspot[],
-};
 
 /**
  * Retrieves all educational hotspots for a given destination ID.
- * Defaults to Taj Mahal demonstration hotspots if not found.
+ * Dynamically converts destination landmarks to 3D hotspots when available.
  */
 export function getHotspotsByDestination(destinationId: string): EducationalHotspot[] {
-  return HOTSPOT_REGISTRY[destinationId] || (tajMahalHotspots as EducationalHotspot[]);
+  const normalized = destinationId.replace(/-temple$/, '');
+
+  const destination = getDestinationById(destinationId);
+  if (destination && destination.landmarks && destination.landmarks.length > 0) {
+    return destination.landmarks.map((landmark) => {
+      const pos: [number, number, number] = landmark.position3D || [
+        ((landmark.mapCoordinates.x - 50) / 50) * 35,
+        3.0,
+        ((landmark.mapCoordinates.y - 50) / 50) * 35,
+      ];
+
+      return {
+        id: landmark.id,
+        destinationId: landmark.destinationId,
+        name: landmark.name,
+        hindiName: landmark.hindiName,
+        category: landmark.category,
+        position: pos,
+        interactionRadius: 4.8,
+        shortDescription: landmark.shortDescription,
+        detailedDescription: landmark.detailedDescription,
+        culturalSignificance: landmark.historicalSignificance,
+        architecturalDetails: landmark.architecturalHighlights || [],
+        gallery: (landmark.gallery || []).map((g) => ({
+          id: g.id,
+          url: g.url,
+          caption: g.caption,
+          alt: g.alt,
+          attribution: g.credit || 'Public Cultural Archive',
+          sourceUrl: g.sourceUrl,
+        })),
+        sources: (landmark.sourceReferences || []).map((s) => ({
+          title: s.title,
+          url: s.url,
+          authorOrPublisher: s.authorOrPublisher,
+          licenseNote: s.licenseNote,
+        })),
+        audioUrl: landmark.audioUrl,
+      };
+    });
+  }
+
+  if (normalized === 'taj-mahal') {
+    return tajMahalHotspots as EducationalHotspot[];
+  }
+
+  return [];
 }
 
 /**

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="snSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="40%" stop-color="#312e81"/>
+      <stop offset="70%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <linearGradient id="stupaStone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c2410c"/>
+      <stop offset="60%" stop-color="#9a3412"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="750" fill="url(#snSky)"/>
+
+  <!-- Morning Sunrise Sun over Deer Park -->
+  <circle cx="850" cy="280" r="120" fill="#fef08a" opacity="0.25" filter="blur(30px)"/>
+  <circle cx="850" cy="280" r="40" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Sacred Deer Park Grove Silhouettes -->
+  <g fill="#1e1b4b" opacity="0.6">
+    <ellipse cx="200" cy="520" rx="90" ry="140"/>
+    <ellipse cx="280" cy="530" rx="70" ry="110"/>
+    <ellipse cx="980" cy="510" rx="100" ry="150"/>
+    <ellipse cx="1060" cy="530" rx="70" ry="100"/>
+  </g>
+
+  <!-- Ground Plane -->
+  <rect x="0" y="520" width="1200" height="230" fill="#0f172a"/>
+
+  <!-- Colossal Dhamek Stupa (Center) -->
+  <g transform="translate(460, 200)">
+    <!-- Lower Cylindrical Carved Stone Base -->
+    <rect x="20" y="180" width="240" height="150" fill="#b45309" rx="6"/>
+    <!-- Gupta Floral Frieze Band -->
+    <rect x="15" y="240" width="250" height="35" fill="#fef3c7" opacity="0.85"/>
+    <circle cx="65" cy="257" r="10" fill="#92400e"/>
+    <circle cx="140" cy="257" r="10" fill="#92400e"/>
+    <circle cx="215" cy="257" r="10" fill="#92400e"/>
+
+    <!-- Niches for Buddha Statues -->
+    <rect x="50" y="195" width="30" height="40" fill="#451a03" rx="15"/>
+    <rect x="125" y="195" width="30" height="40" fill="#451a03" rx="15"/>
+    <rect x="200" y="195" width="30" height="40" fill="#451a03" rx="15"/>
+
+    <!-- Upper Domical Brick Cylinder -->
+    <path d="M 30 180 Q 140 20 250 180 Z" fill="url(#stupaStone)"/>
+    <!-- Crowning Harmika & Finial Base -->
+    <rect x="120" y="35" width="40" height="15" fill="#f59e0b"/>
+  </g>
+
+  <!-- Chaukhandi Stupa (Component Part I) in Left Background -->
+  <g transform="translate(140, 360)">
+    <polygon points="20,160 180,160 160,100 40,100" fill="#9a3412"/>
+    <polygon points="40,100 160,100 145,60 55,60" fill="#c2410c"/>
+    <rect x="75" y="25" width="50" height="35" fill="#b45309"/>
+    <circle cx="100" cy="20" r="16" fill="#fef08a"/>
+  </g>
+
+  <!-- Ashokan Lion Pillar Site & Dharmarajika Stupa Foundations in Foreground -->
+  <g transform="translate(820, 480)">
+    <!-- Polished Sandstone Column Fragment -->
+    <rect x="40" y="10" width="18" height="50" fill="#d97706"/>
+    <polygon points="35,10 63,10 49,0" fill="#f59e0b"/>
+    <!-- Concentric Brick Votive Rings -->
+    <ellipse cx="49" cy="60" rx="35" ry="10" fill="none" stroke="#ea580c" stroke-width="2"/>
+    <ellipse cx="49" cy="60" rx="60" ry="16" fill="none" stroke="#ea580c" stroke-width="2"/>
+  </g>
+
+  <!-- Badges & Titles -->
+  <rect x="50" y="50" width="340" height="42" rx="21" fill="#090505" fill-opacity="0.8" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="220" y="76" fill="#fef08a" font-family="sans-serif" font-size="14" font-weight="bold" letter-spacing="2" text-anchor="middle">UNESCO WORLD HERITAGE #927</text>
+  <text x="50" y="680" fill="#ffffff" font-family="sans-serif" font-size="36" font-weight="900" letter-spacing="1">SARNATH BUDDHIST SITE</text>
+  <text x="50" y="714" fill="#e0e7ff" font-family="sans-serif" font-size="18" font-weight="500">Varanasi, Uttar Pradesh • 6th Cent. BCE – 500 CE • Sacred Deer Park</text>
+</svg>

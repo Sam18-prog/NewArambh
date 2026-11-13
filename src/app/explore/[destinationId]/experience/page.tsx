@@ -1,39 +1,64 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
-import destinationsData from '@/data/destinations.json';
-import { Destination } from '@/types/destination';
+import { getAllDestinations, getDestinationById } from '@/data/destinations/index';
+import DestinationExperienceView from '@/components/exploration/DestinationExperienceView';
 import ExperienceClientWrapper from '@/components/canvas/ExperienceClientWrapper';
 
-const destinations: Destination[] = destinationsData as Destination[];
-
 export async function generateStaticParams() {
-  return destinations.map((d) => ({
+  const destinations = getAllDestinations();
+  const params = destinations.map((d) => ({
     destinationId: d.id,
   }));
+  params.push({ destinationId: 'somnath-temple' });
+  params.push({ destinationId: 'dwarkadhish-temple' });
+  return params;
 }
 
-export default async function ExperiencePortalPage({
+export async function generateMetadata({
   params,
 }: {
   params: Promise<{ destinationId: string }>;
 }) {
   const { destinationId } = await params;
-  const destination = destinations.find((d) => d.id === destinationId);
+  const destination = getDestinationById(destinationId);
+
+  if (!destination) {
+    return {
+      title: 'Destination Not Found | NewArambh',
+    };
+  }
+
+  return {
+    title: `3D Heritage Exploration — ${destination.name} | NewArambh`,
+    description: `Immerse yourself in a real-time 3D architectural exploration of ${destination.name}. Walk through history from anywhere.`,
+  };
+}
+
+export default async function ExperiencePortalPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ destinationId: string }>;
+  searchParams?: Promise<{ mode?: string }>;
+}) {
+  const { destinationId } = await params;
+  const { mode } = (await searchParams) || {};
+  const destination = getDestinationById(destinationId);
 
   if (!destination) {
     notFound();
   }
 
-  // Model path for demonstration environment
-  const modelUrl = '/models/taj-mahal/scene.glb';
+  if (mode === 'map') {
+    return <DestinationExperienceView destination={destination} />;
+  }
 
   return (
-    <main className="w-screen h-screen overflow-hidden bg-[#0c0603]">
+    <div className="w-screen h-screen overflow-hidden bg-[#0c0603]">
       <ExperienceClientWrapper
         destinationId={destination.id}
         destinationName={destination.name}
-        modelUrl={modelUrl}
       />
-    </main>
+    </div>
   );
 }

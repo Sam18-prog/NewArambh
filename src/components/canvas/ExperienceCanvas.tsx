@@ -6,11 +6,10 @@ import { OrbitControls } from '@react-three/drei';
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import * as THREE from 'three';
 import SceneEnvironment from '@/components/canvas/SceneEnvironment';
-import WorldModel from '@/components/canvas/WorldModel';
+import Monument3DSelector from '@/components/three/monuments/Monument3DSelector';
 import ModelErrorBoundary from '@/components/canvas/ModelErrorBoundary';
 import PlayerController from '@/components/canvas/PlayerController';
 import CollisionSystem from '@/components/canvas/CollisionSystem';
-import { TAJ_MAHAL_COLLIDERS } from '@/data/scene-configs/tajMahalColliders';
 import LoadingScreen from '@/components/overlay/LoadingScreen';
 import ExperienceControlsHUD, { ExplorationMode, CameraPreset } from '@/components/overlay/ExperienceControlsHUD';
 import MobileControlsOverlay from '@/components/overlay/MobileControlsOverlay';
@@ -25,7 +24,8 @@ import Fallback2DView from '@/components/fallback/Fallback2DView';
 import { MobileInputState, TouchControlSettings, DEFAULT_TOUCH_SETTINGS } from '@/types/input';
 import { EducationalHotspot } from '@/types/hotspot';
 import { getHotspotsByDestination, getHotspotById } from '@/lib/hotspots/getHotspots';
-import { TAJ_MAHAL_TOUR_STOPS } from '@/data/tours/tajMahalTour';
+import { getTourStopsByDestination } from '@/lib/tours/getTourStops';
+import { getDestinationThreeConfig } from '@/data/scene-configs/destinationScenes';
 import { checkWebGLSupport } from '@/lib/webgl/detectWebGL';
 
 interface ExperienceCanvasProps {
@@ -34,7 +34,7 @@ interface ExperienceCanvasProps {
   modelUrl?: string;
 }
 
-const CAMERA_PRESETS: Record<CameraPreset, { position: [number, number, number]; target: [number, number, number] }> = {
+const CAMERA_PRESETS: Record<string, { position: [number, number, number]; target: [number, number, number] }> = {
   panoramic: { position: [0, 22, 70], target: [0, 10, -25] },
   mausoleum: { position: [0, 6, 8], target: [0, 10, -25] },
   pool: { position: [0, 3, 52], target: [0, 1.5, 36] },
@@ -44,18 +44,21 @@ const CAMERA_PRESETS: Record<CameraPreset, { position: [number, number, number];
 function SmoothCameraController({
   activeView,
   controlsRef,
+  presets = CAMERA_PRESETS,
 }: {
   activeView: CameraPreset;
   controlsRef: React.RefObject<OrbitControlsImpl | null>;
+  presets?: Record<string, { position: [number, number, number]; target: [number, number, number] }>;
 }) {
-  const targetPos = useRef(new THREE.Vector3(...CAMERA_PRESETS[activeView].position));
-  const targetLook = useRef(new THREE.Vector3(...CAMERA_PRESETS[activeView].target));
+  const currentPreset = presets[activeView] || presets.panoramic || CAMERA_PRESETS.panoramic;
+  const targetPos = useRef(new THREE.Vector3(...currentPreset.position));
+  const targetLook = useRef(new THREE.Vector3(...currentPreset.target));
 
   useEffect(() => {
-    const preset = CAMERA_PRESETS[activeView];
-    targetPos.current.set(...preset.position);
-    targetLook.current.set(...preset.target);
-  }, [activeView]);
+    const p = presets[activeView] || presets.panoramic || CAMERA_PRESETS.panoramic;
+    targetPos.current.set(...p.position);
+    targetLook.current.set(...p.target);
+  }, [activeView, presets]);
 
   useFrame(({ camera }) => {
     camera.position.lerp(targetPos.current, 0.05);
@@ -71,8 +74,10 @@ function SmoothCameraController({
 export default function ExperienceCanvas({
   destinationId,
   destinationName,
-  modelUrl = '/models/taj-mahal/scene.glb',
 }: ExperienceCanvasProps) {
+  // Destination 3D scene configuration & Tour Stops
+  const sceneConfig = useMemo(() => getDestinationThreeConfig(destinationId), [destinationId]);
+  const tourStops = useMemo(() => getTourStopsByDestination(destinationId), [destinationId]);
   // WebGL Support & 2D Fallback state
   const [webGLSupport] = useState(() => checkWebGLSupport());
   const [is2DMode, setIs2DMode] = useState(() => {
@@ -264,12 +269,12 @@ export default function ExperienceCanvas({
 
   // Guided Tour Navigation handlers
   const handleNextTourStop = useCallback(() => {
-    if (tourStopIndex < TAJ_MAHAL_TOUR_STOPS.length - 1) {
+    if (tourStopIndex < tourStops.length - 1) {
       setTourStopIndex((prev) => prev + 1);
     } else {
       setIsTourCompleted(true);
     }
-  }, [tourStopIndex]);
+  }, [tourStopIndex, tourStops.length]);
 
   const handlePrevTourStop = useCallback(() => {
     setTourStopIndex((prev) => Math.max(0, prev - 1));
@@ -294,14 +299,14 @@ export default function ExperienceCanvas({
   }, []);
 
   const handleOpenTourDetails = useCallback(() => {
-    const currentStop = TAJ_MAHAL_TOUR_STOPS[tourStopIndex];
+    const currentStop = tourStops[tourStopIndex];
     if (currentStop) {
       const found = getHotspotById(destinationId, currentStop.hotspotId);
       if (found) {
         setSelectedHotspot(found);
       }
     }
-  }, [destinationId, tourStopIndex]);
+  }, [destinationId, tourStopIndex, tourStops]);
 
   // When clicking on canvas in Walk Mode, request pointer lock on desktop
   const handleCanvasClick = useCallback(() => {
@@ -356,11 +361,11 @@ export default function ExperienceCanvas({
       />
 
       {/* Guided Tour HUD (Active during Guided Tour Mode) */}
-      {isTourActive && !isTourCompleted && selectedHotspot === null && (
+      {isTourActive && !isTourCompleted && selectedHotspot === null && tourStops[tourStopIndex] && (
         <GuidedTourHUD
-          currentStop={TAJ_MAHAL_TOUR_STOPS[tourStopIndex]}
+          currentStop={tourStops[tourStopIndex]}
           currentIndex={tourStopIndex}
-          totalStops={TAJ_MAHAL_TOUR_STOPS.length}
+          totalStops={tourStops.length}
           isPaused={isTourPaused}
           onNext={handleNextTourStop}
           onPrev={handlePrevTourStop}
@@ -400,6 +405,7 @@ export default function ExperienceCanvas({
         onPause={() => setIsPaused(true)}
         settings={touchSettings}
         forceVisible={isTouchDevice}
+        allowJump={sceneConfig.allowJump}
       />
 
       {/* Pause & Touch Settings Modal */}
@@ -427,7 +433,7 @@ export default function ExperienceCanvas({
       >
         <Canvas
           shadows
-          camera={{ position: [0, 2.0, 52], fov: 60, near: 0.1, far: 300 }}
+          camera={{ position: sceneConfig.spawnPosition || [0, 2.0, 52], fov: 60, near: 0.1, far: 300 }}
           gl={{
             antialias: true,
             alpha: false,
@@ -437,10 +443,10 @@ export default function ExperienceCanvas({
         >
           <Suspense fallback={null}>
             {/* Lighting, Sky & Fog Environment */}
-            <SceneEnvironment />
+            <SceneEnvironment preset={sceneConfig.skyPreset} />
 
-            {/* Model Loading */}
-            <WorldModel modelUrl={modelUrl} />
+            {/* Architectural 3D Monument Reconstruction */}
+            <Monument3DSelector destinationId={destinationId} />
 
             {/* Educational Hotspots & Proximity Manager */}
             <HotspotManager
@@ -451,28 +457,33 @@ export default function ExperienceCanvas({
             />
 
             {/* Physical Collision Wireframe Overlay (Visual Inspection) */}
-            <CollisionSystem colliders={TAJ_MAHAL_COLLIDERS} visible={showColliders} />
+            <CollisionSystem colliders={sceneConfig.colliders || []} visible={showColliders} />
 
             {/* Mode 1: First-Person Walk Mode Player Controller */}
             {mode === 'walk' && !isTourActive && (
               <PlayerController
                 enabled={true}
                 isLocked={isPointerLocked}
-                spawnPosition={[0, 1.8, 52]}
+                spawnPosition={sceneConfig.spawnPosition}
                 walkSpeed={5.2}
                 sprintSpeed={8.5}
                 mouseSensitivity={0.0022}
-                boundaries={{ minX: -50, maxX: 50, minZ: -60, maxZ: 66 }}
-                colliders={TAJ_MAHAL_COLLIDERS}
+                boundaries={sceneConfig.boundaries}
+                colliders={sceneConfig.colliders || []}
                 mobileInputRef={mobileInput}
                 resetSignal={resetSignal}
+                allowJump={sceneConfig.allowJump}
               />
             )}
 
             {/* Mode 2: Model Inspection Mode with OrbitControls */}
             {mode === 'inspect' && !isTourActive && (
               <>
-                <SmoothCameraController activeView={activeView} controlsRef={controlsRef} />
+                <SmoothCameraController
+                  activeView={activeView}
+                  controlsRef={controlsRef}
+                  presets={sceneConfig.cameraPresets}
+                />
                 <OrbitControls
                   ref={controlsRef}
                   makeDefault
@@ -486,9 +497,9 @@ export default function ExperienceCanvas({
             )}
 
             {/* Mode 3: Guided Tour Waypoint Navigator */}
-            {isTourActive && (
+            {isTourActive && tourStops[tourStopIndex] && (
               <GuidedTourNavigator
-                activeStop={TAJ_MAHAL_TOUR_STOPS[tourStopIndex]}
+                activeStop={tourStops[tourStopIndex]}
                 enabled={isTourActive}
               />
             )}

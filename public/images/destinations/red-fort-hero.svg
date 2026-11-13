@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c0b0b"/>
+      <stop offset="45%" stop-color="#4a1818"/>
+      <stop offset="75%" stop-color="#8a3022"/>
+      <stop offset="100%" stop-color="#c85a38"/>
+    </linearGradient>
+    <linearGradient id="sandstoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#993d28"/>
+      <stop offset="100%" stop-color="#5a1e12"/>
+    </linearGradient>
+    <linearGradient id="wallHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b84c34"/>
+      <stop offset="100%" stop-color="#732515"/>
+    </linearGradient>
+    <linearGradient id="mistGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0505" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="1200" height="750" fill="url(#skyGrad)"/>
+
+  <!-- Distant Stars & Sun Glow -->
+  <circle cx="850" cy="320" r="140" fill="#f59e0b" opacity="0.15" filter="blur(40px)"/>
+  <circle cx="850" cy="320" r="45" fill="#fef08a" opacity="0.4"/>
+
+  <!-- Distant Shahjahanabad Skyline -->
+  <path d="M 0 540 L 120 540 L 140 490 L 160 540 L 320 540 L 340 510 L 360 540 L 800 540 L 820 480 L 840 540 L 1200 540 L 1200 750 L 0 750 Z" fill="#2b0e0c" opacity="0.6"/>
+
+  <!-- Red Fort Ramparts and Massive Curtain Wall -->
+  <path d="M 0 510 L 220 510 L 220 460 L 240 460 L 240 510 L 420 510 L 440 450 L 460 450 L 460 510 L 980 510 L 1000 460 L 1020 460 L 1020 510 L 1200 510 L 1200 750 L 0 750 Z" fill="url(#sandstoneGrad)"/>
+
+  <!-- Left Bastion Tower -->
+  <rect x="360" y="320" width="90" height="230" fill="url(#wallHighlight)" rx="8"/>
+  <polygon points="350,320 460,320 450,290 360,290" fill="#b84c34"/>
+  <circle cx="405" cy="280" r="18" fill="#ffffff" opacity="0.9"/>
+  <polygon points="400,262 410,262 405,245" fill="#f59e0b"/>
+
+  <!-- Right Bastion Tower -->
+  <rect x="750" y="320" width="90" height="230" fill="url(#wallHighlight)" rx="8"/>
+  <polygon points="740,320 850,320 840,290 750,290" fill="#b84c34"/>
+  <circle cx="795" cy="280" r="18" fill="#ffffff" opacity="0.9"/>
+  <polygon points="790,262 800,262 795,245" fill="#f59e0b"/>
+
+  <!-- Central Lahori Gate Main Body -->
+  <rect x="440" y="270" width="320" height="280" fill="url(#sandstoneGrad)" rx="6"/>
+  <!-- Grand Pointed Arch Portal -->
+  <path d="M 520 550 L 520 410 Q 600 330 680 410 L 680 550 Z" fill="#150606"/>
+  <!-- Marble Framing Trim -->
+  <path d="M 510 550 L 510 405 Q 600 320 690 405 L 690 550" fill="none" stroke="#fef08a" stroke-width="4" opacity="0.7"/>
+
+  <!-- Upper Gallery Arcades -->
+  <g fill="#2b0e0c">
+    <rect x="470" y="310" width="25" height="40" rx="12"/>
+    <rect x="505" y="310" width="25" height="40" rx="12"/>
+    <rect x="670" y="310" width="25" height="40" rx="12"/>
+    <rect x="705" y="310" width="25" height="40" rx="12"/>
+  </g>
+
+  <!-- Roof Parapet with 7 White Marble Chhatris -->
+  <rect x="430" y="255" width="340" height="18" fill="#732515"/>
+  <g fill="#ffffff">
+    <circle cx="470" cy="242" r="9"/>
+    <circle cx="510" cy="242" r="9"/>
+    <circle cx="550" cy="242" r="9"/>
+    <circle cx="600" cy="238" r="13"/>
+    <circle cx="650" cy="242" r="9"/>
+    <circle cx="690" cy="242" r="9"/>
+    <circle cx="730" cy="242" r="9"/>
+  </g>
+
+  <!-- Foreground Moat and Embankment -->
+  <rect x="0" y="600" width="1200" height="150" fill="#120505"/>
+  <rect x="0" y="600" width="1200" height="150" fill="url(#mistGrad)"/>
+
+  <!-- Badge & Typography -->
+  <rect x="50" y="50" width="340" height="42" rx="21" fill="#090505" fill-opacity="0.8" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="220" y="76" fill="#fef08a" font-family="sans-serif" font-size="14" font-weight="bold" letter-spacing="2" text-anchor="middle">UNESCO WORLD HERITAGE #231</text>
+  <text x="50" y="680" fill="#ffffff" font-family="sans-serif" font-size="36" font-weight="900" letter-spacing="1">RED FORT COMPLEX</text>
+  <text x="50" y="714" fill="#fca5a5" font-family="sans-serif" font-size="18" font-weight="500">Old Delhi • 1639–1648 CE • Mughal Imperial Citadel</text>
+</svg>
