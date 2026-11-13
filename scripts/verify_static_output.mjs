@@ -48,6 +48,7 @@ for (const dest of DESTINATIONS) {
   assert(fs.existsSync(landingPath), `Destination landing page exists: ${dest.id}.html`);
   const landingHtml = fs.readFileSync(landingPath, 'utf8');
   assert(landingHtml.includes('Explore 3D Walkthrough'), `${dest.id} has "Explore 3D Walkthrough" option`);
+  assert(landingHtml.includes('Drone View'), `${dest.id} has "Drone View" aerial option`);
   assert(landingHtml.includes('Guided Tour'), `${dest.id} has "Guided Tour" option`);
   assert(landingHtml.includes('2D Site Map'), `${dest.id} has "2D Site Map" option`);
 }
@@ -79,6 +80,15 @@ assert(fs.existsSync(licensesHtmlPath), 'licenses.html exists');
 const licensesHtml = fs.readFileSync(licensesHtmlPath, 'utf8');
 assert(licensesHtml.includes('Asset Register &amp; Licensing Attribution') || licensesHtml.includes('Licensing Attribution'), 'licenses.html contains Licensing Attribution heading');
 assert(licensesHtml.includes('Creative Commons') || licensesHtml.includes('CC BY') || licensesHtml.includes('Public Domain'), 'licenses.html contains open source license information');
+
+// 7. Verify Drone View Configurations for all 9 destinations
+const droneConfigFile = fs.readFileSync(path.resolve('src/data/scene-configs/droneConfigs.ts'), 'utf8');
+for (const dest of DESTINATIONS) {
+  assert(droneConfigFile.includes(`'${dest.id}'`), `Drone configuration defined for ${dest.id}`);
+  assert(droneConfigFile.includes(`destinationId: '${dest.id}'`), `Destination ID properly mapped for ${dest.id} drone config`);
+}
+assert(droneConfigFile.includes('aerialOverview'), 'Aerial overview presets defined in drone configuration');
+assert(droneConfigFile.includes('birdsEye'), "Bird's eye top-down presets defined in drone configuration");
 
 console.log(`\n========================================`);
 console.log(`SUMMARY: ${passCount} PASSED, ${failCount} FAILED`);

@@ -1,5 +1,6 @@
 import { Landmark } from './landmark';
 import { SceneCollider } from './collision';
+import { DestinationDroneConfig } from './drone';
 
 export type HeritageClassification = 'unesco' | 'cultural';
 
@@ -13,7 +14,7 @@ export type DestinationCategory =
   | 'museums'
   | 'natural';
 
-export type ExplorationMode = 'walk' | 'inspect' | 'tour' | 'map' | '3d';
+export type ExplorationMode = 'walk' | 'drone' | 'inspect' | 'tour' | 'map' | '3d';
 
 export interface DestinationThreeConfig {
   spawnPosition: [number, number, number];
@@ -24,6 +25,7 @@ export interface DestinationThreeConfig {
   colliders?: SceneCollider[];
   cameraPresets?: Record<string, { position: [number, number, number]; target: [number, number, number] }>;
   skyPreset?: 'daylight' | 'sunset' | 'desert' | 'coastal';
+  droneConfig?: DestinationDroneConfig;
 }
 
 export interface GalleryItem {

@@ -12,6 +12,11 @@ export interface MobileInputState {
   // Touch jump active
   touchJump?: boolean;
 
+  // Drone-specific virtual flight inputs
+  droneAscend?: boolean;
+  droneDescend?: boolean;
+  droneTurbo?: boolean;
+
   // Accumulated touch look rotation deltas (in radians)
   touchLookYaw: number;
   touchLookPitch: number;

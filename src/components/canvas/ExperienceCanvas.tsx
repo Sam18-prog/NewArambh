@@ -21,6 +21,11 @@ import GuidedTourHUD from '@/components/overlay/GuidedTourHUD';
 import TourCompletionModal from '@/components/overlay/TourCompletionModal';
 import GuidedTourNavigator from '@/components/canvas/GuidedTourNavigator';
 import Fallback2DView from '@/components/fallback/Fallback2DView';
+import DroneCameraController from '@/components/canvas/drone/DroneCameraController';
+import DroneHUD from '@/components/overlay/drone/DroneHUD';
+import DroneMobileControls from '@/components/overlay/drone/DroneMobileControls';
+import { getDestinationDroneConfig } from '@/data/scene-configs/droneConfigs';
+import { DroneTelemetry } from '@/types/drone';
 import { MobileInputState, TouchControlSettings, DEFAULT_TOUCH_SETTINGS } from '@/types/input';
 import { EducationalHotspot } from '@/types/hotspot';
 import { getHotspotsByDestination, getHotspotById } from '@/lib/hotspots/getHotspots';
@@ -78,6 +83,11 @@ export default function ExperienceCanvas({
   // Destination 3D scene configuration & Tour Stops
   const sceneConfig = useMemo(() => getDestinationThreeConfig(destinationId), [destinationId]);
   const tourStops = useMemo(() => getTourStopsByDestination(destinationId), [destinationId]);
+  const droneConfig = useMemo(
+    () => sceneConfig.droneConfig || getDestinationDroneConfig(destinationId),
+    [sceneConfig, destinationId]
+  );
+
   // WebGL Support & 2D Fallback state
   const [webGLSupport] = useState(() => checkWebGLSupport());
   const [is2DMode, setIs2DMode] = useState(() => {
@@ -109,10 +119,32 @@ export default function ExperienceCanvas({
     }
   }, []);
 
-  const [mode, setMode] = useState<ExplorationMode>('walk');
+  const [mode, setMode] = useState<ExplorationMode>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const m = params.get('mode');
+      if (m === 'drone') return 'drone';
+      if (m === 'tour') return 'tour';
+      if (m === 'inspect') return 'inspect';
+    }
+    return 'walk';
+  });
+
   const [activeView, setActiveView] = useState<CameraPreset>('panoramic');
   const [isPointerLocked, setIsPointerLocked] = useState(false);
   const [showColliders, setShowColliders] = useState(false);
+
+  // Drone View Specific States
+  const [droneTelemetry, setDroneTelemetry] = useState<DroneTelemetry>({
+    position: droneConfig.spawnPosition,
+    altitude: droneConfig.spawnPosition[1],
+    speedMode: 'normal',
+    currentSpeed: 0,
+    heading: 0,
+  });
+  const [activeDronePreset, setActiveDronePreset] = useState<string | null>(null);
+  const [nearbyDroneLandmark, setNearbyDroneLandmark] = useState<EducationalHotspot | null>(null);
+  const [focusedLandmarkId, setFocusedLandmarkId] = useState<string | null>(null);
 
   // Mobile Touch & Pause States
   const [isPaused, setIsPaused] = useState(false);
@@ -218,7 +250,7 @@ export default function ExperienceCanvas({
 
   // Request Pointer Lock on explicit user interaction (Desktop only) with safe error suppression
   const requestPointerLock = useCallback(() => {
-    if (mode !== 'walk' || isTouchDevice || shouldPause) return;
+    if ((mode !== 'walk' && mode !== 'drone') || isTouchDevice || shouldPause) return;
 
     const canvasElement = containerRef.current?.querySelector('canvas');
     if (canvasElement && document.pointerLockElement !== canvasElement) {
@@ -235,9 +267,20 @@ export default function ExperienceCanvas({
     }
   }, [mode, isTouchDevice, shouldPause]);
 
-  // Handle Mode Change (Walk vs Inspect vs Tour)
+  // Handle Mode Change (Walk vs Drone vs Inspect vs Tour)
   const handleModeChange = useCallback((newMode: ExplorationMode) => {
     setMode(newMode);
+
+    // Sync mode parameter to URL without reloading
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      if (newMode === 'walk') {
+        url.searchParams.delete('mode');
+      } else {
+        url.searchParams.set('mode', newMode);
+      }
+      window.history.replaceState(null, '', url.pathname + (url.search ? url.search : ''));
+    }
 
     // Reset mobile input
     mobileInput.current.joystickX = 0;
@@ -246,6 +289,12 @@ export default function ExperienceCanvas({
     mobileInput.current.touchSprint = false;
     mobileInput.current.touchLookYaw = 0;
     mobileInput.current.touchLookPitch = 0;
+    mobileInput.current.droneAscend = false;
+    mobileInput.current.droneDescend = false;
+    mobileInput.current.droneTurbo = false;
+
+    setActiveDronePreset(null);
+    setNearbyDroneLandmark(null);
 
     if (newMode === 'tour') {
       setIsTourActive(true);
@@ -308,10 +357,10 @@ export default function ExperienceCanvas({
     }
   }, [destinationId, tourStopIndex, tourStops]);
 
-  // When clicking on canvas in Walk Mode, request pointer lock on desktop
+  // When clicking on canvas in Walk or Drone Mode, request pointer lock on desktop
   const handleCanvasClick = useCallback(() => {
     if (isTouchDevice || shouldPause) return;
-    if (mode === 'walk' && !isPointerLocked) {
+    if ((mode === 'walk' || mode === 'drone') && !isPointerLocked) {
       requestPointerLock();
     }
   }, [mode, isPointerLocked, shouldPause, isTouchDevice, requestPointerLock]);
@@ -343,22 +392,44 @@ export default function ExperienceCanvas({
         onSwitchTo2D={handleSwitchTo2D}
       />
 
-      {/* 2D Overlay HUD (Mode toggle, return, camera presets, controls help, pause, 2D switch) */}
-      <ExperienceControlsHUD
-        destinationId={destinationId}
-        destinationName={destinationName}
-        mode={mode}
-        onModeChange={handleModeChange}
-        isPointerLocked={isPointerLocked}
-        onRequestPointerLock={requestPointerLock}
-        activeView={activeView}
-        onSetCameraView={(view) => setActiveView(view)}
-        showColliders={showColliders}
-        onToggleColliders={() => setShowColliders((prev) => !prev)}
-        isTouchDevice={isTouchDevice}
-        onPause={() => setIsPaused(true)}
-        onToggle2D={handleSwitchTo2D}
-      />
+      {/* Experience HUD: DroneHUD when in Drone View, ExperienceControlsHUD otherwise */}
+      {mode === 'drone' && !isTourActive ? (
+        <DroneHUD
+          destinationId={destinationId}
+          destinationName={destinationName}
+          telemetry={droneTelemetry}
+          presets={droneConfig.presets}
+          activePresetId={activeDronePreset}
+          onSelectPreset={(pId) => setActiveDronePreset(pId)}
+          onClearPreset={() => setActiveDronePreset(null)}
+          onResetPosition={() => setResetSignal((s) => s + 1)}
+          onModeChange={handleModeChange}
+          isPointerLocked={isPointerLocked}
+          onRequestPointerLock={requestPointerLock}
+          nearbyLandmark={nearbyDroneLandmark}
+          onFocusLandmark={(landmarkId) => setFocusedLandmarkId(landmarkId)}
+          onOpenLandmarkDetails={(hotspot) => setSelectedHotspot(hotspot)}
+          onToggle2D={handleSwitchTo2D}
+          onPause={() => setIsPaused(true)}
+          isTouchDevice={isTouchDevice}
+        />
+      ) : (
+        <ExperienceControlsHUD
+          destinationId={destinationId}
+          destinationName={destinationName}
+          mode={mode}
+          onModeChange={handleModeChange}
+          isPointerLocked={isPointerLocked}
+          onRequestPointerLock={requestPointerLock}
+          activeView={activeView}
+          onSetCameraView={(view) => setActiveView(view)}
+          showColliders={showColliders}
+          onToggleColliders={() => setShowColliders((prev) => !prev)}
+          isTouchDevice={isTouchDevice}
+          onPause={() => setIsPaused(true)}
+          onToggle2D={handleSwitchTo2D}
+        />
+      )}
 
       {/* Guided Tour HUD (Active during Guided Tour Mode) */}
       {isTourActive && !isTourCompleted && selectedHotspot === null && tourStops[tourStopIndex] && (
@@ -398,7 +469,7 @@ export default function ExperienceCanvas({
         onClose={() => setSelectedHotspot(null)}
       />
 
-      {/* Mobile Touch Controls Overlay (Virtual Joystick, Sprint, Swipe Look) */}
+      {/* Mobile Touch Controls for Walk Mode */}
       <MobileControlsOverlay
         mobileInputRef={mobileInput}
         enabled={mode === 'walk' && !shouldPause && !isTourActive}
@@ -406,6 +477,16 @@ export default function ExperienceCanvas({
         settings={touchSettings}
         forceVisible={isTouchDevice}
         allowJump={sceneConfig.allowJump}
+      />
+
+      {/* Mobile Touch Controls for Drone View Mode */}
+      <DroneMobileControls
+        mobileInputRef={mobileInput}
+        enabled={mode === 'drone' && !shouldPause && !isTourActive}
+        onExitDrone={() => handleModeChange('walk')}
+        onResetPosition={() => setResetSignal((s) => s + 1)}
+        settings={touchSettings}
+        forceVisible={isTouchDevice}
       />
 
       {/* Pause & Touch Settings Modal */}
@@ -473,6 +554,25 @@ export default function ExperienceCanvas({
                 mobileInputRef={mobileInput}
                 resetSignal={resetSignal}
                 allowJump={sceneConfig.allowJump}
+              />
+            )}
+
+            {/* Mode 2: Interactive Drone View Aerial Camera Controller */}
+            {mode === 'drone' && !isTourActive && (
+              <DroneCameraController
+                config={droneConfig}
+                colliders={sceneConfig.colliders || []}
+                mobileInputRef={mobileInput}
+                isLocked={isPointerLocked}
+                enabled={true}
+                activePresetId={activeDronePreset}
+                onClearPreset={() => setActiveDronePreset(null)}
+                onTelemetryUpdate={setDroneTelemetry}
+                resetSignal={resetSignal}
+                hotspots={hotspots}
+                onNearbyLandmark={setNearbyDroneLandmark}
+                focusedLandmarkId={focusedLandmarkId}
+                onClearFocusedLandmark={() => setFocusedLandmarkId(null)}
               />
             )}
 

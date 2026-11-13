@@ -1,6 +1,7 @@
 import { DestinationThreeConfig } from '@/types/destination';
 import { TAJ_MAHAL_COLLIDERS } from './tajMahalColliders';
 import { SceneCollider } from '@/types/collision';
+import { getDestinationDroneConfig } from './droneConfigs';
 
 /**
  * Standard colliders for each destination's architectural footprint
@@ -218,5 +219,9 @@ export const DESTINATION_SCENE_CONFIGS: Record<string, DestinationThreeConfig> =
 
 export function getDestinationThreeConfig(destinationId: string): DestinationThreeConfig {
   const normalized = destinationId.replace(/-temple$/, '');
-  return DESTINATION_SCENE_CONFIGS[normalized] || DESTINATION_SCENE_CONFIGS['taj-mahal'];
+  const config = DESTINATION_SCENE_CONFIGS[normalized] || DESTINATION_SCENE_CONFIGS['taj-mahal'];
+  return {
+    ...config,
+    droneConfig: getDestinationDroneConfig(normalized),
+  };
 }

@@ -18,9 +18,11 @@ import {
   Shield,
   Pause,
   Map,
+  Crosshair,
 } from 'lucide-react';
+import { ExplorationMode } from '@/types/destination';
 
-export type ExplorationMode = 'walk' | 'inspect' | 'tour';
+export type { ExplorationMode };
 export type CameraPreset = 'panoramic' | 'mausoleum' | 'pool' | 'gate';
 
 interface ExperienceControlsHUDProps {
@@ -107,17 +109,23 @@ export default function ExperienceControlsHUD({
             <span className="text-zinc-600">•</span>
             <span className="inline-flex items-center gap-1 text-[11px] text-amber-400 font-semibold">
               <Sparkles className="w-3 h-3" />
-              {mode === 'walk' ? 'Walk Mode' : mode === 'inspect' ? 'Inspect Mode' : 'Guided Tour'}
+              {mode === 'walk'
+                ? 'Walk Mode'
+                : mode === 'drone'
+                ? 'Drone View'
+                : mode === 'inspect'
+                ? 'Inspect Mode'
+                : 'Guided Tour'}
             </span>
           </div>
         </div>
 
-        {/* Center: Exploration Mode Switcher */}
+        {/* Center: Exploration Mode Switcher (Walk | Drone | Tour) */}
         <div className="pointer-events-auto flex items-center p-1 rounded-full bg-zinc-950/90 backdrop-blur-md border border-zinc-800 shadow-xl">
           <button
             type="button"
             onClick={() => onModeChange('walk')}
-            className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
+            className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
               mode === 'walk'
                 ? 'bg-gradient-to-r from-amber-400 to-yellow-400 text-zinc-950 shadow-md shadow-amber-500/20'
                 : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
@@ -129,21 +137,21 @@ export default function ExperienceControlsHUD({
 
           <button
             type="button"
-            onClick={() => onModeChange('inspect')}
-            className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
-              mode === 'inspect'
+            onClick={() => onModeChange('drone')}
+            className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+              mode === 'drone'
                 ? 'bg-gradient-to-r from-amber-400 to-yellow-400 text-zinc-950 shadow-md shadow-amber-500/20'
                 : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
             }`}
           >
-            <Eye className="w-3.5 h-3.5" />
-            <span>Inspect</span>
+            <Crosshair className="w-3.5 h-3.5" />
+            <span>Drone</span>
           </button>
 
           <button
             type="button"
             onClick={() => onModeChange('tour')}
-            className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
+            className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
               mode === 'tour'
                 ? 'bg-gradient-to-r from-amber-400 to-yellow-400 text-zinc-950 shadow-md shadow-amber-500/20'
                 : 'text-zinc-400 hover:text-white hover:bg-zinc-900'

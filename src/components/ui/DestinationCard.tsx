@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Bookmark, Compass } from 'lucide-react';
+import { Bookmark, Compass, Crosshair } from 'lucide-react';
 import { Destination } from '@/types/destination';
 
 interface DestinationCardProps {
@@ -58,15 +58,25 @@ export default function DestinationCard({ destination }: DestinationCardProps) {
           </button>
         </div>
 
-        {/* Desktop Quick 3D Hover Pill (subtle, non-intrusive) */}
-        <div className="absolute bottom-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto hidden sm:block">
+        {/* Desktop Quick Exploration Hover Pills (subtle, non-intrusive) */}
+        <div className="absolute bottom-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto hidden sm:flex items-center gap-1.5">
           <Link
             href={threeDHref}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-zinc-950 bg-amber-400 hover:bg-amber-300 shadow-lg shadow-black/50 transition-transform active:scale-95"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-zinc-950 bg-amber-400 hover:bg-amber-300 shadow-lg shadow-black/50 transition-transform active:scale-95"
             onClick={(e) => e.stopPropagation()}
+            title="First-Person Walk"
           >
             <Compass className="w-3.5 h-3.5" />
-            <span>3D Walk</span>
+            <span>Walk</span>
+          </Link>
+          <Link
+            href={`${threeDHref}?mode=drone`}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-white bg-zinc-900/90 hover:bg-zinc-800 border border-white/20 shadow-lg shadow-black/50 transition-transform active:scale-95"
+            onClick={(e) => e.stopPropagation()}
+            title="Aerial Drone View"
+          >
+            <Crosshair className="w-3.5 h-3.5 text-amber-400" />
+            <span>Drone</span>
           </Link>
         </div>
       </div>

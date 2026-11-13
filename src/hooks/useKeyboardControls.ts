@@ -9,6 +9,9 @@ export interface KeyboardState {
   right: boolean;
   sprint: boolean;
   jump: boolean;
+  ascend: boolean;
+  descend: boolean;
+  reset: boolean;
 }
 
 export function useKeyboardControls(enabled: boolean = true) {
@@ -19,6 +22,9 @@ export function useKeyboardControls(enabled: boolean = true) {
     right: false,
     sprint: false,
     jump: false,
+    ascend: false,
+    descend: false,
+    reset: false,
   });
 
   useEffect(() => {
@@ -30,6 +36,9 @@ export function useKeyboardControls(enabled: boolean = true) {
         right: false,
         sprint: false,
         jump: false,
+        ascend: false,
+        descend: false,
+        reset: false,
       };
       return;
     }
@@ -67,6 +76,15 @@ export function useKeyboardControls(enabled: boolean = true) {
           break;
         case 'Space':
           keys.current.jump = true;
+          keys.current.ascend = true;
+          break;
+        case 'ControlLeft':
+        case 'ControlRight':
+        case 'KeyC':
+          keys.current.descend = true;
+          break;
+        case 'KeyR':
+          keys.current.reset = true;
           break;
       }
     };
@@ -95,6 +113,15 @@ export function useKeyboardControls(enabled: boolean = true) {
           break;
         case 'Space':
           keys.current.jump = false;
+          keys.current.ascend = false;
+          break;
+        case 'ControlLeft':
+        case 'ControlRight':
+        case 'KeyC':
+          keys.current.descend = false;
+          break;
+        case 'KeyR':
+          keys.current.reset = false;
           break;
       }
     };
@@ -107,6 +134,9 @@ export function useKeyboardControls(enabled: boolean = true) {
         right: false,
         sprint: false,
         jump: false,
+        ascend: false,
+        descend: false,
+        reset: false,
       };
     };
 

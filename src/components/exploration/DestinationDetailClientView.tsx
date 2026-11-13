@@ -24,6 +24,7 @@ import {
   ChevronRight,
   Award,
   Bookmark,
+  Crosshair,
 } from 'lucide-react';
 
 interface DestinationDetailClientViewProps {
@@ -165,6 +166,14 @@ export default function DestinationDetailClientView({
                 <Compass className="w-4 h-4 stroke-[2.3]" />
                 <span>Explore 3D Walkthrough</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.3]" />
+              </Link>
+
+              <Link
+                href={`/explore/${destination.slug || destination.id}/3d?mode=drone`}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-200 hover:text-white bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700/80 transition-all hover:scale-105 active:scale-95"
+              >
+                <Crosshair className="w-4 h-4 text-amber-400" />
+                <span>Drone View</span>
               </Link>
 
               <Link
