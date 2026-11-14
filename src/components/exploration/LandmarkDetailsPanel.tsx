@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useSyncExternalStore } from 'react';
 import { Landmark } from '@/types/landmark';
 import {
   X,
@@ -13,7 +13,15 @@ import {
   Compass,
   Layers,
   Image as ImageIcon,
+  Bookmark,
+  Share2,
+  Check,
 } from 'lucide-react';
+import {
+  isLandmarkSaved,
+  toggleSaveLandmark,
+  subscribeToCollection,
+} from '@/lib/storage/collectionStorage';
 
 interface LandmarkDetailsPanelProps {
   landmark: Landmark | null;
@@ -24,6 +32,8 @@ interface LandmarkDetailsPanelProps {
   currentIndex?: number;
   totalLandmarks?: number;
   onOpenGallery?: (imageIndex: number) => void;
+  destinationId?: string;
+  destinationName?: string;
 }
 
 export default function LandmarkDetailsPanel({
@@ -35,10 +45,52 @@ export default function LandmarkDetailsPanel({
   currentIndex = 0,
   totalLandmarks = 0,
   onOpenGallery,
+  destinationId = '',
+  destinationName = '',
 }: LandmarkDetailsPanelProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'architecture' | 'history' | 'sources'>('overview');
+  const [copiedShare, setCopiedShare] = useState(false);
+
+  const isSaved = useSyncExternalStore(
+    subscribeToCollection,
+    () => (landmark && destinationId ? isLandmarkSaved(destinationId, landmark.id) : false),
+    () => false
+  );
 
   if (!isOpen || !landmark) return null;
+
+  const handleToggleSave = () => {
+    if (!landmark || !destinationId) return;
+    const thumb = landmark.gallery && landmark.gallery[0] ? landmark.gallery[0].url : undefined;
+    toggleSaveLandmark({
+      id: landmark.id,
+      destinationId,
+      destinationName: destinationName || destinationId,
+      name: landmark.name,
+      category: landmark.category,
+      thumbnailUrl: thumb,
+    });
+  };
+
+  const handleShare = async () => {
+    const url = typeof window !== 'undefined' ? `${window.location.origin}/explore/${destinationId}?landmark=${landmark.id}` : '';
+    const shareData = {
+      title: `${landmark.name} - ${destinationName || 'NewArambh'}`,
+      text: `Discover ${landmark.name}: ${landmark.shortDescription}`,
+      url,
+    };
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch {
+        // user cancelled or failed, fallback to clipboard
+      }
+    } else if (navigator.clipboard) {
+      await navigator.clipboard.writeText(url);
+      setCopiedShare(true);
+      setTimeout(() => setCopiedShare(false), 2000);
+    }
+  };
 
   return (
     <div
@@ -71,15 +123,45 @@ export default function LandmarkDetailsPanel({
           )}
         </div>
 
-        {/* Close Button */}
-        <button
-          type="button"
-          onClick={onClose}
-          className="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-800/80 border border-zinc-800 transition-colors shrink-0"
-          aria-label="Close landmark details"
-        >
-          <X className="w-5 h-5" />
-        </button>
+        {/* Action Buttons: Save, Share, Close */}
+        <div className="flex items-center gap-1.5 shrink-0">
+          {destinationId && (
+            <button
+              type="button"
+              onClick={handleToggleSave}
+              className={`p-2 rounded-xl border transition-colors ${
+                isSaved
+                  ? 'bg-amber-500/20 text-amber-400 border-amber-500/40'
+                  : 'text-zinc-400 hover:text-white hover:bg-zinc-800/80 border-zinc-800'
+              }`}
+              title={isSaved ? 'Remove from My Heritage' : 'Save Landmark'}
+              aria-label={isSaved ? 'Remove from My Heritage' : 'Save Landmark'}
+            >
+              <Bookmark className={`w-4 h-4 ${isSaved ? 'fill-amber-400' : ''}`} />
+            </button>
+          )}
+
+          {destinationId && (
+            <button
+              type="button"
+              onClick={handleShare}
+              className="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-800/80 border border-zinc-800 transition-colors"
+              title="Share Landmark"
+              aria-label="Share Landmark"
+            >
+              {copiedShare ? <Check className="w-4 h-4 text-emerald-400" /> : <Share2 className="w-4 h-4" />}
+            </button>
+          )}
+
+          <button
+            type="button"
+            onClick={onClose}
+            className="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-800/80 border border-zinc-800 transition-colors"
+            aria-label="Close landmark details"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
       </div>
 
       {/* Tabs Navigation */}

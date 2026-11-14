@@ -1,8 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 import { Landmark } from '@/types/landmark';
 import { Destination } from '@/types/destination';
+import { allDestinations } from '@/data/destinations/index';
 import {
   Compass,
   Route,
@@ -12,6 +14,9 @@ import {
   RotateCcw,
   CheckCircle2,
   Sparkles,
+  Share2,
+  Check,
+  ArrowRight,
 } from 'lucide-react';
 
 interface GuidedExplorationHUDProps {
@@ -45,9 +50,33 @@ export default function GuidedExplorationHUD({
   isTourFinished = false,
   onRestartTour,
 }: GuidedExplorationHUDProps) {
+  const [copiedShare, setCopiedShare] = useState(false);
   const progressPercent = Math.round(((currentStopIndex + 1) / totalStops) * 100);
   const isLastStop = currentStopIndex === totalStops - 1;
   const isFirstStop = currentStopIndex === 0;
+
+  const currentDestIndex = allDestinations.findIndex((d) => d.id === destination.id);
+  const nextDest = allDestinations[(currentDestIndex + 1) % allDestinations.length];
+
+  const handleShare = async () => {
+    const url = typeof window !== 'undefined' ? `${window.location.origin}/explore/${destination.id}` : '';
+    const shareText = `I just completed the guided architectural journey of ${destination.name} on NewArambh! Explore with me: ${url}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `${destination.name} Journey Completed`,
+          text: shareText,
+          url,
+        });
+      } catch {
+        // cancelled
+      }
+    } else if (navigator.clipboard) {
+      await navigator.clipboard.writeText(shareText);
+      setCopiedShare(true);
+      setTimeout(() => setCopiedShare(false), 2000);
+    }
+  };
 
   return (
     <div className="w-full flex flex-col gap-3 pointer-events-auto">
@@ -193,25 +222,36 @@ export default function GuidedExplorationHUD({
             </p>
           </div>
 
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={handleShare}
+              className="px-3.5 py-2 rounded-xl text-xs font-semibold text-zinc-200 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition-colors inline-flex items-center gap-1.5"
+            >
+              {copiedShare ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Share2 className="w-3.5 h-3.5 text-amber-400" />}
+              <span>{copiedShare ? 'Copied Link' : 'Share Journey'}</span>
+            </button>
+
+            {nextDest && (
+              <Link
+                href={`/explore/${nextDest.id}/experience`}
+                className="px-4 py-2 rounded-xl text-xs font-bold text-zinc-950 bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 transition-all shadow-md shadow-amber-500/20 inline-flex items-center gap-1.5"
+              >
+                <span>Next: {nextDest.shortName || nextDest.name}</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            )}
+
             {onRestartTour && (
               <button
                 type="button"
                 onClick={onRestartTour}
-                className="px-4 py-2 rounded-xl text-xs font-semibold text-zinc-200 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition-colors inline-flex items-center gap-1.5"
+                className="px-3 py-2 rounded-xl text-xs font-semibold text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 transition-colors inline-flex items-center gap-1.5"
+                title="Restart"
               >
-                <RotateCcw className="w-3.5 h-3.5 text-amber-400" />
-                <span>Restart Tour</span>
+                <RotateCcw className="w-3.5 h-3.5" />
               </button>
             )}
-            <button
-              type="button"
-              onClick={onOpenDetails}
-              className="px-4 py-2 rounded-xl text-xs font-bold text-zinc-950 bg-amber-400 hover:bg-amber-300 transition-colors inline-flex items-center gap-1.5 shadow-md shadow-amber-500/25"
-            >
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>Review Landmarks</span>
-            </button>
           </div>
         </div>
       )}

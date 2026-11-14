@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { Destination } from '@/types/destination';
 import { Landmark } from '@/types/landmark';
 import {
@@ -10,6 +10,9 @@ import {
   Compass,
   Layers,
   Info,
+  Search,
+  Filter,
+  X,
 } from 'lucide-react';
 
 interface InteractiveSiteMapProps {
@@ -34,6 +37,16 @@ export default function InteractiveSiteMap({
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [showLegend, setShowLegend] = useState(false);
   const [hoveredLandmark, setHoveredLandmark] = useState<Landmark | null>(null);
+  const [mapSearch, setMapSearch] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // Available categories in this destination
+  const landmarkCategories = useMemo(() => {
+    const cats = new Set<string>();
+    destination.landmarks.forEach((l) => cats.add(l.category));
+    return ['all', ...Array.from(cats)];
+  }, [destination.landmarks]);
 
   // Reset view
   const handleReset = useCallback(() => {
@@ -168,11 +181,17 @@ export default function InteractiveSiteMap({
               const isSelected = selectedLandmarkId === landmark.id;
               const isHovered = hoveredLandmark?.id === landmark.id;
               const stopNumber = index + 1;
+              const matchesFilter =
+                (selectedCategory === 'all' || landmark.category === selectedCategory) &&
+                (mapSearch.trim() === '' ||
+                  landmark.name.toLowerCase().includes(mapSearch.toLowerCase()) ||
+                  landmark.shortDescription.toLowerCase().includes(mapSearch.toLowerCase()));
 
               return (
                 <g
                   key={landmark.id}
-                  className="cursor-pointer group"
+                  className="cursor-pointer group transition-opacity duration-200"
+                  style={{ opacity: matchesFilter ? 1 : 0.2 }}
                   onClick={(e) => {
                     e.stopPropagation();
                     onSelectLandmark(landmark);
@@ -353,7 +372,10 @@ export default function InteractiveSiteMap({
           {/* Legend Toggle */}
           <button
             type="button"
-            onClick={() => setShowLegend(!showLegend)}
+            onClick={() => {
+              setShowLegend(!showLegend);
+              if (isSearchOpen) setIsSearchOpen(false);
+            }}
             className={`w-9 h-9 rounded-xl backdrop-blur-md flex items-center justify-center transition-all shadow-md active:scale-95 border ${
               showLegend
                 ? 'bg-amber-400 text-zinc-950 border-amber-400'
@@ -364,6 +386,108 @@ export default function InteractiveSiteMap({
           >
             <Layers className="w-4 h-4" />
           </button>
+
+          {/* Search & Category Filter Toggle */}
+          <button
+            type="button"
+            onClick={() => {
+              setIsSearchOpen(!isSearchOpen);
+              if (showLegend) setShowLegend(false);
+            }}
+            className={`w-9 h-9 rounded-xl backdrop-blur-md flex items-center justify-center transition-all shadow-md active:scale-95 border ${
+              isSearchOpen
+                ? 'bg-amber-400 text-zinc-950 border-amber-400'
+                : 'bg-zinc-950/80 text-amber-400 hover:bg-zinc-800 border-amber-900/40'
+            }`}
+            aria-label="Search and filter map landmarks"
+            title="Filter Landmarks"
+          >
+            <Search className="w-4 h-4" />
+          </button>
+        </div>
+      )}
+
+      {/* Expandable Landmark Search & Category Filter Panel */}
+      {isSearchOpen && (
+        <div className="absolute top-16 left-16 z-20 w-72 bg-zinc-950/95 backdrop-blur-xl border border-amber-500/30 rounded-2xl p-4 shadow-2xl text-xs space-y-3 animate-in fade-in zoom-in-95 duration-200">
+          <div className="flex items-center justify-between pb-2 border-b border-zinc-800">
+            <span className="font-bold text-amber-400 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+              <Filter className="w-3.5 h-3.5" />
+              <span>Filter Landmarks</span>
+            </span>
+            <button
+              type="button"
+              onClick={() => setIsSearchOpen(false)}
+              className="text-zinc-500 hover:text-white"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+
+          <div className="space-y-1.5">
+            <div className="relative">
+              <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
+              <input
+                type="text"
+                value={mapSearch}
+                onChange={(e) => setMapSearch(e.target.value)}
+                placeholder="Search pins..."
+                className="w-full pl-8 pr-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 text-xs focus:outline-none focus:border-amber-400"
+              />
+            </div>
+          </div>
+
+          {/* Category filter chips */}
+          <div className="space-y-1">
+            <span className="text-[10px] text-zinc-400 uppercase font-bold tracking-wider">
+              Category:
+            </span>
+            <div className="flex flex-wrap gap-1 max-h-28 overflow-y-auto pt-1">
+              {landmarkCategories.map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-2 py-0.5 rounded text-[10px] font-semibold transition-colors ${
+                    selectedCategory === cat
+                      ? 'bg-amber-400 text-zinc-950'
+                      : 'bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800'
+                  }`}
+                >
+                  {cat === 'all' ? 'All' : cat}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Match Count */}
+          <div className="pt-2 border-t border-zinc-800 flex items-center justify-between text-[10px] text-zinc-400">
+            <span>
+              Showing{' '}
+              {
+                destination.landmarks.filter(
+                  (l) =>
+                    (selectedCategory === 'all' || l.category === selectedCategory) &&
+                    (mapSearch.trim() === '' ||
+                      l.name.toLowerCase().includes(mapSearch.toLowerCase()) ||
+                      l.shortDescription.toLowerCase().includes(mapSearch.toLowerCase()))
+                ).length
+              }{' '}
+              of {destination.landmarks.length} pins
+            </span>
+            {(mapSearch || selectedCategory !== 'all') && (
+              <button
+                type="button"
+                onClick={() => {
+                  setMapSearch('');
+                  setSelectedCategory('all');
+                }}
+                className="text-amber-400 hover:underline"
+              >
+                Clear
+              </button>
+            )}
+          </div>
         </div>
       )}
 

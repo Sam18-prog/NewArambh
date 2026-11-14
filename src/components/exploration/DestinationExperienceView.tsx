@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { Destination } from '@/types/destination';
 import { Landmark } from '@/types/landmark';
@@ -9,6 +9,7 @@ import LandmarkDetailsPanel from './LandmarkDetailsPanel';
 import GuidedExplorationHUD from './GuidedExplorationHUD';
 import ImageGalleryModal from './ImageGalleryModal';
 import UpcomingFeatures from '@/components/roadmap/UpcomingFeatures';
+import { updateJourneyProgress } from '@/lib/storage/collectionStorage';
 import {
   ArrowLeft,
   Compass,
@@ -35,6 +36,12 @@ export default function DestinationExperienceView({
   const landmarks = destination.landmarks;
   const totalStops = landmarks.length;
   const activeLandmark = landmarks[currentStopIndex] || landmarks[0];
+
+  useEffect(() => {
+    if (destination && totalStops > 0) {
+      updateJourneyProgress(destination.id, destination.name, currentStopIndex, totalStops);
+    }
+  }, [destination, currentStopIndex, totalStops]);
 
   // Handle selecting a landmark pin on the map
   const handleSelectLandmark = useCallback(
@@ -167,6 +174,8 @@ export default function DestinationExperienceView({
         onNext={currentStopIndex < totalStops - 1 ? handleNextStop : undefined}
         currentIndex={currentStopIndex}
         totalLandmarks={totalStops}
+        destinationId={destination.id}
+        destinationName={destination.name}
         onOpenGallery={(idx) => {
           setGalleryStartIndex(idx);
           setIsGalleryOpen(true);

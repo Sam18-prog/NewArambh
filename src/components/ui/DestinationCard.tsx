@@ -1,9 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { Bookmark, Compass, Crosshair } from 'lucide-react';
 import { Destination } from '@/types/destination';
+import {
+  isDestinationBookmarked,
+  toggleBookmarkDestination,
+  subscribeToCollection,
+} from '@/lib/storage/collectionStorage';
 
 interface DestinationCardProps {
   destination: Destination;
@@ -12,7 +17,12 @@ interface DestinationCardProps {
 export default function DestinationCard({ destination }: DestinationCardProps) {
   const isUnesco = destination.heritageClassification === 'unesco';
   const displayName = destination.shortName || destination.name;
-  const [isBookmarked, setIsBookmarked] = useState(false);
+
+  const isBookmarked = useSyncExternalStore(
+    subscribeToCollection,
+    () => isDestinationBookmarked(destination.id),
+    () => false
+  );
 
   const [imgSrc, setImgSrc] = useState(
     destination.thumbnailUrl || destination.heroImageUrl || '/images/destinations/discovery-monuments.jpg'
@@ -45,7 +55,13 @@ export default function DestinationCard({ destination }: DestinationCardProps) {
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              setIsBookmarked(!isBookmarked);
+              toggleBookmarkDestination({
+                id: destination.id,
+                name: displayName,
+                location: destination.location,
+                thumbnailUrl: destination.thumbnailUrl || destination.heroImageUrl,
+                heritageClassification: destination.heritageClassification,
+              });
             }}
             className="w-10 h-10 rounded-full bg-zinc-950/60 hover:bg-zinc-900/90 border border-white/20 text-white flex items-center justify-center backdrop-blur-md shadow-lg transition-all active:scale-90 cursor-pointer"
             aria-label={isBookmarked ? 'Remove bookmark' : 'Bookmark destination'}

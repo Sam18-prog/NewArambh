@@ -19,15 +19,15 @@ export default function Footer() {
             </Link>
             <div className="space-y-1.5 max-w-sm">
               <p className="font-bold text-sm text-zinc-100 tracking-tight">
-                Walk through history, free in your browser.
+                Walk Through History, From Anywhere.
               </p>
-              <p className="text-zinc-400 leading-relaxed">
-                Explore 3D reconstructions of World’s heritage architecture: courtyards, stepwells, and temple halls, with no downloads and no tickets.
+              <p className="text-zinc-400 leading-relaxed text-xs">
+                Experience the world’s cultural heritage, sacred monuments, and architectural wonders through immersive 3D exploration and open educational access.
               </p>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Platform Links */}
           <div className="md:col-span-2 space-y-3">
             <p className="text-xs font-semibold uppercase tracking-wider text-white">Platform</p>
             <ul className="space-y-2">
@@ -47,50 +47,45 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#how-it-works" className="hover:text-amber-400 transition-colors">
-                  How It Works
+                <Link href="/my-heritage" className="hover:text-amber-400 transition-colors">
+                  My Heritage Collection
                 </Link>
               </li>
               <li>
-                <Link href="/#about" className="hover:text-amber-400 transition-colors">
-                  About the Project
+                <Link href="/about" className="hover:text-amber-400 transition-colors">
+                  About NewArambh
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Heritage Categories */}
+          {/* Learn & Explore */}
           <div className="md:col-span-3 space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-wider text-white">Categories</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-white">Learn &amp; Discover</p>
             <ul className="space-y-2">
               <li>
-                <Link href="/explore?category=forts-palaces" className="hover:text-amber-400 transition-colors">
-                  Forts &amp; Palaces
+                <Link href="/learn/timelines" className="hover:text-amber-400 transition-colors">
+                  Historical Timelines
                 </Link>
               </li>
               <li>
-                <Link href="/explore?category=religious" className="hover:text-amber-400 transition-colors">
-                  Religious Places &amp; Temples
+                <Link href="/learn/quiz" className="hover:text-amber-400 transition-colors">
+                  Knowledge Quizzes
                 </Link>
               </li>
               <li>
-                <Link href="/explore?category=monuments" className="hover:text-amber-400 transition-colors">
-                  Historical Monuments
+                <Link href="/learn/glossary" className="hover:text-amber-400 transition-colors">
+                  Architectural Glossary
                 </Link>
               </li>
               <li>
-                <Link href="/explore?category=museums" className="hover:text-amber-400 transition-colors">
-                  Museums &amp; Collections
+                <Link href="/learn/compare" className="hover:text-amber-400 transition-colors">
+                  Compare Monuments
                 </Link>
               </li>
               <li>
-                <Link href="/explore?category=heritage" className="hover:text-amber-400 transition-colors">
-                  Heritage Architecture
-                </Link>
-              </li>
-              <li>
-                <Link href="/explore?category=natural" className="hover:text-amber-400 transition-colors">
-                  Natural Attractions
+                <Link href="/explore?category=unesco" className="hover:text-amber-400 transition-colors">
+                  UNESCO World Heritage Sites
                 </Link>
               </li>
             </ul>
@@ -98,24 +93,37 @@ export default function Footer() {
 
           {/* Transparency & Licenses */}
           <div className="md:col-span-2 space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-wider text-white">Transparency</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-white">Integrity</p>
             <ul className="space-y-2">
               <li>
-                <Link href="/licenses" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 font-medium text-amber-400/90">
-                  <Sparkles className="w-3 h-3 text-amber-400" />
-                  <span>Asset Register &amp; Licenses</span>
+                <Link href="/licenses" className="hover:text-amber-400 transition-colors">
+                  Asset Register &amp; Attribution
                 </Link>
               </li>
               <li>
-                <span className="text-zinc-400">CC0 1.0 Universal</span>
+                <span className="text-zinc-500">Zero-Budget Project ($0.00)</span>
               </li>
               <li>
-                <span className="text-zinc-400">Smithsonian Open Access</span>
+                <span className="text-zinc-500">Public Domain &amp; CC Assets</span>
               </li>
               <li>
-                <span className="text-zinc-400">Poly Haven Textures</span>
+                <span className="text-zinc-500">Client-Side Storage Only</span>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-400">
+          <p>© {new Date().getFullYear()} NewArambh. Built for open cultural education and architectural discovery.</p>
+          <div className="flex items-center gap-4 text-[11px]">
+            <Link href="/licenses" className="hover:text-white transition-colors">
+              Attribution &amp; Licenses
+            </Link>
+            <span>•</span>
+            <Link href="/about" className="hover:text-white transition-colors">
+              About
+            </Link>
           </div>
         </div>
       </div>
